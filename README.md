@@ -9,7 +9,7 @@ Welcome to the Scripts Repository! This repository contains various scripts whic
 - [Script Feature Overviews](#script-feature-overviews)
 - [Custom Toast](#custom-toast)
 - [Greetings Toast](#greetings-toast)
-- [Motivation Dialogs](#motivation-dialogs)
+- [Flexi Quotes](#flexi-quotes)
 - [Custom Reminders](#custom-reminders)
 - [Message Bomber](#message-bomber)
 - [Saved Replies](#saved-replies)
@@ -54,27 +54,31 @@ Welcome to the Scripts Repository! This repository contains various scripts whic
 
 [Jump to Script Details](#greetings-toast)
 
-## motivation_dialogs.js
+## flexi_quotes.js
 
 1. **Extensive Quote Collection:**
    - Preloaded with over 150+ motivational quotes.
    - Displays a random motivational quote each time Snapchat is opened.
 
-2. **Dialog Display:**
-   - Utilizes a dialog interface.
+2. **Dual Display:**
+   - Utilizes both toast & dialog interface.
 
-3. **Customizable Font Size:**
+3. **Customizable Font Size & Color:**
    - Users can customize the font size of the motivation dialog text.
    - Includes a font size slider in the settings for easy adjustment.
-
-4. **Customizable Font Color:**
    - Users can change the font color of the motivation dialog text.
    - Features a text input field for entering custom HEX codes.
 
+4. **Customizable Display Mode:**:
+   - Users can choose whether to display the quote as a toast or a dialog!
+
 5. **HEX Code Testing:**
    - Includes a "Test HEX Code" button to verify that the entered HEX code displays the desired color.
+  
+6. **Motivate your friends!:**:
+   - You can now send a random motivational quote to your friend by clicking on the `Send Motivational Quote` Button in the Toolbox.
 
-[Jump to Script Details](#motivation-dialogs)
+[Jump to Script Details](#flexi-quotes)
 
 ## custom_reminders.js
 
@@ -109,6 +113,9 @@ Welcome to the Scripts Repository! This repository contains various scripts whic
 
 3. **Enhanced User Experience:**
    - Added icons for the "Message Bomb" button, improving visual appeal and user interaction.
+  
+4. **Translations:**
+   - Added Translations for 7 languages i.e. English, Portugese, Punjabi, French, German, Russian & Arabic!
   
 [Jump to Script Details](#message-bomber)
 
@@ -148,15 +155,15 @@ To download the latest version of the script, choose one of the following option
 
 1. **Download from GitHub:**
 
-   Click the link below to download the `Custom Toast Script v1.5` directly from GitHub:
+   Click the link below to download `Custom Toast` directly from GitHub:
 
-   [Download Custom Toast Script v1.5](https://github.com/suryadip2008/SE-Deluxe/blob/scripts/ScriptDev/custom_toast_v1.5.js)
+   [Download Custom Toast](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/custom_toast.js)
 
 2. **Import from URL:**
 
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Deluxe/scripts/ScriptDev/custom_toast_v1.5.js)
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/custom_toast.js)
 
 ## Greetings Toast
 
@@ -170,21 +177,21 @@ To download the latest version of the script, choose one of the following option
 
 1. **Download from GitHub:**
 
-   Click the link below to download the `Greetings Toast Script v3.0` directly from GitHub:
+   Click the link below to download `Greetings Toast` directly from GitHub:
 
-   [Download Greetings Toast Script v3.0](https://github.com/suryadip2008/SE-Deluxe/blob/scripts/ScriptDev/greetings_toast_v3.0.js)
+   [Download Greetings Toast](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/greetings_toast.js)
 
 2. **Import from URL:**
 
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Deluxe/scripts/ScriptDev/greetings_toast_v3.0.js)
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/greetings_toast.js)
 
-## Motivation Dialogs
+## Flexi Quotes
 
-- **Name:** motivation_dialogs
-- **Version:** 3.0
-- **Last Updated:** July 19, 2024
+- **Name:** flexi_quotes
+- **Version:** 4.0
+- **Last Updated:** August 15, 2024
 - **Author:** Suryadip Sarkar & Jacob Thomas
 - **Description:** A Script that shows a random motivation quote dialog on the startup of Snapchat.
 
@@ -192,15 +199,15 @@ To download the latest version of the script, choose one of the following option
 
 1. **Download from GitHub:**
 
-   Click the link below to download the `Motivation Dialogs Script v3.0` directly from GitHub:
+   Click the link below to download `Flexi Quotes` directly from GitHub:
 
-   [Download Motivation Dialogs Script v3.0](https://github.com/suryadip2008/SE-Deluxe/blob/scripts/ScriptDev/motivation_dialogs_v3.0.js)
+   [Download Flexi Quotes](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/flexi_quotes.js)
 
 2. **Import from URL:**
 
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Deluxe/scripts/ScriptDev/motivation_dialogs_v3.0.js)
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/flexi_quotes.js)
 
 ## Custom Reminders
 
@@ -214,21 +221,21 @@ To download the latest version of the script, choose one of the following option
 
 1. **Download from GitHub:**
 
-   Click the link below to download the `Custom Reminders Script v1.0` directly from GitHub:
+   Click the link below to download `Custom Reminders` directly from GitHub:
 
-   [Download Custom Reminders Script v1.0](https://github.com/suryadip2008/SE-Deluxe/blob/scripts/ScriptDev/custom_reminders.js)
+   [Download Custom Reminders](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/custom_reminders.js)
 
 2. **Import from URL:**
 
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Deluxe/scripts/ScriptDev/custom_reminders.js)
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/custom_reminders.js)
 
 ## Message Bomber
 
 - **Name:** message_bomber
-- **Version:** 3.5
-- **Last Updated:** August 10, 2024
+- **Version:** 5.0
+- **Last Updated:** August 14, 2024
 - **Author:** Suryadip Sarkar
 - **Description:** A script for bombing your friends with custom messages. Just for educational purposes. May or May not cause bans.
 
@@ -236,15 +243,15 @@ To download the latest version of the script, choose one of the following option
 
 1. **Download from GitHub:**
 
-   Click the link below to download the `Message Bomber Script v3.5` directly from GitHub:
+   Click the link below to download `Message Bomber` directly from GitHub:
 
-   [Download Message Bomber Script v3.5](https://github.com/suryadip2008/SE-Deluxe/blob/scripts/ScriptDev/message_bomber_3.5.js)
+   [Download Message Bomber](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/message_bomber.js)
 
 2. **Import from URL:**
 
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Deluxe/scripts/ScriptDev/message_bomber_3.5.js)
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/message_bomber.js)
 
 ## Saved Replies
 
@@ -258,15 +265,15 @@ To download the latest version of the script, choose one of the following option
 
 1. **Download from GitHub:**
 
-   Click the link below to download the `Saved Replies Script v1.5` directly from GitHub:
+   Click the link below to download `Saved Replies` directly from GitHub:
 
-   [Download Saved Replies Script v1.5](https://github.com/suryadip2008/SE-Deluxe/blob/scripts/ScriptDev/saved_replies_v1.5.js)
+   [Download Saved Replies](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/saved_replies.js)
 
 2. **Import from URL:**
 
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Deluxe/scripts/ScriptDev/saved_replies_v1.5.js)
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/saved_replies.js)
 
 ## Scheduled Messages (Work in Progress, Incomplete)
 
@@ -293,43 +300,43 @@ Below are some screenshots demonstrating the script in action:
 - ## Custom Toast:
   
   <p align="center">
-  <img src="info/custom_toast_1.jpg" width="45%" style="margin-right:10px;" />
-  <img src="info/custom_toast_2.jpg" width="45%" />
+  <img src="scripts/screenshots/custom_toast_1.jpg" width="45%" style="margin-right:10px;" />
+  <img src="scripts/screenshots/custom_toast_2.jpg" width="45%" />
 </p>
 
 - ## Greetings Toast:
   
   <p align="center">
-  <img src="info/greetings_toast_1.jpg" width="45%" style="margin-right:10px;" />
-  <img src="info/greetings_toast_2.jpg" width="45%" />
+  <img src="scripts/screenshots/greetings_toast_1.jpg" width="45%" style="margin-right:10px;" />
+  <img src="scripts/screenshots/greetings_toast_2.jpg" width="45%" />
 </p>
 
-- ## Motivation Dialogs:
+- ## Flexi Quotes:
   
   <p align="center">
-  <img src="info/motivation_diaologs_1.jpeg" width="45%" style="margin-right:10px;" />
-  <img src="info/motivation_diaologs_2.jpeg" width="45%" />
+  <img src="scripts/screenshots/flexi_quotes_1.jpeg" width="45%" style="margin-right:10px;" />
+  <img src="scripts/screenshots/flexi_quotes_2.jpeg" width="45%" />
 </p>
 
 - ## Custom Reminders:
   
   <p align="center">
-  <img src="info/custom_reminders_1.jpg" width="45%" style="margin-right:10px;" />
-  <img src="info/custom_reminders_2.jpg" width="45%" />
+  <img src="scripts/screenshots/custom_reminders_1.jpg" width="45%" style="margin-right:10px;" />
+  <img src="scripts/screenshots/custom_reminders_2.jpg" width="45%" />
 </p>
 
 - ## Message Bomber:
   
   <p align="center">
-  <img src="info/message_bomber_1.jpg" width="45%" style="margin-right:10px;" />
-  <img src="info/message_bomber_2.jpg" width="45%" />
+  <img src="scripts/screenshots/message_bomber_1.jpg" width="45%" style="margin-right:10px;" />
+  <img src="scripts/screenshots/message_bomber_2.jpg" width="45%" />
 </p>
 
 - ## Saved Replies:
   
   <p align="center">
-  <img src="info/saved_replies_1.jpg" width="45%" style="margin-right:10px;" />
-  <img src="info/saved_replies_2.jpg" width="45%" />
+  <img src="scripts/screenshots/saved_replies_1.jpg" width="45%" style="margin-right:10px;" />
+  <img src="scripts/screenshots/saved_replies_2.jpg" width="45%" />
 </p>
 
 ## How to Use
@@ -362,6 +369,9 @@ Follow these steps to install and use the script:
 
 ### FAQs
 
+- **SE crashes when I import the script/When I open the `Scripts` Tab!!**
+  - This is due to duplicate scripts existing in your scripts folder. Head over to your File Manager and navigate to your Scripts Folder and Delete all the duplicate scripts.
+
 - **Failed to Import Script!**
   - You have to first give SE access to your Scripts Folder.(To do this, head over to the Scripts Tab in SE)
  
@@ -375,8 +385,8 @@ Follow these steps to install and use the script:
 - **Toasts not showing up sometimes**
   - Scripts like custom_toast.js, greetings_toast.js, etc which are based on toasts require Snapchat to be closed completely then opened. If you have just pressed the home button to exit Snapchat and reopened Snapchat again, the toast might not show up. You also need to clear Snapchat from the recents menu or exit it properly in order for the toast to show up.
  
-## Discontinued Versions
+## Deprecated Versions
 
-   Discontinued versions of the scripts can be found here : [Link](https://github.com/suryadip2008/SE-Deluxe/blob/0f000f5ad89ad4ac758b181b4888f7081fba37a3/info/Discontinued_Versions.md)
+   Deprecated versions of the scripts can be found here : [Link](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/deprecated/Deprecated.md)
 
 If you encounter any issues with these script, feel free to contact me : https://t.me/suryadip_sark08
