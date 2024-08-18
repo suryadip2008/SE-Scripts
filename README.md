@@ -1,6 +1,11 @@
-# Scripts Repository
+# SE-Scripts
 
-Welcome to the Scripts Repository! This repository contains various scripts which have been created by me!!
+A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
+
+![Contributors](https://img.shields.io/github/contributors/suryadip2008/SE-Scripts)
+![Issues](https://img.shields.io/github/issues/suryadip2008/SE-Scripts)
+![Stars](https://img.shields.io/github/stars/suryadip2008/SE-Scripts)
+![Forks](https://img.shields.io/github/forks/suryadip2008/SE-Scripts)
 
 ![Maintainer](https://img.shields.io/badge/Creator-Suryadip_Sarkar-black)
 
