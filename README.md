@@ -22,7 +22,7 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 - [Screenshots](#screenshots)
 - [How to Use](#how-to-use)
 - [Troubleshooting](#troubleshooting)
-- [Discontinued Versions](#discontinued-versions)
+- [Discontinued Versions](#deprecated-versions)
 
 # Script Feature Overviews
 
