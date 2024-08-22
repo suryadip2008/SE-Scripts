@@ -318,6 +318,13 @@ To download the latest version of the script, choose one of the following option
 
 Below are some screenshots demonstrating the script in action:
 
+- ## Scheduled Messages:
+  
+  <p align="center">
+  <img src="scripts/screenshots/scheduled_messages_1.jpg" width="45%" style="margin-right:10px;" />
+  <img src="scripts/screenshots/scheduled_messages_2.jpg" width="45%" />
+</p>
+
 - ## Custom Toast:
   
   <p align="center">
