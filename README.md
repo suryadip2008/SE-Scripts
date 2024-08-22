@@ -2,7 +2,6 @@
 
 A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 
-![Contributors](https://img.shields.io/github/contributors/suryadip2008/SE-Scripts)
 ![Issues](https://img.shields.io/github/issues/suryadip2008/SE-Scripts)
 ![Stars](https://img.shields.io/github/stars/suryadip2008/SE-Scripts)
 ![Forks](https://img.shields.io/github/forks/suryadip2008/SE-Scripts)
@@ -12,19 +11,29 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 ## Table of Contents
 
 - [Script Feature Overviews](#script-feature-overviews)
+- [Scheduled Messages](#scheduled-messages)
 - [Custom Toast](#custom-toast)
 - [Greetings Toast](#greetings-toast)
 - [Flexi Quotes](#flexi-quotes)
 - [Custom Reminders](#custom-reminders)
 - [Message Bomber](#message-bomber)
 - [Saved Replies](#saved-replies)
-- [Scheduled Messages (Work in Progress, Incomplete)](#scheduled-messages-work-in-progress-incomplete)
 - [Screenshots](#screenshots)
 - [How to Use](#how-to-use)
 - [Troubleshooting](#troubleshooting)
 - [Discontinued Versions](#deprecated-versions)
 
 # Script Feature Overviews
+
+## scheduled_messages.js
+
+1. **Quick Schedule Options:**
+   - Includes four preset scheduling buttons: 1 minute, 5 minutes, 30 minutes, and 1 hour. These options allow users to quickly set a message to be sent after the selected interval, making it easy to manage messaging without constant monitoring.
+
+2. **Custom Scheduling:**
+   - Allows users to set a custom time for sending messages, providing flexibility for specific needs. This feature ensures that users can plan their messaging schedule with precision beyond the preset options.
+  
+[Jump to Script Details](#scheduled-messages)
 
 ## custom_toast.js
 
@@ -147,6 +156,30 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 [Jump to Script Details](#saved-replies)
 
 # Scripts
+
+## Scheduled Messages
+
+- **Name:** scheduled_messages
+- **Version:** 1.0
+- **Last Updated:** August 22, 2024
+- **Author:** Suryadip Sarkar
+- **Credits:** rhunk & Jacob Thomas
+- **Requirements:** Only works on SE versions released after 20/08/24
+- **Description:** A Script That Allows For Scheduling Messages. Please don't remove Snapchat from the background when your message is scheduled.
+
+To download the latest version of the script, choose one of the following options:
+
+1. **Download from GitHub:**
+
+   Click the link below to download `Scheduled Messages` directly from GitHub:
+
+   [Download Scheduled Messages](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/scheduled_messages.js)
+
+2. **Import from URL:**
+
+   Copy & paste this url in the `Import from URL` button in the scripts tab.
+
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/scheduled_messages.js)
 
 ## Custom Toast
 
@@ -280,23 +313,6 @@ To download the latest version of the script, choose one of the following option
 
    [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/saved_replies.js)
 
-## Scheduled Messages (Work in Progress, Incomplete)
-
-- **Name:** scheduled_message
-- **Version:** 0.1
-- **Last Updated:** April 26, 2024
-- **Author:** Jacob Thomas
-- **Description:** A Script That Allows For Scheduling Messages.
-
-To download the latest version of the script, choose one of the following options:
-
-1. **Download from GitHub:**
-
-   **Not Released yet.**
-
-2. **Import from URL:**
-
-   **Not Released yet.**
 
 ## Screenshots
 
