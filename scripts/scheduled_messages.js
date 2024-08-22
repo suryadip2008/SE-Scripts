@@ -88,16 +88,6 @@ var config = require("config");
       }).singleLine(true);
 
       builder.row(function(rowBuilder) {
-        rowBuilder.button("Send Now", function() {
-          if (inputMessage.trim() !== "") {
-            sendMessage(conversationId, inputMessage);
-          } else {
-            displayMessage("Please enter a message");
-          }
-        });
-
-        rowBuilder.text(" ");
-
         rowBuilder.button("Schedule (1m)", function() {
           if (inputMessage.trim() !== "") {
             scheduleMessage(inputMessage, 60000);
@@ -105,9 +95,9 @@ var config = require("config");
             displayMessage("Please enter a message");
           }
         });
-      });
 
-      builder.row(function(rowBuilder) {
+        rowBuilder.text(" ");
+
         rowBuilder.button("Schedule (5m)", function() {
           if (inputMessage.trim() !== "") {
             scheduleMessage(inputMessage, 300000);
@@ -115,9 +105,9 @@ var config = require("config");
             displayMessage("Please enter a message");
           }
         });
+      });
 
-        rowBuilder.text(" ");
-
+      builder.row(function(rowBuilder) {
         rowBuilder.button("Schedule (30m)", function() {
           if (inputMessage.trim() !== "") {
             scheduleMessage(inputMessage, 1800000);
@@ -125,9 +115,9 @@ var config = require("config");
             displayMessage("Please enter a message");
           }
         });
-      });
 
-      builder.row(function(rowBuilder) {
+        rowBuilder.text(" ");
+
         rowBuilder.button("Schedule (1h)", function() {
           if (inputMessage.trim() !== "") {
             scheduleMessage(inputMessage, 3600000);
