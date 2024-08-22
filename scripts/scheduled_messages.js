@@ -88,7 +88,7 @@ var config = require("config");
       }).singleLine(true);
 
       builder.row(function(rowBuilder) {
-        rowBuilder.button("Schedule (1m) ", function() {
+        rowBuilder.button("Schedule (1m)  ", function() {
           if (inputMessage.trim() !== "") {
             scheduleMessage(inputMessage, 60000);
           } else {
