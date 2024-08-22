@@ -34,4 +34,4 @@
 - These versions may contain bugs, security vulnerabilities, and lack of support for new features.
 - It is highly recommended to upgrade to the latest version for the best performance and security.
 
-For the latest versions and documentation, please visit the [main repository](https://github.com/suryadip2008/SE-Deluxe/tree/scripts) .
+For the latest versions and documentation, please visit the [main repository](https://github.com/suryadip2008/SE-Scripts) .
