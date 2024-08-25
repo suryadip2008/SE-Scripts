@@ -33,6 +33,12 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 2. **Custom Scheduling:**
    - Allows users to set a custom time for sending messages, providing flexibility for specific needs. This feature ensures that users can plan their messaging schedule with precision beyond the preset options.
   
+3. **Translations:**
+   - Added Translations for 7 languages i.e. English, Portugese, Punjabi, French, German, Russian & Arabic!
+  
+4. **Recurring Schedule:**
+   - The recurring schedule feature will help you to schedule any recurring message. For example: If I want to send Good Morning to my friend everyday, I just write Good Morning in the Recurring Message Field and Set the slider to Daily and click on the Recurring Schedule Button(Please note: the recurring message will be sent from the next day).
+  
 [Jump to Script Details](#scheduled-messages)
 
 ## custom_toast.js
@@ -160,8 +166,8 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 ## Scheduled Messages
 
 - **Name:** scheduled_messages
-- **Version:** 1.0
-- **Last Updated:** August 22, 2024
+- **Version:** 2.0
+- **Last Updated:** August 26, 2024
 - **Author:** Suryadip Sarkar
 - **Credits:** rhunk & Jacob Thomas
 - **Requirements:** Only works on SE versions released after 20/08/24
@@ -371,7 +377,15 @@ Below are some screenshots demonstrating the script in action:
 
 Follow these steps to install and use the script:
 
-1. **Download the Script(Follow either of the two methods):**
+1. **Download & Install Snapenhance:**
+
+   *Ignore this step if you already have Snapenhance installed.*
+
+   Click on this link for furthur instructions on how to install `Snapenhance`:
+   
+   [Installation Guide](https://github.com/rhunk/SnapEnhance/wiki/Installation-Guide)
+
+3. **Download the Script(Follow either of the two methods):**
 
    - **Download from GitHub:**
      - The link will open the script file on GitHub.
@@ -380,16 +394,16 @@ Follow these steps to install and use the script:
    - **Import from URL:**
      - Copy the url by pressing and holding it and then paste it in the `Import from URL` button in the Scripts tab of SE.
        
-2. **Installation:**
+4. **Installation:**
    *Ignore this step if you have followed the `Import from URL` Method*
    - Copy the script to your Scripts folder.
 
-4. **Enable the Script:**
+5. **Enable the Script:**
 
    - Open SE.
    - Navigate to the 'Scripts' section and enable the script.
 
-5. **Configuration:**
+6. **Configuration:**
 
    - Go to the script settings to customize options like custom toast, username, date of birth, etc.
 
