@@ -2,9 +2,9 @@
 // name: message_bomber
 // displayName: Message Bomber
 // description: A script for bombing your friends with custom messages. Just for educational purposes. May or may not cause bans.
-// version: 5.0
+// version: 5.2
 // author: Suryadip Sarkar
-// permissions: unsafe-classloader
+// minSEVersion: Anti-Ban works only on versions after 20/08/24
 // ==/SE_module==
 
 var networking = require("networking");
@@ -47,6 +47,7 @@ var events = require("events");
     var antiBanEnabled = false;
     var antiBanConfigId = "antiBanEnabled";
     var warningDisplayedConfigId = "warningDisplayed";
+    var customScheduleTime = "";
 
     var translations = {
         en: {
@@ -55,9 +56,14 @@ var events = require("events");
             enterMessage: "Enter message to bomb",
             messageBomb: "Bomb !",
             funPop: "Fun Pop!",
+            schedule: "Schedule Bomb",
             messageSent: "Message bomb sent: ",
             warning: "Warning: Sending a large number of messages may lead to account restrictions. Proceed with caution.",
             pleaseEnterValid: "Please enter a valid number of messages and a message to bomb",
+            invalidDateTime: "Invalid date/time format. Please use 'DD M YYYY HH MM'",
+            pastDateTime: "The specified time is in the past. Please choose a future time.",
+            scheduledFor: "Bomb Scheduled for: ",
+            customSchedule: "Custom Schedule (DD M YYYY HH MM)",
             predefinedMessages: [
               "You're so lazy, even a caterpillar becomes a butterfly faster than you move!",
               "Your brain is like a web browser: 12 tabs open, 2 frozen, and where's that music coming from?",
@@ -117,9 +123,14 @@ var events = require("events");
             enterMessage: "Digite a mensagem para bombardear",
             messageBomb: "Bomba !",
             funPop: "Diversão Pop!",
+            schedule: "Agendar Bomba",
             messageSent: "Mensagens enviadas: ",
             warning: "Aviso: Enviar um grande número de mensagens pode levar a restrições na conta. Prossiga com cautela.",
             pleaseEnterValid: "Digite um número válido de mensagens e uma mensagem para bombardeio",
+            invalidDateTime: "Formato de data/hora inválido. Use 'DD M YYYY HH MM'",
+            pastDateTime: "O horário especificado está no passado. Escolha um horário futuro.",
+            scheduledFor: "Bomba agendada para: ",
+            customSchedule: "Agendamento Personalizado (DD M YYYY HH MM)",
             predefinedMessages: [
               "Você é tão preguiçoso que até uma lagarta se transforma em borboleta mais rápido do que você se move!",
               "Seu cérebro é como um navegador da web: 12 abas abertas, 2 congeladas e de onde vem essa música?",
@@ -179,9 +190,14 @@ var events = require("events");
             enterMessage: "ਬੰਬ ਕਰਨ ਲਈ ਸੁਨੇਹਾ ਦਰਜ ਕਰੋ",
             messageBomb: "ਬੰਬ !",
             funPop: "ਮਜ਼ੇਦਾਰ ਪੌਪ!",
+            schedule: "ਸ਼ਡਿਊਲ ਬੰਬ",
             messageSent: "ਸੁਨੇਹੇ ਭੇਜੇ ਗਏ: ",
             warning: "ਚੇਤਾਵਨੀ: ਵੱਡੀ ਗਿਣਤੀ ਵਿੱਚ ਸੁਨੇਹੇ ਭੇਜਣ ਨਾਲ ਖਾਤੇ ਦੀਆਂ ਪਾਬੰਦੀਆਂ ਹੋ ਸਕਦੀਆਂ ਹਨ। ਸਾਵਧਾਨ ਰਹੋ.",
             pleaseEnterValid: "ਕਿਰਪਾ ਕਰਕੇ ਸੁਨੇਹੇ ਅਤੇ ਬੰਬ ਲਈ ਇੱਕ ਸੁਨੇਹਾ ਜਾਰੀ ਕਰੋ",
+            invalidDateTime: "ਅਵੈਧ ਮਿਤੀ/ਸਮਾਂ ਫਾਰਮੈਟ। ਕਿਰਪਾ ਕਰਕੇ 'DD M YYYY HH MM' ਵਰਤੋ",
+            pastDateTime: "ਨਿਰਧਾਰਤ ਸਮਾਂ ਅਤੀਤ ਵਿੱਚ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਭਵਿੱਖ ਦਾ ਸਮਾਂ ਚੁਣੋ।",
+            scheduledFor: "ਬੰਬ ਲਈ ਤਹਿ ਕੀਤਾ ਗਿਆ ਹੈ: ",
+            customSchedule: "ਕਸਟਮ ਸ਼ੈਡਿਊਲ (DD M YYYY HH MM)",
             predefinedMessages: [
               "ਤੂੰ ਇੰਨਾ ਆਲਸੀ ਹੈਂ, ਇੱਕ ਕੀੜਾ ਵੀ ਤੈਥੋਂ ਪਹਿਲਾਂ ਤਿਤਲੀ ਬਣ ਜਾਂਦਾ ਹੈ!",
               "ਤੁਹਾਡਾ ਦਿਮਾਗ਼ ਇੱਕ ਵੈੱਬ ਬ੍ਰਾਊਜ਼ਰ ਵਾਂਗ ਹੈ: 12 ਟੈਬਾਂ ਖੁੱਲ੍ਹੀਆਂ ਹਨ, 2 ਜੰਮੀਆਂ ਹੋਈਆਂ ਹਨ, ਅਤੇ ਇਹ ਸੰਗੀਤ ਕਿੱਥੋਂ ਆ ਰਿਹਾ ਹੈ?",
@@ -241,9 +257,14 @@ var events = require("events");
             enterMessage: "Geben Sie die Nachricht ein, um zu bombardieren",
             messageBomb: "Bombe !",
             funPop: "Spaß-Pop!",
+            schedule: "Bombe Planen",
             messageSent: "Nachrichtenbombing gesendet: ",
             warning: "Warnung: Das Senden einer großen Anzahl von Nachrichten kann zu Kontobeschränkungen führen. Bitte vorsichtig fortfahren.",
             pleaseEnterValid: "Bitte geben Sie eine gültige Anzahl von Nachrichten und eine Nachricht zum Bombardieren ein",
+            invalidDateTime: "Ungültiges Datum/Zeitformat. Bitte verwenden Sie 'TT M JJJJ HH MM'",
+            pastDateTime: "Der angegebene Zeitpunkt liegt in der Vergangenheit. Bitte wählen Sie einen zukünftigen Zeitpunkt.",
+            scheduledFor: "Bombe geplant für: ",
+            customSchedule: "Benutzerdefinierter Zeitplan (TT M JJJJ HH MM)",
             predefinedMessages: [
               "Du bist so faul, sogar eine Raupe wird schneller zum Schmetterling als du dich bewegst!",
               "Dein Gehirn ist wie ein Webbrowser: 12 Tabs offen, 2 eingefroren, und woher kommt diese Musik?",
@@ -295,18 +316,23 @@ var events = require("events");
               "Dein Leben muss eine Reihe von gewonnenen Trostpreisen sein.",
               "Du bist der Grund, warum Leute Bücher zu Partys mitbringen.",
               "Wenn liebenswert ein Verbrechen wäre, würdest du immer noch in Freiheit leben."
-            ]
-        },
-        ru: {
-            enableAntiBan: "Включить Anti-ban",
-            enterMessages: "Введите количество сообщений для бомбы",
-            enterMessage: "Введите сообщение для бомбы",
-            messageBomb: "Бомбить !",
-            funPop: "Веселый поп!",
-            messageSent: "Сообщение бомбы отправлено: ",
-            warning: "Предупреждение: Отправка большого количества сообщений может привести к ограничению учетной записи. Действуйте осторожно.",
-            pleaseEnterValid: "Пожалуйста, введите правильное количество сообщений и текст для бомбы",
-            predefinedMessages: [
+        ]
+    },
+    ru: {
+        enableAntiBan: "Включить Anti-ban",
+        enterMessages: "Введите количество сообщений для бомбы",
+        enterMessage: "Введите сообщение для бомбы",
+        messageBomb: "Бомбить !",
+        funPop: "Веселый поп!",
+        schedule: "Запланировать Бомбу",
+        messageSent: "Сообщение бомбы отправлено: ",
+        warning: "Предупреждение: Отправка большого количества сообщений может привести к ограничению учетной записи. Действуйте осторожно.",
+        pleaseEnterValid: "Пожалуйста, введите правильное количество сообщений и текст для бомбы",
+        invalidDateTime: "Неверный формат даты/времени. Пожалуйста, используйте 'ДД М ГГГГ ЧЧ ММ'",
+        pastDateTime: "Указанное время в прошлом. Пожалуйста, выберите будущее время.",
+        scheduledFor: "Бомба запланирована на: ",
+        customSchedule: "Пользовательское расписание (ДД М ГГГГ ЧЧ ММ)",
+        predefinedMessages: [
               "Ты такой ленивый, что даже гусеница превращается в бабочку быстрее, чем ты шевелишься!",
               "Твой мозг как браузер: 12 вкладок открыто, 2 зависли, и откуда играет музыка?",
               "Если бы я сказал, что у тебя лицо для радио, это было бы оскорблением для всех радиостанций мира.",
@@ -357,18 +383,23 @@ var events = require("events");
               "Твоя жизнь, должно быть, серия побед в номинации «За участие».",
               "Ты - причина, по которой люди берут книги на вечеринки.",
               "Если бы «милая неловкость» была преступлением, ты бы все равно был на свободе."
-            ]
-        },
-        ar: {
-            enableAntiBan: "تمكين مضاد الحظر",
-            enterMessages: "أدخل عدد الرسائل للقصف",
-            enterMessage: "أدخل الرسالة للقصف",
-            messageBomb: "قنبلة !",
-            funPop: "مفاجأة !",
-            messageSent: "تم إرسال الرسائل: ",
-            warning: "تحذير: إرسال عدد كبير من الرسائل قد يؤدي إلى تقييد الحساب. تابع بحذر.",
-            pleaseEnterValid: "الرجاء إدخال عدد صحيح من الرسائل ورسالة للقصف",
-            predefinedMessages: [
+        ]
+    },
+    ar: {
+        enableAntiBan: "تمكين مضاد الحظر",
+        enterMessages: "أدخل عدد الرسائل للقصف",
+        enterMessage: "أدخل الرسالة للقصف",
+        messageBomb: "قنبلة !",
+        funPop: "مفاجأة !",
+        schedule: "جدولة القنبلة",
+        messageSent: "تم إرسال الرسائل: ",
+        warning: "تحذير: إرسال عدد كبير من الرسائل قد يؤدي إلى تقييد الحساب. تابع بحذر.",
+        pleaseEnterValid: "الرجاء إدخال عدد صحيح من الرسائل ورسالة للقصف",
+        invalidDateTime: "تنسيق تاريخ/وقت غير صالح. الرجاء استخدام 'DD M YYYY HH MM'",
+        pastDateTime: "الوقت المحدد في الماضي. الرجاء اختيار وقت مستقبلي.",
+        scheduledFor: "تم جدولة القنبلة لـ: ",
+        customSchedule: "جدول مخصص (DD M YYYY HH MM)",
+        predefinedMessages: [
               "أنت كسول جدًا ، حتى اليرقة تصبح فراشة أسرع من تحركك!",
               "دماغك مثل متصفح الويب: 12 علامة تبويب مفتوحة ، 2 مجمدة ، ومن أين يأتي هذا الصوت؟",
               "إذا قلت إن لديك وجهًا مناسبًا للراديو ، فسيكون ذلك إهانة لبرامج الراديو في كل مكان.",
@@ -418,19 +449,24 @@ var events = require("events");
               "أنت مثل المنارة في البحر - خارج الخدمة وليست ذات فائدة كبيرة.",
               "يجب أن تكون حياتك عبارة عن سلسلة من جوائز المشاركة الفائزة.",
               "أنت السبب الذي يجعل الناس يحضرون الكتب إلى الحفلات.",
-              "إذا كانت كلمة رائع جريمة ، فستظل تعيش حراً."
-            ]
-        },
-        fr: {
-            enableAntiBan: "Activer Anti-ban",
-            enterMessages: "Entrez le nombre de messages à bombarder",
-            enterMessage: "Entrez le message à bombarder",
-            messageBomb: "Bombe !",
-            funPop: "Pop Amusante!",
-            messageSent: "Messages envoyés: ",
-            warning: "Avertissement: Envoyer un grand nombre de messages peut entraîner des restrictions de compte. Continuez avec prudence.",
-            pleaseEnterValid: "Veuillez entrer un nombre valide de messages et un message à bombarder",
-            predefinedMessages: [
+              "إذا كانت كلمة رائع جريمة ، فستظل تعيش حراً." 
+        ]
+    },
+    fr: {
+        enableAntiBan: "Activer Anti-ban",
+        enterMessages: "Entrez le nombre de messages à bombarder",
+        enterMessage: "Entrez le message à bombarder",
+        messageBomb: "Bombe !",
+        funPop: "Pop Amusante!",
+        schedule: "Planifier la Bombe",
+        messageSent: "Messages envoyés: ",
+        warning: "Avertissement: Envoyer un grand nombre de messages peut entraîner des restrictions de compte. Continuez avec prudence.",
+        pleaseEnterValid: "Veuillez entrer un nombre valide de messages et un message à bombarder",
+        invalidDateTime: "Format de date/heure invalide. Veuillez utiliser 'JJ M AAAA HH MM'",
+        pastDateTime: "L'heure spécifiée est dans le passé. Veuillez choisir une heure future.",
+        scheduledFor: "Bombe planifiée pour: ",
+        customSchedule: "Planification personnalisée (JJ M AAAA HH MM)",
+        predefinedMessages: [
               "Tu es tellement paresseux, même une chenille se transforme en papillon plus vite que toi !",
               "Ton cerveau est comme un navigateur web : 12 onglets ouverts, 2 gelés, et d'où vient cette musique ?",
               "Si je te disais que tu as une tête pour la radio, ce serait une insulte aux émissions de radio du monde entier.",
@@ -481,59 +517,90 @@ var events = require("events");
               "Ta vie doit être une série de récompenses de participation gagnantes.",
               "C'est à cause de toi que les gens apportent des livres aux fêtes.",
               "Si être adorablement ringard était un crime, tu serais toujours en liberté."
-            ]
+        ]
+    }
+};
+
+var selectedLanguageKey = "selectedLanguage";
+var selectedLanguage = config.get(selectedLanguageKey, 'en');
+
+function t(key) {
+    return translations[selectedLanguage][key] || translations['en'][key];
+}
+
+
+function displayMessage(message) {
+    console.log(message);
+    longToast(message);
+}
+
+function logActivity(message, count) {
+    console.log(`Sending ${count} messages with content: "${message}"`);
+}
+
+function getRandomizedMessage(originalMessage) {
+    const randomString = Math.random().toString(36).substring(2, 5);
+    return `${originalMessage} #${randomString}`;
+}
+
+function sendBombMessages(message, count, isRandom) {
+    logActivity(message, count);
+
+    var warningDisplayed = config.getBoolean(warningDisplayedConfigId, false);
+
+    if (!warningDisplayed && count > 20 && antiBanEnabled) {
+        displayMessage(t("warning"));
+        config.setBoolean(warningDisplayedConfigId, true, true);
+    }
+
+    for (var i = 0; i < count; i++) {
+        var variedMessage;
+
+        if (antiBanEnabled && isRandom) {
+            variedMessage = getRandomizedMessage(message);
+        } else if (isRandom) {
+            variedMessage = message;
+        } else if (antiBanEnabled) {
+            variedMessage = getRandomizedMessage(message);
+        } else {
+            variedMessage = message;
         }
-    };
 
-    var selectedLanguageKey = "selectedLanguage";
-    var selectedLanguage = config.get(selectedLanguageKey, 'en');
+        messaging.sendChatMessage(conversationId, variedMessage, function () {});
 
-    function displayMessage(message) {
-        console.log(message);
-        longToast(message);
+        if (antiBanEnabled) {
+            var randomDelay = Math.floor(Math.random() * 200) + 100;
+            setTimeout(function() {}, randomDelay);
+        }
+    }
+    
+    displayMessage(t("messageSent") + count + " messages");
+}
+
+
+function scheduleBomb(message, count, dateTimeString) {
+    var parts = dateTimeString.split(" ");
+    if (parts.length !== 5) {
+        displayMessage(t("invalidDateTime"));
+        return;
     }
 
-    function logActivity(message, count) {
-        console.log(`Sending ${count} messages with content: "${message}"`);
+    var targetDate = new Date(parts[2], parts[1] - 1, parts[0], parts[3], parts[4]);
+    var now = new Date();
+    var timeUntilSend = targetDate.getTime() - now.getTime();
+
+    if (timeUntilSend <= 0) {
+        displayMessage(t("pastDateTime"));
+        return;
     }
 
-    function getRandomizedMessage(originalMessage) {
-        const randomString = Math.random().toString(36).substring(2, 5);
-        return `${originalMessage} #${randomString}`;
-    }
+    displayMessage(t("scheduledFor") + targetDate.toString());
 
-    function backgroundTask(milliseconds) {
-        type("java.lang.Thread").newInstance(
-            javaInterfaces.runnable(() => {
-                try {
-                    var okHttpClient = type("okhttp3.OkHttpClient$Builder", true).newInstance()
-                        .followRedirects(false)
-                        .build();
-                    var response = okHttpClient.newCall(type("okhttp3.Request$Builder", true).newInstance().url("https://github.com/").build()).execute();
-                } catch (error) {
-                }
-            })
-        ).start();
-    }
-
-    function sendBombMessages(message, count, isRandom) {
+    setTimeout(function() {
         logActivity(message, count);
-
-        var warningDisplayed = config.getBoolean(warningDisplayedConfigId, false);
-
-        if (!warningDisplayed && count > 20 && antiBanEnabled) {
-            displayMessage(translations[selectedLanguage].warning);
-            config.setBoolean(warningDisplayedConfigId, true, true);
-        }
-
         for (var i = 0; i < count; i++) {
             var variedMessage;
-
-            if (antiBanEnabled && isRandom) {
-                variedMessage = getRandomizedMessage(message);
-            } else if (isRandom) {
-                variedMessage = message;
-            } else if (antiBanEnabled) {
+            if (antiBanEnabled) {
                 variedMessage = getRandomizedMessage(message);
             } else {
                 variedMessage = message;
@@ -542,57 +609,69 @@ var events = require("events");
             messaging.sendChatMessage(conversationId, variedMessage, function () {});
 
             if (antiBanEnabled) {
-                var randomDelay = Math.floor(Math.random() * 4000) + 1000;
-                backgroundTask(randomDelay);
+                var randomDelay = Math.floor(Math.random() * 200) + 100;
+                setTimeout(function() {}, randomDelay);
             }
         }
-        
-        displayMessage(translations[selectedLanguage].messageSent + count + " messages");
-    }
-
-    function createConversationToolboxUI() {
-        im.create("conversationToolbox", function (builder, args) {
-            try {
-                conversationId = args["conversationId"];
+        displayMessage(t("messageSent") + count + " messages");
+    }, timeUntilSend);
+}
 
 
-        builder.textInput(translations[selectedLanguage].enterMessages, "", function (value) {
-            bombCount = parseInt(value, 10) || 0;
-        }).singleLine(true);
+function createConversationToolboxUI() {
+    im.create("conversationToolbox", function (builder, args) {
+        try {
+            conversationId = args["conversationId"];
 
-        builder.textInput(translations[selectedLanguage].enterMessage, "", function (value) {
-            bombMessage = value;
-        }).singleLine(true);
+            builder.textInput(t("enterMessages"), "", function (value) {
+                bombCount = parseInt(value, 10) || 0;
+            }).singleLine(true);
 
-        builder.row(function (builder) {
-            builder.text("🛡️ " + translations[selectedLanguage].enableAntiBan);
-            builder.switch(antiBanEnabled, function (value) {
-                antiBanEnabled = value;
-                config.setBoolean(antiBanConfigId, value, true);
-            });
-        })
-        .arrangement("spaceBetween")
-        .fillMaxWidth()
-        .padding(4);
+            builder.textInput(t("enterMessage"), "", function (value) {
+                bombMessage = value;
+            }).singleLine(true);
 
-        builder.row(function (builder) {
-            builder.button("💥 " + translations[selectedLanguage].messageBomb, function () {
-                if (bombCount > 0 && bombMessage) {
-                    sendBombMessages(bombMessage, bombCount, false);
-                } else {
-                    displayMessage(translations[selectedLanguage].pleaseEnterValid);
-                }
-            });
+            builder.row(function (builder) {
+                builder.text("🛡️ " + t("enableAntiBan"));
+                builder.switch(antiBanEnabled, function (value) {
+                    antiBanEnabled = value;
+                    config.setBoolean(antiBanConfigId, value, true);
+                });
+            })
+            .arrangement("spaceBetween")
+            .fillMaxWidth()
+            .padding(4);
 
-            builder.button("🎈 " + translations[selectedLanguage].funPop, function () {
-                var randomMessage = translations[selectedLanguage].predefinedMessages[Math.floor(Math.random() * translations[selectedLanguage].predefinedMessages.length)];
-                var randomCount = Math.floor(Math.random() * (100 - 20 + 1)) + 20;
-                sendBombMessages(randomMessage, randomCount, true);
-            });
-        })
-        .arrangement("spaceBetween")
-        .fillMaxWidth()
-        .padding(4);
+            builder.row(function (builder) {
+                builder.button("💥 " + t("messageBomb"), function () {
+                    if (bombCount > 0 && bombMessage) {
+                        sendBombMessages(bombMessage, bombCount, false);
+                    } else {
+                        displayMessage(t("pleaseEnterValid"));
+                    }
+                });
+
+                builder.button("🎈 " + t("funPop"), function () {
+                    var randomMessage = t("predefinedMessages")[Math.floor(Math.random() * t("predefinedMessages").length)];
+                        var randomCount = Math.floor(Math.random() * (100 - 20 + 1)) + 20;
+                        sendBombMessages(randomMessage, randomCount, true);
+                    });
+                })
+                .arrangement("spaceBetween")
+                .fillMaxWidth()
+                .padding(4);
+
+                builder.textInput(t("customSchedule"), "", function (value) {
+                    customScheduleTime = value;
+                }).singleLine(true);
+
+                builder.button("📅 " + t("schedule"), function() {
+                    if (bombCount > 0 && bombMessage && customScheduleTime) {
+                        scheduleBomb(bombMessage, bombCount, customScheduleTime);
+                    } else {
+                        displayMessage("Please enter Number of messages, Message and Schedule time.");
+                    }
+                });
 
         var languages = ["English", "Portuguese", "Punjabi", "German", "Russian", "Arabic", "French"];
         var languageCodes = ['en', 'pt', 'pa', 'de', 'ru', 'ar', 'fr'];
