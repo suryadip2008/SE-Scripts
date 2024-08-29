@@ -278,8 +278,8 @@ To download the latest version of the script, choose one of the following option
 ## Message Bomber
 
 - **Name:** message_bomber
-- **Version:** 5.0
-- **Last Updated:** August 14, 2024
+- **Version:** 5.2
+- **Last Updated:** August 29, 2024
 - **Author:** Suryadip Sarkar
 - **Description:** A script for bombing your friends with custom messages. Just for educational purposes. May or May not cause bans.
 
