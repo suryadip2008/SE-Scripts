@@ -1,6 +1,6 @@
 ---
 name: Script Idea
-about: Suggest an new script idea!
+about: Suggest a new script idea!
 title: ''
 labels: "\U0001F4DC Script Idea"
 assignees: suryadip2008

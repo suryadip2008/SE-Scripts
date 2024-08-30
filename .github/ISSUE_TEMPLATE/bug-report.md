@@ -2,7 +2,7 @@
 name: Bug Report
 about: Report any bug that you have encountered!
 title: ''
-labels: "bug, \U0001F4DC Script Idea"
+labels: bug
 assignees: suryadip2008
 
 ---
