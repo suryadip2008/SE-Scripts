@@ -12,12 +12,12 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 
 - [Script Feature Overviews](#script-feature-overviews)
 - [Scheduled Messages](#scheduled-messages)
-- [Custom Toast](#custom-toast)
+- [Message Bomber](#message-bomber)
 - [Greetings Toast](#greetings-toast)
 - [Flexi Quotes](#flexi-quotes)
 - [Custom Reminders](#custom-reminders)
-- [Message Bomber](#message-bomber)
 - [Saved Replies](#saved-replies)
+- [Custom Toast](#custom-toast)
 - [Screenshots](#screenshots)
 - [How to Use](#how-to-use)
 - [Troubleshooting](#troubleshooting)
@@ -41,15 +41,27 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
   
 [Jump to Script Details](#scheduled-messages)
 
-## custom_toast.js
+## message_bomber.js
 
-1. **Custom Message Toast:**
-   - Allows users to enter their favorite message to be displayed as a toast notification, enabling a personalized experience.
+1. **Customizable Message Bombing:**
+   - Users can specify the number of times they want the recipient to receive messages, allowing for tailored message bombing.
+  
+2. **Anti-Ban Features:**
+   - New Anti-Ban Features have been added! To use the new anti-ban features, click on the toolbox, then click on Message Bomber and turn on "Enable Anti-Ban".
 
-2. **Testing Functionality:**
-   - Added a "Test Custom Script" button below the text input field. This allows users to test the changes they have made without needing to reopen Snapchat repeatedly, providing immediate feedback on their custom messages.
+3. **Custom Message Input:**
+   - Users can enter custom messages to be used for the message bombing, providing flexibility in content.
+  
+4. **Schedule Bomb Feature:**
+   - Now you can schedule your bomb message in the format DD M YYYY HH MM. 
 
-[Jump to Script Details](#custom-toast)
+5. **Enhanced User Experience:**
+   - Added icons for the "Message Bomb" button, improving visual appeal and user interaction.
+  
+6. **Translations:**
+   - Added Translations for 7 languages i.e. English, Portugese, Punjabi, French, German, Russian & Arabic!
+  
+[Jump to Script Details](#message-bomber)
 
 ## greetings_toast.js
 
@@ -120,28 +132,6 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 
 [Jump to Script Details](#custom-reminders)
 
-## message_bomber.js
-
-1. **Customizable Message Bombing:**
-   - Users can specify the number of times they want the recipient to receive messages, allowing for tailored message bombing.
-  
-2. **Anti-Ban Features:**
-   - New Anti-Ban Features have been added! To use the new anti-ban features, click on the toolbox, then click on Message Bomber and turn on "Enable Anti-Ban".
-
-2. **Custom Message Input:**
-   - Users can enter custom messages to be used for the message bombing, providing flexibility in content.
-  
-3. **Schedule Bomb Feature:**
-   - Now you can schedule your bomb message in the format DD M YYYY HH MM. 
-
-4. **Enhanced User Experience:**
-   - Added icons for the "Message Bomb" button, improving visual appeal and user interaction.
-  
-5. **Translations:**
-   - Added Translations for 7 languages i.e. English, Portugese, Punjabi, French, German, Russian & Arabic!
-  
-[Jump to Script Details](#message-bomber)
-
 ## saved_replies.js
 
 1. **Save Replies Functionality:**
@@ -163,6 +153,16 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
    - New Icons: Added icons for each button: Add, Delete, and Send for better visual representation.
   
 [Jump to Script Details](#saved-replies)
+
+## custom_toast.js
+
+1. **Custom Message Toast:**
+   - Allows users to enter their favorite message to be displayed as a toast notification, enabling a personalized experience.
+
+2. **Testing Functionality:**
+   - Added a "Test Custom Script" button below the text input field. This allows users to test the changes they have made without needing to reopen Snapchat repeatedly, providing immediate feedback on their custom messages.
+
+[Jump to Script Details](#custom-toast)
 
 # Scripts
 
@@ -190,27 +190,27 @@ To download the latest version of the script, choose one of the following option
 
    [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/scheduled_messages.js)
 
-## Custom Toast
+## Message Bomber
 
-- **Name:** custom_toast
-- **Version:** 1.5
-- **Last Updated:** July 20, 2024
-- **Author:** Gabriel Modz, Jacob Thomas & Suryadip Sarkar
-- **Description:** A Script that shows a custom toast on the startup of Snapchat.
+- **Name:** message_bomber
+- **Version:** 5.2
+- **Last Updated:** August 29, 2024
+- **Author:** Suryadip Sarkar
+- **Description:** A script for bombing your friends with custom messages. Just for educational purposes. May or May not cause bans.
 
 To download the latest version of the script, choose one of the following options:
 
 1. **Download from GitHub:**
 
-   Click the link below to download `Custom Toast` directly from GitHub:
+   Click the link below to download `Message Bomber` directly from GitHub:
 
-   [Download Custom Toast](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/custom_toast.js)
+   [Download Message Bomber](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/message_bomber.js)
 
 2. **Import from URL:**
 
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/custom_toast.js)
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/message_bomber.js)
 
 ## Greetings Toast
 
@@ -278,28 +278,6 @@ To download the latest version of the script, choose one of the following option
 
    [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/custom_reminders.js)
 
-## Message Bomber
-
-- **Name:** message_bomber
-- **Version:** 5.2
-- **Last Updated:** August 29, 2024
-- **Author:** Suryadip Sarkar
-- **Description:** A script for bombing your friends with custom messages. Just for educational purposes. May or May not cause bans.
-
-To download the latest version of the script, choose one of the following options:
-
-1. **Download from GitHub:**
-
-   Click the link below to download `Message Bomber` directly from GitHub:
-
-   [Download Message Bomber](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/message_bomber.js)
-
-2. **Import from URL:**
-
-   Copy & paste this url in the `Import from URL` button in the scripts tab.
-
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/message_bomber.js)
-
 ## Saved Replies
 
 - **Name:** saved_replies
@@ -321,6 +299,28 @@ To download the latest version of the script, choose one of the following option
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
    [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/saved_replies.js)
+
+## Custom Toast
+
+- **Name:** custom_toast
+- **Version:** 1.5
+- **Last Updated:** July 20, 2024
+- **Author:** Gabriel Modz, Jacob Thomas & Suryadip Sarkar
+- **Description:** A Script that shows a custom toast on the startup of Snapchat.
+
+To download the latest version of the script, choose one of the following options:
+
+1. **Download from GitHub:**
+
+   Click the link below to download `Custom Toast` directly from GitHub:
+
+   [Download Custom Toast](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/custom_toast.js)
+
+2. **Import from URL:**
+
+   Copy & paste this url in the `Import from URL` button in the scripts tab.
+
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/custom_toast.js)
 
 
 ## Screenshots
