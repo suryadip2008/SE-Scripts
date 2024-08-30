@@ -130,11 +130,14 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 
 2. **Custom Message Input:**
    - Users can enter custom messages to be used for the message bombing, providing flexibility in content.
+  
+3. **Schedule Bomb Feature:**
+   - Now you can schedule your bomb message in the format DD M YYYY HH MM. 
 
-3. **Enhanced User Experience:**
+4. **Enhanced User Experience:**
    - Added icons for the "Message Bomb" button, improving visual appeal and user interaction.
   
-4. **Translations:**
+5. **Translations:**
    - Added Translations for 7 languages i.e. English, Portugese, Punjabi, French, German, Russian & Arabic!
   
 [Jump to Script Details](#message-bomber)
@@ -166,8 +169,8 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 ## Scheduled Messages
 
 - **Name:** scheduled_messages
-- **Version:** 2.0
-- **Last Updated:** August 26, 2024
+- **Version:** 2.5
+- **Last Updated:** August 30, 2024
 - **Author:** Suryadip Sarkar
 - **Credits:** rhunk & Jacob Thomas
 - **Requirements:** Only works on SE versions released after 20/08/24
