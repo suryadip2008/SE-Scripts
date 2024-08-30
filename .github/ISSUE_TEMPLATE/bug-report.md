@@ -2,7 +2,7 @@
 name: Bug Report
 about: Report any bug that you have encountered!
 title: ''
-labels: bug
+labels: "\U0001FAB2 Bug"
 assignees: suryadip2008
 
 ---
