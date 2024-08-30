@@ -2,7 +2,7 @@
 name: Script Idea
 about: Suggest a new script idea!
 title: ''
-labels: "\U0001F4DC Script Idea"
+labels: "\U0001F4A1 Script Idea"
 assignees: suryadip2008
 
 ---
