@@ -1,8 +1,8 @@
 ---
 name: Bug Report
-about: Create a report to help us improve
+about: Report any bug that you have encountered!
 title: ''
-labels: bug
+labels: "bug, \U0001F4DC Script Idea"
 assignees: suryadip2008
 
 ---
