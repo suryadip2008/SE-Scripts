@@ -2,7 +2,7 @@
 // name: scheduled_messages
 // displayName: Scheduled Messages
 // description: A Script That Allows For Scheduling Messages and Recurring Messages. Please don't remove Snapchat from the background when your message is scheduled.
-// version: 2.0
+// version: 2.5
 // author: Suryadip Sarkar
 // credits: rhunk & Jacob Thomas
 // minSEVersion: Versions after 20/08/24
@@ -14,6 +14,28 @@ var config = require("config");
 
 (function () {
   'use strict';
+
+  function getAuthorToastCurrentTime() {
+    return new Date().getTime();
+  }
+
+  function shouldShowAuthorToast() {
+    var currentTime = getAuthorToastCurrentTime();
+    var nextAuthorToastTime = config.getLong("nextAuthorToastTime", 0); 
+
+    if (currentTime >= nextAuthorToastTime || nextAuthorToastTime === 0) {
+        var oneDayInMillis = 24 * 60 * 60 * 1000;
+        config.setLong("nextAuthorToastTime", currentTime + oneDayInMillis, true);
+        return true;
+    }
+    return false;
+  }
+
+  function showAuthorStartupToast() {
+    if (shouldShowAuthorToast()) {
+        shortToast("Made by Suryadip Sarkar");
+    }
+  }
 
   var inputMessage = "";
   var customScheduleTime = "";
@@ -332,6 +354,7 @@ var config = require("config");
 
   function startRecurringSchedule() {
     isRecurringScheduleActive = true;
+    config.set("conversationId", conversationId, true);
     config.setBoolean("isRecurringScheduleActive", true, true);
     config.set("recurringMessage", recurringMessage, true);
     config.set("recurringInterval", recurringInterval, true);
@@ -354,27 +377,48 @@ var config = require("config");
 
   function calculateNextRecurringTime() {
     var now = new Date();
+    var next = new Date(now);
     switch(recurringInterval) {
-      case "daily":
-        return now.setDate(now.getDate() + 1);
-      case "weekly":
-        return now.setDate(now.getDate() + 7);
-      case "monthly":
-        return now.setMonth(now.getMonth() + 1);
-    }
+    case "daily":
+      next.setDate(now.getDate() + 1);
+      break;
+    case "weekly":
+      next.setDate(now.getDate() + 7);
+      break;
+    case "monthly":
+      next.setMonth(now.getMonth() + 1);
+      break;
+  }
+    return next.getTime();
   }
 
   function checkAndSendRecurringMessage() {
     if (isRecurringScheduleActive) {
-      var currentTime = new Date().getTime();
+      var currentTime = Date.now();
       var nextRecurringTime = config.getLong("nextRecurringTime", 0);
 
+      console.log("Current time:", new Date(currentTime).toString());
+      console.log("Next recurring time:", new Date(nextRecurringTime).toString());
+
       if (currentTime >= nextRecurringTime) {
-        sendMessage(conversationId, config.get("recurringMessage", ""));
-        config.setLong("nextRecurringTime", calculateNextRecurringTime(), true);
+        conversationId = config.get("conversationId");
+        if (conversationId) {
+          sendMessage(conversationId, config.get("recurringMessage", ""));
+        
+          var newNextRecurringTime = calculateNextRecurringTime();
+          config.setLong("nextRecurringTime", newNextRecurringTime, true);
+        
+          console.log("Message sent. New next recurring time:", new Date(newNextRecurringTime).toString());
+        } else {
+          console.error("Error: conversationId not found for recurring message.");
       }
+    } else {
+        console.log("Not yet time to send recurring message.");
     }
+  } else {
+      console.log("Recurring schedule is not active.");
   }
+}
 
   function createConversationToolboxUI() {
     im.create("conversationToolbox", function (builder, args) {
@@ -526,11 +570,12 @@ var config = require("config");
   start();
 
   module.onSnapMainActivityCreate = activity => {
+    showAuthorStartupToast();
     isRecurringScheduleActive = config.getBoolean("isRecurringScheduleActive", false);
     recurringMessage = config.get("recurringMessage", "");
     recurringInterval = config.get("recurringInterval", "daily");
 
-    setInterval(checkAndSendRecurringMessage, 60000);
+    checkAndSendRecurringMessage();
   };
 
 })();
