@@ -2,7 +2,7 @@
 // name: message_bomber
 // displayName: Message Bomber
 // description: A script for bombing your friends with custom messages. Just for educational purposes. May or may not cause bans.
-// version: 5.2
+// version: 5.3
 // author: Suryadip Sarkar
 // minSEVersion: Anti-Ban works only on versions after 20/08/24
 // ==/SE_module==
@@ -59,7 +59,7 @@ var events = require("events");
             schedule: "Schedule Bomb",
             messageSent: "Message bomb sent: ",
             warning: "Warning: Sending a large number of messages may lead to account restrictions. Proceed with caution.",
-            pleaseEnterValid: "Please enter a valid number of messages and a message to bomb",
+            pleaseEnterValid: "Please double-check that you've entered information in the correct fields.",
             invalidDateTime: "Invalid date/time format. Please use 'DD M YYYY HH MM'",
             pastDateTime: "The specified time is in the past. Please choose a future time.",
             scheduledFor: "Bomb Scheduled for: ",
@@ -126,7 +126,7 @@ var events = require("events");
             schedule: "Agendar Bomba",
             messageSent: "Mensagens enviadas: ",
             warning: "Aviso: Enviar um grande número de mensagens pode levar a restrições na conta. Prossiga com cautela.",
-            pleaseEnterValid: "Digite um número válido de mensagens e uma mensagem para bombardeio",
+            pleaseEnterValid: "Por favor, verifique novamente se você inseriu as informações nos campos corretos.",
             invalidDateTime: "Formato de data/hora inválido. Use 'DD M YYYY HH MM'",
             pastDateTime: "O horário especificado está no passado. Escolha um horário futuro.",
             scheduledFor: "Bomba agendada para: ",
@@ -193,7 +193,7 @@ var events = require("events");
             schedule: "ਸ਼ਡਿਊਲ ਬੰਬ",
             messageSent: "ਸੁਨੇਹੇ ਭੇਜੇ ਗਏ: ",
             warning: "ਚੇਤਾਵਨੀ: ਵੱਡੀ ਗਿਣਤੀ ਵਿੱਚ ਸੁਨੇਹੇ ਭੇਜਣ ਨਾਲ ਖਾਤੇ ਦੀਆਂ ਪਾਬੰਦੀਆਂ ਹੋ ਸਕਦੀਆਂ ਹਨ। ਸਾਵਧਾਨ ਰਹੋ.",
-            pleaseEnterValid: "ਕਿਰਪਾ ਕਰਕੇ ਸੁਨੇਹੇ ਅਤੇ ਬੰਬ ਲਈ ਇੱਕ ਸੁਨੇਹਾ ਜਾਰੀ ਕਰੋ",
+            pleaseEnterValid: "ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਜਾਂਚ ਕਰੋ ਕਿ ਤੁਸੀਂ ਸਹੀ ਖੇਤਰਾਂ ਵਿੱਚ ਜਾਣਕਾਰੀ ਦਰਜ ਕੀਤੀ ਹੈ।",
             invalidDateTime: "ਅਵੈਧ ਮਿਤੀ/ਸਮਾਂ ਫਾਰਮੈਟ। ਕਿਰਪਾ ਕਰਕੇ 'DD M YYYY HH MM' ਵਰਤੋ",
             pastDateTime: "ਨਿਰਧਾਰਤ ਸਮਾਂ ਅਤੀਤ ਵਿੱਚ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਭਵਿੱਖ ਦਾ ਸਮਾਂ ਚੁਣੋ।",
             scheduledFor: "ਬੰਬ ਲਈ ਤਹਿ ਕੀਤਾ ਗਿਆ ਹੈ: ",
@@ -260,7 +260,7 @@ var events = require("events");
             schedule: "Bombe Planen",
             messageSent: "Nachrichtenbombing gesendet: ",
             warning: "Warnung: Das Senden einer großen Anzahl von Nachrichten kann zu Kontobeschränkungen führen. Bitte vorsichtig fortfahren.",
-            pleaseEnterValid: "Bitte geben Sie eine gültige Anzahl von Nachrichten und eine Nachricht zum Bombardieren ein",
+            pleaseEnterValid: "Bitte überprüfen Sie noch einmal, ob Sie die Informationen in die richtigen Felder eingegeben haben.",
             invalidDateTime: "Ungültiges Datum/Zeitformat. Bitte verwenden Sie 'TT M JJJJ HH MM'",
             pastDateTime: "Der angegebene Zeitpunkt liegt in der Vergangenheit. Bitte wählen Sie einen zukünftigen Zeitpunkt.",
             scheduledFor: "Bombe geplant für: ",
@@ -327,7 +327,7 @@ var events = require("events");
         schedule: "Запланировать Бомбу",
         messageSent: "Сообщение бомбы отправлено: ",
         warning: "Предупреждение: Отправка большого количества сообщений может привести к ограничению учетной записи. Действуйте осторожно.",
-        pleaseEnterValid: "Пожалуйста, введите правильное количество сообщений и текст для бомбы",
+        pleaseEnterValid: "Пожалуйста, перепроверьте, что вы ввели информацию в правильные поля.",
         invalidDateTime: "Неверный формат даты/времени. Пожалуйста, используйте 'ДД М ГГГГ ЧЧ ММ'",
         pastDateTime: "Указанное время в прошлом. Пожалуйста, выберите будущее время.",
         scheduledFor: "Бомба запланирована на: ",
@@ -394,7 +394,7 @@ var events = require("events");
         schedule: "جدولة القنبلة",
         messageSent: "تم إرسال الرسائل: ",
         warning: "تحذير: إرسال عدد كبير من الرسائل قد يؤدي إلى تقييد الحساب. تابع بحذر.",
-        pleaseEnterValid: "الرجاء إدخال عدد صحيح من الرسائل ورسالة للقصف",
+        pleaseEnterValid: "يرجى التحقق مرة أخرى من إدخال المعلومات في الحقول الصحيحة.",
         invalidDateTime: "تنسيق تاريخ/وقت غير صالح. الرجاء استخدام 'DD M YYYY HH MM'",
         pastDateTime: "الوقت المحدد في الماضي. الرجاء اختيار وقت مستقبلي.",
         scheduledFor: "تم جدولة القنبلة لـ: ",
@@ -461,7 +461,7 @@ var events = require("events");
         schedule: "Planifier la Bombe",
         messageSent: "Messages envoyés: ",
         warning: "Avertissement: Envoyer un grand nombre de messages peut entraîner des restrictions de compte. Continuez avec prudence.",
-        pleaseEnterValid: "Veuillez entrer un nombre valide de messages et un message à bombarder",
+        pleaseEnterValid: "Veuillez vérifier à nouveau que vous avez saisi les informations dans les champs appropriés.",
         invalidDateTime: "Format de date/heure invalide. Veuillez utiliser 'JJ M AAAA HH MM'",
         pastDateTime: "L'heure spécifiée est dans le passé. Veuillez choisir une heure future.",
         scheduledFor: "Bombe planifiée pour: ",
@@ -623,12 +623,12 @@ function createConversationToolboxUI() {
         try {
             conversationId = args["conversationId"];
 
-            builder.textInput(t("enterMessages"), "", function (value) {
-                bombCount = parseInt(value, 10) || 0;
-            }).singleLine(true);
-
             builder.textInput(t("enterMessage"), "", function (value) {
                 bombMessage = value;
+            }).singleLine(true);
+            
+            builder.textInput(t("enterMessages"), "", function (value) {
+                bombCount = parseInt(value, 10) || 0;
             }).singleLine(true);
 
             builder.row(function (builder) {
