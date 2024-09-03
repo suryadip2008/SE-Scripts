@@ -2,7 +2,7 @@
 // name: message_bomber
 // displayName: Message Bomber
 // description: A script for bombing your friends with custom messages. Just for educational purposes. May or may not cause bans.
-// version: 5.3
+// version: 5.4
 // author: Suryadip Sarkar
 // minSEVersion: Anti-Ban works only on versions after 20/08/24
 // ==/SE_module==
@@ -40,6 +40,14 @@ var events = require("events");
             shortToast("Made by Suryadip Sarkar");
         }
     }
+
+    var owner = "suryadip2008";
+    var repo = "SE-Scripts";
+    var scriptName = "message_bomber";
+    var currentVersion = "v5.4";
+    let updateAvailable = false;
+
+    var versionJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/version.json`;
 
     var conversationId = null;
     var bombCount = 0;
@@ -626,7 +634,7 @@ function createConversationToolboxUI() {
             builder.textInput(t("enterMessage"), "", function (value) {
                 bombMessage = value;
             }).singleLine(true);
-            
+
             builder.textInput(t("enterMessages"), "", function (value) {
                 bombCount = parseInt(value, 10) || 0;
             }).singleLine(true);
@@ -653,49 +661,72 @@ function createConversationToolboxUI() {
 
                 builder.button("🎈 " + t("funPop"), function () {
                     var randomMessage = t("predefinedMessages")[Math.floor(Math.random() * t("predefinedMessages").length)];
-                        var randomCount = Math.floor(Math.random() * (100 - 20 + 1)) + 20;
-                        sendBombMessages(randomMessage, randomCount, true);
-                    });
-                })
-                .arrangement("spaceBetween")
-                .fillMaxWidth()
-                .padding(4);
-
-                builder.textInput(t("customSchedule"), "", function (value) {
-                    customScheduleTime = value;
-                }).singleLine(true);
-
-                builder.button("📅 " + t("schedule"), function() {
-                    if (bombCount > 0 && bombMessage && customScheduleTime) {
-                        scheduleBomb(bombMessage, bombCount, customScheduleTime);
-                    } else {
-                        displayMessage("Please enter Number of messages, Message and Schedule time.");
-                    }
+                    var randomCount = Math.floor(Math.random() * (100 - 20 + 1)) + 20;
+                    sendBombMessages(randomMessage, randomCount, true);
                 });
+            })
+            .arrangement("spaceBetween")
+            .fillMaxWidth()
+            .padding(4);
 
-        var languages = ["English", "Portuguese", "Punjabi", "German", "Russian", "Arabic", "French"];
-        var languageCodes = ['en', 'pt', 'pa', 'de', 'ru', 'ar', 'fr'];
-        var oldSelectedLanguage = config.get(selectedLanguageKey, 'en');
-        var oldSelectedIndex = languageCodes.indexOf(oldSelectedLanguage);
+            builder.textInput(t("customSchedule"), "", function (value) {
+                customScheduleTime = value;
+            }).singleLine(true);
 
-        builder.row(function (builder) {
-            var text = builder.text("Language: " + languages[oldSelectedIndex]);
-            builder.slider(0, languages.length - 1, languages.length - 1, oldSelectedIndex, function (value) {
-                var newLanguage = languageCodes[value];
-                text.label("Language: " + languages[value]);
-                config.set(selectedLanguageKey, newLanguage, true);
-                selectedLanguage = newLanguage;
-                createConversationToolboxUI();
+            builder.button("📅 " + t("schedule"), function() {
+                if (bombCount > 0 && bombMessage && customScheduleTime) {
+                    scheduleBomb(bombMessage, bombCount, customScheduleTime);
+                } else {
+                    displayMessage("Please enter Number of messages, Message and Schedule time.");
+                }
             });
-        })
-        .arrangement("spaceBetween")
-        .fillMaxWidth()
-        .padding(4);
 
-    } catch (error) {
-        console.error("Error in createConversationToolboxUI: " + JSON.stringify(error));
-    }
-        });
+            var languages = ["English", "Portuguese", "Punjabi", "German", "Russian", "Arabic", "French"];
+            var languageCodes = ['en', 'pt', 'pa', 'de', 'ru', 'ar', 'fr'];
+            var oldSelectedLanguage = config.get(selectedLanguageKey, 'en');
+            var oldSelectedIndex = languageCodes.indexOf(oldSelectedLanguage);
+
+            builder.row(function (builder) {
+                var text = builder.text("Language: " + languages[oldSelectedIndex]);
+                builder.slider(0, languages.length - 1, languages.length - 1, oldSelectedIndex, function (value) {
+                    var newLanguage = languageCodes[value];
+                    text.label("Language: " + languages[value]);
+                    config.set(selectedLanguageKey, newLanguage, true);
+                    selectedLanguage = newLanguage;
+                    createConversationToolboxUI();
+                });
+            })
+            .arrangement("spaceBetween")
+            .fillMaxWidth()
+            .padding(4);
+
+            builder.row(function (builder) {
+                builder.text("⚙️ v5.4")
+                    .fontSize(12)
+                    .padding(4);
+
+                builder.text("👨‍💻 Made By Suryadip Sarkar")
+                    .fontSize(12)
+                    .padding(4);
+            })
+            .arrangement("spaceBetween")
+            .alignment("centerVertically")
+            .fillMaxWidth();
+
+            if (updateAvailable) { 
+                builder.row(function (builder) {
+                    builder.text("📢 A new update is available! Please visit the scripts repository.")
+                        .fontSize(12)
+                        .padding(4);
+                })
+                .arrangement("center") 
+                .fillMaxWidth();
+            }
+
+        } catch (error) {
+            console.error("Error in createConversationToolboxUI: " + JSON.stringify(error));
+        }
+    });
 }
 
     function getIfAntiBanEnabled() {
@@ -708,6 +739,22 @@ function createConversationToolboxUI() {
 
     module.onSnapMainActivityCreate = activity => {
         showStartupToast();
+        networking.getUrl(versionJsonUrl, (error, response) => {
+            if (error) {
+                console.error("Error fetching version.json:", error);
+                return;
+            }
+            try {
+                var versions = JSON.parse(response);
+                var latestVersion = versions[scriptName];
+                if (currentVersion !== latestVersion) {
+                    longToast("A new version of message bomber is available!");
+                    updateAvailable = true;
+                }
+            } catch (e) {
+                console.error("Error parsing version.json:", e);
+            }
+        });
     }
 
     function start() {
