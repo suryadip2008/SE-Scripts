@@ -31,7 +31,7 @@ var events = require("events");
     var owner = "suryadip2008";
     var repo = "SE-Scripts";
     var scriptName = "message_bomber";
-    var currentVersion = "v5.4 RE";
+    var currentVersion = "v5.5";
     let updateAvailable = false;
 
     var versionJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/version.json`;
@@ -47,7 +47,7 @@ var events = require("events");
                 var versions = JSON.parse(response);
                 var latestVersion = versions[scriptName];
                 if (currentVersion !== latestVersion) {
-                    longToast("A new version of message bomber is available!");
+                    longToast("A new version of message bomber is available! Please refresh the scripts page.");
                     updateAvailable = true;
                 }
             } catch (e) {
@@ -732,7 +732,7 @@ function createConversationToolboxUI() {
             .padding(4);
 
             builder.row(function (builder) {
-                builder.text("⚙️ v5.4")
+                builder.text("⚙️ v5.5")
                     .fontSize(12)
                     .padding(4);
 
@@ -746,7 +746,7 @@ function createConversationToolboxUI() {
 
             if (updateAvailable) { 
                 builder.row(function (builder) {
-                    builder.text("📢 A new update is available! Please reinstall the script to update.")
+                    builder.text("📢 A new update is available! Please refresh the scripts page & then click on Update Module.")
                         .fontSize(12)
                         .padding(4);
                 })
