@@ -20,6 +20,12 @@ var events = require("events");
     'use strict';
 
     var goodbyePrompt = "Sorry to see you go :( I hope you liked my script :D";
+    var hasShownWelcome = "hasShownWelcome";
+    
+    if (!config.getBoolean(hasShownWelcome, false)) {
+        longToast("Thank you for installing my script! Hope you like it :D");
+        config.setBoolean(hasShownWelcome, true, true);
+    }
 
     function getCurrentTime() {
         return new Date().getTime();
@@ -740,7 +746,8 @@ function createConversationToolboxUI() {
     }
 
     module.onUnload = () => {
-    longToast(goodbyePrompt);
+        longToast(goodbyePrompt);
+        config.setBoolean(hasShownWelcome, false, true);
     }
 
     module.onSnapMainActivityCreate = activity => {
