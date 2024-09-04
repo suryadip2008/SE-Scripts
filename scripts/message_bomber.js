@@ -2,7 +2,7 @@
 // name: message_bomber
 // displayName: Message Bomber
 // description: A script for bombing your friends with custom messages. Just for educational purposes. May or may not cause bans.
-// version: 5.5
+// version: 5.4 RE
 // updateUrl: https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/message_bomber.js
 // author: Suryadip Sarkar
 // minSEVersion: Anti-Ban works only on versions after 20/08/24
