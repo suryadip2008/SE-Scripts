@@ -2,7 +2,7 @@
 // name: message_bomber
 // displayName: Message Bomber
 // description: A script for bombing your friends with custom messages. Just for educational purposes. May or may not cause bans.
-// version: 5.4
+// version: 5.4 RE
 // author: Suryadip Sarkar
 // minSEVersion: Anti-Ban works only on versions after 20/08/24
 // ==/SE_module==
@@ -27,35 +27,57 @@ var events = require("events");
         config.setBoolean(hasShownWelcome, true, true);
     }
 
-    function getCurrentTime() {
-        return new Date().getTime();
-    }
-
-    function shouldShowToast() {
-        var currentTime = getCurrentTime();
-        var nextToastTime = config.getLong("nextToastTime", 0); 
-
-        if (currentTime >= nextToastTime || nextToastTime === 0) {
-            var oneDayInMillis = 24 * 60 * 60 * 1000;
-            config.setLong("nextToastTime", currentTime + oneDayInMillis, true);
-            return true;
-        }
-        return false;
-    }
-
-    function showStartupToast() {
-        if (shouldShowToast()) {
-            shortToast("Made by Suryadip Sarkar");
-        }
-    }
-
     var owner = "suryadip2008";
     var repo = "SE-Scripts";
     var scriptName = "message_bomber";
-    var currentVersion = "v5.4";
+    var currentVersion = "v5.4 RE";
     let updateAvailable = false;
 
     var versionJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/version.json`;
+    var messagesJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/messages.json`;
+
+    function checkForNewVersion() {
+        networking.getUrl(versionJsonUrl, (error, response) => {
+            if (error) {
+                console.error("Error fetching version.json:", error);
+                return;
+            }
+            try {
+                var versions = JSON.parse(response);
+                var latestVersion = versions[scriptName];
+                if (currentVersion !== latestVersion) {
+                    longToast("A new version of message bomber is available!");
+                    updateAvailable = true;
+                }
+            } catch (e) {
+                console.error("Error parsing version.json:", e);
+            }
+        });
+    }
+    
+    function checkForNewMessages() {
+        networking.getUrl(messagesJsonUrl, (error, response) => {
+            if (error) {
+                console.error("Error fetching messages.json:", error);
+                return;
+            }
+            try {
+                var messages = JSON.parse(response);
+                for (var i = 0; i < messages.length; i++) {
+                    var message = messages[i];
+                    var messageId = message.id;
+                    if (!config.getBoolean(`message_${messageId}`, false)) {
+                        longToast(message.text);
+                        config.setBoolean(`message_${messageId}`, true);
+                        config.save();
+                        break;
+                    }
+                }
+            } catch (e) {
+                console.error("Error parsing messages.json:", e);
+            }
+        });
+    }
 
     var conversationId = null;
     var bombCount = 0;
@@ -723,7 +745,7 @@ function createConversationToolboxUI() {
 
             if (updateAvailable) { 
                 builder.row(function (builder) {
-                    builder.text("📢 A new update is available! Please visit the scripts repository.")
+                    builder.text("📢 A new update is available! Please reinstall the script to update.")
                         .fontSize(12)
                         .padding(4);
                 })
@@ -751,23 +773,8 @@ function createConversationToolboxUI() {
     }
 
     module.onSnapMainActivityCreate = activity => {
-        showStartupToast();
-        networking.getUrl(versionJsonUrl, (error, response) => {
-            if (error) {
-                console.error("Error fetching version.json:", error);
-                return;
-            }
-            try {
-                var versions = JSON.parse(response);
-                var latestVersion = versions[scriptName];
-                if (currentVersion !== latestVersion) {
-                    longToast("A new version of message bomber is available!");
-                    updateAvailable = true;
-                }
-            } catch (e) {
-                console.error("Error parsing version.json:", e);
-            }
-        });
+        checkForNewVersion(); 
+        checkForNewMessages();
     }
 
     function start() {
