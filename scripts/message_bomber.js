@@ -19,6 +19,8 @@ var events = require("events");
 (function () {
     'use strict';
 
+    var goodbyePrompt = "Sorry to see you go :( I hope you liked my script :D";
+
     function getCurrentTime() {
         return new Date().getTime();
     }
@@ -735,6 +737,10 @@ function createConversationToolboxUI() {
 
     function initializeWarningDisplayed() {
         config.setBoolean(warningDisplayedConfigId, false, true);
+    }
+
+    module.onUnload = () => {
+    longToast(goodbyePrompt);
     }
 
     module.onSnapMainActivityCreate = activity => {
