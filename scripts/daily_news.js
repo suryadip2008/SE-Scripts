@@ -38,7 +38,7 @@ function checkForNewVersion() {
             var versions = JSON.parse(response);
             var latestVersion = versions[scriptName];
             if (currentVersion !== latestVersion) {
-                longToast("A new version of scheduled messages is available! Please refresh the scripts page.");
+                longToast("A new version of daily news is available! Please refresh the scripts page.");
                 updateAvailable = true;
             }
         } catch (e) {
