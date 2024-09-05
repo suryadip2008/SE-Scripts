@@ -12,14 +12,22 @@ url = ('https://newsapi.org/v2/everything?'
 response = requests.get(url)
 news_data = response.json()
 
-# Extract headlines (only titles)
-headlines = [article['title'] for article in news_data['articles']]
+if news_data['status'] != 'ok':
+    print(f"API returned an error: {news_data.get('message', 'Unknown error')}")
 
-# Prepare the JSON data
-news_json = {"headlines": headlines}
+# Print the entire response for debugging
+print(news_data)  # Check if the API returns data
 
-# Save the headlines to networking/news.json
-with open('networking/news.json', 'w') as f:
-    json.dump(news_json, f, indent=4)
+# Extract headlines (only titles) if articles are present
+if 'articles' in news_data and len(news_data['articles']) > 0:
+    headlines = [article['title'] for article in news_data['articles']]
 
-print("news.json file updated with latest headlines.")
+    # Prepare the JSON data
+    news_json = {"headlines": headlines}
+
+    # Save the headlines to networking/news.json
+    with open('networking/news.json', 'w') as f:
+        json.dump(news_json, f, indent=4)
+    print("news.json file updated with latest headlines.")
+else:
+    print("No articles found or API error.")
