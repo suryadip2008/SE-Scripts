@@ -1,0 +1,33 @@
+name: Update News Headlines Daily
+
+on:
+  schedule:
+    - cron: '30 3 * * *'  # Runs daily at 9:00 AM IST (3:30 AM UTC)
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12.5'
+
+    - name: Install dependencies
+      run: |
+        pip install requests
+
+    - name: Run the script to update news.json
+      run: python networking/update_news.py
+
+    - name: Commit changes
+      run: |
+        git config --local user.name "suryadip2008"
+        git config --local user.email "suryadip.2008@gmail.com"
+        git add networking/news.json
+        git commit -m "Update networking/news.json with latest news"
+        git push
