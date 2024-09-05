@@ -2,7 +2,8 @@ name: Update News Headlines Daily
 
 on:
   schedule:
-    - cron: '40 9 * * *'  # Runs daily at 15:10 PM IST (9:40 AM UTC)
+    - cron: '30 3 * * *'  # Runs daily at 9:00 AM IST (3:30 AM UTC)
+  workflow_dispatch:  # Allow manual trigger
 
 jobs:
   update-news:
