@@ -2,10 +2,8 @@ import requests
 import json
 
 # API endpoint and parameters
-url = ('https://newsapi.org/v2/everything?'
-       'q=Apple&'
-       'from=2024-09-05&'
-       'sortBy=popularity&'
+url = ('https://newsapi.org/v2/top-headlines?'
+       'country=us&'
        'apiKey=73309e4f35f649eb90fdf02c81c5bcd6')
 
 # Fetch the news data
