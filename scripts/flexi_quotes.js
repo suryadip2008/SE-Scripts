@@ -97,7 +97,7 @@ function showQuote(activity, quote, fontSize, fontColor, useToast) {
             });
             myDialog.show();
         }
-    }));
+    });
 }
 
 function fetchAndShowQuote(activity, callback) {
