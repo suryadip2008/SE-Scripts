@@ -2,7 +2,7 @@
 // name: flexi_quotes
 // displayName: FlexiQuote: Customizable Motivation
 // description: A script that shows customizable motivation quotes on Snapchat startup, with options for dialog or toast notifications.
-// version: 5.0
+// version: 5.0 
 // updateUrl: https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/flexi_quotes.js
 // author: Suryadip Sarkar & Jacob Thomas
 // ==/SE_module==
@@ -18,7 +18,7 @@ var events = require("events");
 
 var goodbyePrompt = "Sorry to see you go :( I hope you liked my script :D";
 var hasShownWelcome = "hasShownWelcome";
-    
+
 if (!config.getBoolean(hasShownWelcome, false)) {
     longToast("Thank you for installing my script! Hope you like it :D");
     config.setBoolean(hasShownWelcome, true, true);
@@ -53,7 +53,7 @@ function checkForNewVersion() {
         }
     });
 }
-    
+
 function checkForNewMessages() {
     networking.getUrl(messagesJsonUrl, (error, response) => {
         if (error) {
@@ -78,47 +78,83 @@ function checkForNewMessages() {
     });
 }
 
-var quotes = [];
-var shownQuotes = [];
+var defaultFontSize = 20;
+var defaultColor = "#4CAF50";
 
 var settingsContext = {
     events: [],
 };
 
-function fetchQuotes(callback) {
+function showQuote(activity, quote, fontSize, fontColor, useToast) {
+    activity.runOnUiThread(javaInterfaces.runnable(() => {
+        if (useToast) {
+            longToast(quote);
+        } else {
+            var myDialog = im.createAlertDialog(activity, (builder, dialog) => {
+                builder.text(quote)
+                    .fontSize(fontSize)
+                    .color(fontColor);
+            });
+            myDialog.show();
+        }
+    }));
+}
+
+function fetchAndShowQuote(activity, callback) {
     networking.getUrl(quotesJsonUrl, (error, response) => {
         if (error) {
             console.error("Error fetching quotes.json:", error);
             longToast("Error loading quotes. Please check your internet connection and repository settings.");
             return;
         }
+
         try {
-            quotes = JSON.parse(response);
+            var quotes = JSON.parse(response);
+
+            var allRead = true;
+            for (var i = 0; i < quotes.length; i++) {
+                if (!config.getBoolean(`quote_${quotes[i]}`, false)) {
+                    allRead = false;
+                    break;
+                }
+            }
+
+            if (allRead) {
+                for (var i = 0; i < quotes.length; i++) {
+                    config.delete(`quote_${quotes[i]}`);
+                }
+                config.save();
+            }
+
+            var unreadQuotes = [];
+            for (var i = 0; i < quotes.length; i++) {
+                if (!config.getBoolean(`quote_${quotes[i]}`, false)) {
+                    unreadQuotes.push(quotes[i]);
+                }
+            }
+
+            if (unreadQuotes.length > 0) {
+                var randomIndex = Math.floor(Math.random() * unreadQuotes.length);
+                var selectedQuote = unreadQuotes[randomIndex];
+
+                config.setBoolean(`quote_${selectedQuote}`, true);
+                config.save();
+
+                if (callback) {
+                    callback(selectedQuote);
+                }
+            } else {
+                console.log("All quotes have been read.");
+                if (callback) {
+                    callback(null);
+                }
+            }
         } catch (e) {
             console.error("Error parsing quotes.json:", e);
             longToast("Error parsing quotes. Please ensure quotes.json is in the correct format.");
         }
-        callback();
     });
 }
-
-function getRandomQuote() {
-    if (quotes.length === 0) {
-        return "Loading quotes..."; 
-    }
-    if (shownQuotes.length === quotes.length) {
-        shownQuotes = []; 
-    }
-
-    var randomIndex;
-    do {
-        randomIndex = Math.floor(Math.random() * quotes.length);
-    } while (shownQuotes.includes(randomIndex));
-
-    shownQuotes.push(randomIndex);
-    return quotes[randomIndex];
-}
-
 
 function sendChatMessage(conversationId, message, callback) {
     messaging.sendChatMessage(conversationId, message, callback);
@@ -131,11 +167,18 @@ function createConversationToolboxUI() {
 
             builder.row(function (builder) {
                 builder.button("➡️ Send Motivation Quote", function () {
-                    var randomQuote = getRandomQuote();
-                    sendChatMessage(conversationId, randomQuote, function () {
-                        builder.root().activity.runOnUiThread(javaInterfaces.runnable(() => {
-                            longToast("Motivation quote sent!");
-                        }));
+                    fetchAndShowQuote(builder.root().activity, function (quote) {
+                        if (quote) {
+                            sendChatMessage(conversationId, quote, function () {
+                                builder.root().activity.runOnUiThread(javaInterfaces.runnable(() => {
+                                    longToast("Motivation quote sent!");
+                                }));
+                            });
+                        } else {
+                            builder.root().activity.runOnUiThread(javaInterfaces.runnable(() => {
+                                longToast("All quotes have been sent! They will reset soon.");
+                            }));
+                        }
                     });
                 });
             })
@@ -152,18 +195,18 @@ function createConversationToolboxUI() {
                     .fontSize(12)
                     .padding(4);
             })
-            .arrangement("spaceBetween")
-            .alignment("centerVertically")
-            .fillMaxWidth();
+                .arrangement("spaceBetween")
+                .alignment("centerVertically")
+                .fillMaxWidth();
 
-        if (updateAvailable) { 
+            if (updateAvailable) {
                 builder.row(function (builder) {
                     builder.text("📢 A new update is available! Please refresh the scripts page & then click on Update Module.")
                         .fontSize(12)
                         .padding(4);
                 })
-                .arrangement("center") 
-                .fillMaxWidth();
+                    .arrangement("center")
+                    .fillMaxWidth();
             }
 
         } catch (error) {
@@ -171,6 +214,7 @@ function createConversationToolboxUI() {
         }
     });
 }
+
 
 function createManagerToolBoxUI() {
     settingsContext.events.push({
@@ -180,7 +224,7 @@ function createManagerToolBoxUI() {
             });
 
             var fontSizes = [12, 16, 20, 24, 28, 32, 36];
-            var oldSelectedFontSize = config.getInteger("fontSize", 20);
+            var oldSelectedFontSize = config.getInteger("fontSize", defaultFontSize);
             builder.row(function (builder) {
                 var text = builder.text("Font Size: " + oldSelectedFontSize);
                 builder.slider(0, fontSizes.length - 1, fontSizes.length - 1, fontSizes.indexOf(oldSelectedFontSize), function (value) {
@@ -220,7 +264,9 @@ function createManagerToolBoxUI() {
     });
 }
 
-var defaultColor = "#4CAF50";
+function isValidHex(hex) {
+    return /^#([0-9A-Fa-f]{6})$/.test(hex);
+}
 
 function testHexCode() {
     const customColor = config.get("customColor", defaultColor);
@@ -234,51 +280,11 @@ function testHexCode() {
 
 function hexToColor(hex) {
     if (!isValidHex(hex)) {
-        return null;
+        return parseInt('FF' + defaultColor.substring(1), 16);
     }
     return parseInt('FF' + hex.substring(1), 16);
 }
 
-function isValidHex(hex) {
-    return /^#([0-9A-Fa-f]{6})$/.test(hex);
-}
-
-
-module.onSnapMainActivityCreate = activity => {
-    fetchQuotes();
-    checkForNewVersion(); 
-    checkForNewMessages();
-
-    fetchQuotes(() => {
-        if (quotes.length > 0) {
-            var randomQuote = getRandomQuote();
-            var fontSize = config.getInteger("fontSize", 20);
-            var customColor = config.get("customColor", defaultColor);
-            var colorInt = hexToColor(customColor);
-            var useToast = config.getBoolean("useToast", false);
-
-            if (colorInt === null) {
-                longToast("Incorrect hex code. Please try again.");
-                colorInt = hexToColor(defaultColor);
-            } else if (customColor.trim() === "") {
-                colorInt = hexToColor(defaultColor);
-            }
-
-            activity.runOnUiThread(javaInterfaces.runnable(() => {
-                if (useToast) {
-                    longToast(randomQuote); 
-                } else {
-                    var myDialog = im.createAlertDialog(activity, (builder, dialog) => {
-                        builder.text(randomQuote)
-                            .fontSize(fontSize)
-                            .color(colorInt);
-                    });
-                    myDialog.show();
-                }
-            }));
-        } 
-    });
-};
 
 function start() {
     createManagerToolBoxUI();
@@ -292,3 +298,21 @@ im.create("settings" /* EnumUI.SETTINGS */, function (builder, args) {
         event.start(builder, args);
     });
 });
+
+module.onUnload = () => {
+    longToast(goodbyePrompt);
+    config.setBoolean(hasShownWelcome, false, true);
+}
+
+module.onSnapMainActivityCreate = activity => {
+    fetchAndShowQuote(activity, function(quote) {
+        if (quote) {
+            var fontSize = config.getInteger("fontSize", defaultFontSize);
+            var fontColor = hexToColor(config.get("customColor", defaultColor));
+            var useToast = config.getBoolean("useToast", false);
+            showQuote(activity, quote, fontSize, fontColor, useToast);
+        }
+    });
+    checkForNewVersion();
+    checkForNewMessages();
+};
