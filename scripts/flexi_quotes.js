@@ -86,7 +86,7 @@ var settingsContext = {
 };
 
 function showQuote(activity, quote, fontSize, fontColor, useToast) {
-    activity.runOnUiThread(javaInterfaces.runnable(() => {
+    activity.runOnUiThread(() => {
         if (useToast) {
             longToast(quote);
         } else {
@@ -225,7 +225,7 @@ function createConversationToolboxUI() {
                 .padding(4);
 
             builder.row(function (builder) {
-                builder.text("⚙️ v8.0")
+                builder.text("⚙️ v5.0")
                     .fontSize(12)
                     .padding(4);
 
