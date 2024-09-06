@@ -5,7 +5,6 @@
 // version: 5.0
 // updateUrl: https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/flexi_quotes.js
 // author: Suryadip Sarkar & Jacob Thomas
-// minSEVersion: Versions after 20/08/24
 // ==/SE_module==
 
 var networking = require("networking");
@@ -86,7 +85,7 @@ var settingsContext = {
     events: [],
 };
 
-function fetchQuotes() {
+function fetchQuotes(callback) {
     networking.getUrl(quotesJsonUrl, (error, response) => {
         if (error) {
             console.error("Error fetching quotes.json:", error);
@@ -99,6 +98,7 @@ function fetchQuotes() {
             console.error("Error parsing quotes.json:", e);
             longToast("Error parsing quotes. Please ensure quotes.json is in the correct format.");
         }
+        callback();
     });
 }
 
@@ -249,10 +249,8 @@ module.onSnapMainActivityCreate = activity => {
     checkForNewVersion(); 
     checkForNewMessages();
 
-    var quoteLoadInterval = setInterval(() => {
+    fetchQuotes(() => {
         if (quotes.length > 0) {
-            clearInterval(quoteLoadInterval);
-
             var randomQuote = getRandomQuote();
             var fontSize = config.getInteger("fontSize", 20);
             var customColor = config.get("customColor", defaultColor);
@@ -268,7 +266,7 @@ module.onSnapMainActivityCreate = activity => {
 
             activity.runOnUiThread(javaInterfaces.runnable(() => {
                 if (useToast) {
-                    longToast(randomQuote);
+                    longToast(randomQuote); 
                 } else {
                     var myDialog = im.createAlertDialog(activity, (builder, dialog) => {
                         builder.text(randomQuote)
@@ -278,8 +276,8 @@ module.onSnapMainActivityCreate = activity => {
                     myDialog.show();
                 }
             }));
-        }
-    }, 100);
+        } 
+    });
 };
 
 function start() {
