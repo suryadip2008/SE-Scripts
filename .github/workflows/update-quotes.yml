@@ -29,5 +29,5 @@ jobs:
         git config --local user.name "suryadip2008"
         git config --local user.email "suryadip.2008@gmail.com"
         git add networking/quotes.json
-        git commit -m "Update networking/quotes.json with latest quotes"
+        git commit -m "bot(scripts): Daily Quotes Update"
         git push
