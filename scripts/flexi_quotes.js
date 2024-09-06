@@ -167,19 +167,57 @@ function createConversationToolboxUI() {
 
             builder.row(function (builder) {
                 builder.button("➡️ Send Motivation Quote", function () {
-                    fetchAndShowQuote(builder.root().activity, function (quote) {
-                        if (quote) {
-                            sendChatMessage(conversationId, quote, function () {
-                                builder.root().activity.runOnUiThread(javaInterfaces.runnable(() => {
-                                    longToast("Motivation quote sent!");
-                                }));
-                            });
-                        } else {
-                            builder.root().activity.runOnUiThread(javaInterfaces.runnable(() => {
-                                longToast("All quotes have been sent! They will reset soon.");
-                            }));
+                    networking.getUrl(quotesJsonUrl, (error, response) => {
+                        if (error) {
+                            console.error("Error fetching quotes.json:", error);
+                            longToast("Error loading quotes. Please check your internet connection and repository settings.");
+                            return;
                         }
-                    });
+
+                        try {
+                            var quotes = JSON.parse(response);
+
+                            var allRead = true;
+                            for (var i = 0; i < quotes.length; i++) {
+                                if (!config.getBoolean(`quote_${quotes[i]}`, false)) {
+                                    allRead = false;
+                                    break;
+                                }
+                            }
+
+                            if (allRead) {
+                                for (var i = 0; i < quotes.length; i++) {
+                                    config.delete(`quote_${quotes[i]}`);
+                                }
+                                config.save();
+                            }
+
+                            var unreadQuotes = [];
+                            for (var i = 0; i < quotes.length; i++) {
+                                if (!config.getBoolean(`quote_${quotes[i]}`, false)) {
+                                    unreadQuotes.push(quotes[i]);
+                                }
+                            }
+
+                            if (unreadQuotes.length > 0) {
+                                var randomIndex = Math.floor(Math.random() * unreadQuotes.length);
+                                var selectedQuote = unreadQuotes[randomIndex];
+
+                                sendChatMessage(conversationId, selectedQuote, function () {
+                                    longToast("Motivation quote sent!");
+                                });
+
+                                config.setBoolean(`quote_${selectedQuote}`, true);
+                                config.save();
+                            } else {
+                                console.log("All quotes have been sent! They will reset soon.");
+                                longToast("All quotes have been sent! They will reset soon.");
+                            }
+                        } catch (e) {
+                            console.error("Error parsing quotes.json:", e);
+                            longToast("Error parsing quotes. Please ensure quotes.json is in the correct format.");
+                        }
+                    }); 
                 });
             })
                 .arrangement("spaceBetween")
@@ -187,7 +225,7 @@ function createConversationToolboxUI() {
                 .padding(4);
 
             builder.row(function (builder) {
-                builder.text("⚙️ v5.0")
+                builder.text("⚙️ v8.0")
                     .fontSize(12)
                     .padding(4);
 
