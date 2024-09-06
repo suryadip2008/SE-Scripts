@@ -2,10 +2,9 @@ name: Update Quotes
 
 on:
   schedule:
-    # Runs daily at 9:00 AM IST (3:30 AM UTC)
-    - cron: '30 3 * * *'
-  workflow_dispatch:  # Allows the workflow to be triggered manually
-  
+    - cron: '30 3 * * *'  # 9:00 AM IST daily
+  workflow_dispatch:
+
 jobs:
   update-quotes:
     runs-on: ubuntu-latest
@@ -18,22 +17,17 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: '3.12.5'
-    
-    - name: Install requests library
-      run: |
-        pip install requests
-    
-    - name: Run the quotes update script
-      run: |
-        python networking/update_quotes.py
-    
-    - name: Configure Git
+
+    - name: Install requests module
+      run: pip install requests
+
+    - name: Run update_quotes.py
+      run: python networking/update_quotes.py
+
+    - name: Commit and push changes
       run: |
         git config --local user.name "suryadip2008"
         git config --local user.email "suryadip.2008@gmail.com"
-    
-    - name: Commit and push the updated quotes.json
-      run: |
         git add networking/quotes.json
-        git commit -m "Update networking/quotes.json with the latest quotes"
+        git commit -m "Update networking/quotes.json with latest quotes"
         git push
