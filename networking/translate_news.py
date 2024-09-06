@@ -15,14 +15,18 @@ languages = {
 def translate_text(text, target_lang):
     try:
         result = subprocess.run(
-            ['node', 'translate.js', text, target_lang],
+            ['node', 'networking/translate.js', text, target_lang],
             capture_output=True,
             text=True
         )
-        return result.stdout.strip()
+        if result.returncode == 0:
+            return result.stdout.strip()
+        else:
+            print(f"Error in translation: {result.stderr}")
+            return ""
     except Exception as e:
         print(f"Error during translation: {e}")
-        return None
+        return ""
 
 # Load the original news.json file
 with open('networking/news.json', 'r') as f:
@@ -30,10 +34,13 @@ with open('networking/news.json', 'r') as f:
 
 # Loop through each language and generate translated files
 for lang_code, lang_name in languages.items():
-    translated_news = {}
-    for title in news_data:
+    translated_news = {"headlines": []}
+    
+    # Translate each headline
+    for title in news_data["headlines"]:
         translated_text = translate_text(title, target_lang=lang_code)
-        translated_news[title] = translated_text
+        if translated_text:
+            translated_news["headlines"].append(translated_text)
     
     # Save the translated data to a new JSON file
     translated_file = f'networking/news_{lang_code}.json'
