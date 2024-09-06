@@ -1,35 +1,29 @@
 import requests
 import json
-import time
 
-# API endpoint
-api_url = 'https://api.api-ninjas.com/v1/quotes'
-headers = {'X-Api-Key': 'fDfoOTpsStHRc19vimAMjA==9nwVTXbZUXhitKYZ'}
+# API URL for ZenQuotes, fetching multiple quotes
+api_url = 'https://zenquotes.io/api/quotes'
+response = requests.get(api_url)
 
-# List to store the quotes
-quotes = []
+if response.status_code == 200:
+    quotes_data = response.json()
+    # Extracting only the quote text
+    new_quotes = [quote['q'] for quote in quotes_data]
 
-# Loop to fetch 10 quotes
-for _ in range(10):
-    response = requests.get(api_url, headers=headers)
+    # Load existing quotes from quotes.json
+    try:
+        with open('networking/quotes.json', 'r') as f:
+            existing_quotes = json.load(f)
+    except FileNotFoundError:
+        existing_quotes = []
+
+    # Combine new quotes with existing quotes
+    updated_quotes = list(set(existing_quotes + new_quotes))
+
+    # Writing the updated quotes to quotes.json file
+    with open('networking/quotes.json', 'w') as f:
+        json.dump(updated_quotes, f, indent=4)
     
-    # Check if the response is successful
-    if response.status_code == requests.codes.ok:
-        quote_data = response.json()
-        
-        # Extract and store the quote text
-        if len(quote_data) > 0:
-            quotes.append(quote_data[0]['quote'])
-        else:
-            print("No quote found in this response.")
-    else:
-        print(f"Error: {response.status_code}, {response.text}")
-    
-    # Sleep for a short time to avoid overwhelming the API with requests
-    time.sleep(1)  # You can adjust the sleep time as needed
-
-# Overwrite the networking/quotes.json file with new quotes
-with open('networking/quotes.json', 'w') as f:
-    json.dump(quotes, f, indent=4)
-
-print("quotes.json file updated with the latest quotes.")
+    print("quotes.json file updated with the latest quotes.")
+else:
+    print(f"Error: {response.status_code}")
