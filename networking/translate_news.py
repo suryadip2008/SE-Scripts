@@ -16,11 +16,19 @@ languages = {
 }
 
 # Load the news headlines from the original news.json file
-with open(news_file_path, 'r') as f:
+with open(news_file_path, 'r', encoding='utf-8') as f:
     news_data = json.load(f)
 
 # Extract the headlines
 headlines = news_data.get("headlines", [])
+
+# Function to remove old translation files
+def remove_old_translations():
+    for lang_code in languages.keys():
+        translated_file_path = f'networking/news_{lang_code}.json'
+        if os.path.exists(translated_file_path):
+            os.remove(translated_file_path)
+            print(f"Removed old translation file: {translated_file_path}")
 
 # Function to translate headlines and save to a new JSON file
 def translate_and_save(headlines, lang_code, lang_name):
@@ -48,7 +56,10 @@ def translate_and_save(headlines, lang_code, lang_name):
     with open(translated_file_path, 'w', encoding='utf-8') as f:
         json.dump(translated_data, f, ensure_ascii=False, indent=4)
 
-# Translate headlines to all specified languages and save them
+# Step 1: Remove old translation files
+remove_old_translations()
+
+# Step 2: Translate headlines to all specified languages and save them
 for lang_code, lang_name in languages.items():
     translate_and_save(headlines, lang_code, lang_name)
 
