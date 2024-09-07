@@ -16,7 +16,7 @@ languages = {
 }
 
 # Initialize LibreTranslateAPI with the new API URL
-translator = LibreTranslateAPI("https://translate.terraprint.co/")
+translator = LibreTranslateAPI("https://libretranslate.com/translate")
 
 # Load the news headlines from the original news.json file
 with open(news_file_path, 'r') as f:
