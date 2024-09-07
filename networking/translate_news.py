@@ -1,50 +1,39 @@
 import json
-import subprocess
+from libretranslatepy import LibreTranslateAPI
 
-# List of languages and their file suffixes
-languages = {
-    'fr': 'French',
-    'pt': 'Portuguese',
-    'pa': 'Punjabi',
-    'de': 'German',
-    'ru': 'Russian',
-    'ar': 'Arabic'
-}
+# Function to translate text
+def translate_text(text, target_language):
+    lt = LibreTranslateAPI("https://translate.terraprint.co/")  # Use your preferred LibreTranslate API URL
+    return lt.translate(text, target_language)
 
-# Function to call node script for translation
-def translate_text(text, target_lang):
-    try:
-        result = subprocess.run(
-            ['node', 'networking/translate.js', text, target_lang],
-            capture_output=True,
-            text=True
-        )
-        if result.returncode == 0:
-            return result.stdout.strip()
-        else:
-            print(f"Error in translation: {result.stderr}")
-            return ""
-    except Exception as e:
-        print(f"Error during translation: {e}")
-        return ""
+# Function to translate headlines and save to individual files
+def translate_headlines(news_data, target_languages):
+    for lang_name, lang_code in target_languages.items():
+        translated_data = {"headlines": []}
+        for headline in news_data['headlines']:
+            translated_headline = translate_text(headline, lang_code)
+            translated_data["headlines"].append(translated_headline)
+        
+        # Save each translation in a separate JSON file
+        with open(f'news_{lang_code}.json', 'w', encoding='utf-8') as file:
+            json.dump(translated_data, file, ensure_ascii=False, indent=4)
+        print(f"Translation saved to news_{lang_code}.json")
 
-# Load the original news.json file
-with open('networking/news.json', 'r') as f:
-    news_data = json.load(f)
-
-# Loop through each language and generate translated files
-for lang_code, lang_name in languages.items():
-    translated_news = {"headlines": []}
+# Main execution
+if __name__ == "__main__":
+    # Load original news.json
+    with open('news.json', 'r', encoding='utf-8') as file:
+        news_data = json.load(file)
     
-    # Translate each headline
-    for title in news_data["headlines"]:
-        translated_text = translate_text(title, target_lang=lang_code)
-        if translated_text:
-            translated_news["headlines"].append(translated_text)
+    # Define target languages (ISO codes)
+    languages = {
+        "Portuguese": "pt",
+        "Punjabi": "pa",
+        "French": "fr",
+        "German": "de",
+        "Russian": "ru",
+        "Arabic": "ar"
+    }
     
-    # Save the translated data to a new JSON file
-    translated_file = f'networking/news_{lang_code}.json'
-    with open(translated_file, 'w', encoding='utf-8') as f:
-        json.dump(translated_news, f, ensure_ascii=False, indent=4)
-    
-    print(f"Translation complete: {translated_file}")
+    # Translate and save headlines
+    translate_headlines(news_data, languages)
