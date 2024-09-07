@@ -15,8 +15,8 @@ languages = {
     "ar": "Arabic"
 }
 
-# Initialize LibreTranslateAPI with the new API URL
-translator = LibreTranslateAPI("https://libretranslate.com/translate")
+# Initialize LibreTranslateAPI with the new working API URL
+translator = LibreTranslateAPI("https://libretranslate.de/")
 
 # Load the news headlines from the original news.json file
 with open(news_file_path, 'r') as f:
