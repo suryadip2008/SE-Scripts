@@ -1,5 +1,6 @@
 import json
 from libretranslatepy import LibreTranslateAPI
+import urllib.error
 
 # Define the path to the news.json file
 news_file_path = 'networking/news.json'
@@ -14,8 +15,8 @@ languages = {
     "ar": "Arabic"
 }
 
-# Initialize LibreTranslateAPI
-translator = LibreTranslateAPI("https://translate.argosopentech.com/")
+# Initialize LibreTranslateAPI with the new API URL
+translator = LibreTranslateAPI("https://translate.terraprint.co/")
 
 # Load the news headlines from the original news.json file
 with open(news_file_path, 'r') as f:
@@ -30,8 +31,12 @@ def translate_and_save(headlines, lang_code, lang_name):
     
     # Translate each headline
     for headline in headlines:
-        translated = translator.translate(headline, source="en", target=lang_code)
-        translated_headlines.append(translated)
+        try:
+            translated = translator.translate(headline, source="en", target=lang_code)
+            translated_headlines.append(translated)
+        except urllib.error.URLError as e:
+            print(f"Failed to translate to {lang_name}: {e}")
+            return
     
     # Prepare the translated data in JSON format
     translated_data = {
