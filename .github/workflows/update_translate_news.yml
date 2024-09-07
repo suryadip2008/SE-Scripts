@@ -34,22 +34,22 @@ jobs:
         git push
 
   translate-news:
+    needs: update-news  # Dependency on update-news job to ensure it runs afterward
     runs-on: ubuntu-latest
-    needs: update-news  # This ensures the second job only runs after update-news finishes
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: '3.12.5'
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install tastranslate
+        pip install translate
 
     - name: Run translation script
       run: |
@@ -60,5 +60,5 @@ jobs:
         git config --global user.name "suryadip2008"
         git config --global user.email "suryadip.2008@gmail.com"
         git add networking/news_*.json
-        git commit -m "bot(scripts): Translate News"
+        git commit -m "bot(scripts): News Translations"
         git push
