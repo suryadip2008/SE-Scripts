@@ -1,38 +1,36 @@
-name: Translate news.json
+name: Translate Headlines
 
 on:
+  workflow_dispatch: # Manual trigger
   schedule:
-    - cron: '40 3 * * *'  # Runs daily at 9:10 AM IST (3:40 AM UTC)
-  workflow_dispatch:
+    - cron: '40 3 * * *'  # 9:10 AM IST (Convert to UTC, IST is UTC+5:30)
 
 jobs:
-  translate-news:
+  translate_news:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '22.8.0'
-
-    - name: Install Node.js dependencies
-      run: npm install @vitalets/google-translate-api
+      uses: actions/checkout@v2
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v2
       with:
         python-version: '3.12.5'
 
-    - name: Run Python script to translate news.json
-      run: python networking/translate_news.py
-
-    - name: Commit and push translated JSON files
+    - name: Install dependencies
       run: |
-        git config --local user.name "suryadip2008"
-        git config --local user.email "suryadip.2008@gmail.com"
-        git add networking/news_*.json
-        git commit -m "Update translated news files"
+        python -m pip install --upgrade pip
+        pip install libretranslatepy
+
+    - name: Run translation script
+      run: |
+        python translate_news.py
+    
+    - name: Commit translated news.json files
+      run: |
+        git config --global user.name 'suryadip2008'
+        git config --global user.email 'suryadip.2008@gmail.com'
+        git add news_*.json
+        git commit -m 'Add translated headlines in different languages'
         git push
