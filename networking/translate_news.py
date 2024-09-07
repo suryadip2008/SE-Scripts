@@ -1,5 +1,5 @@
 import json
-from tastranslation.translate import translate
+from translate import Translator
 import os
 
 # Define the path to the news.json file
@@ -26,10 +26,13 @@ headlines = news_data.get("headlines", [])
 def translate_and_save(headlines, lang_code, lang_name):
     translated_headlines = []
 
+    # Set up the translator for the target language
+    translator = Translator(to_lang=lang_code)
+
     # Translate each headline
     for headline in headlines:
         try:
-            translated = translate(headline, source_lang="en", target_lang=lang_code)
+            translated = translator.translate(headline)
             translated_headlines.append(translated)
         except Exception as e:
             print(f"Failed to translate to {lang_name}: {e}")
