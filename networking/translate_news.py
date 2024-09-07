@@ -1,5 +1,5 @@
-import json
 from libretranslatepy import LibreTranslateAPI
+import json
 import urllib.error
 
 # Define the path to the news.json file
@@ -15,8 +15,8 @@ languages = {
     "ar": "Arabic"
 }
 
-# Initialize LibreTranslateAPI with the new working API URL
-translator = LibreTranslateAPI("https://libretranslate.de/")
+# Use an alternative working LibreTranslate API URL
+translator = LibreTranslateAPI("https://libretranslate.com/")  # Try a different public API
 
 # Load the news headlines from the original news.json file
 with open(news_file_path, 'r') as f:
