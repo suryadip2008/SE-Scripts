@@ -7,6 +7,7 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 ![Forks](https://img.shields.io/github/forks/suryadip2008/SE-Scripts)
 
 ![Maintainer](https://img.shields.io/badge/Creator-Suryadip_Sarkar-black)
+![Maintainer](https://img.shields.io/badge/Contributer-Being_Zain-black)
 
 ## Table of Contents
 
@@ -164,12 +165,32 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 
 [Jump to Script Details](#custom-toast)
 
+## daily_news.js
+
+1.  **Fetches Daily News:**
+   - Automatically retrieves news headlines from a news.json file hosted on GitHub which is updated daily.
+
+2.  **Displays News in Dialog:**
+   -Shows a random, unread news headline in a dialog box when you open Snapchat.
+
+3.  **Font Size:**
+   - Allows you to customize the font size of the news headline in the dialog using a slider in the script's settings.
+
+4.  **Font Color:**
+   - Lets you set a custom hex color code for the headline text, giving you more control over the dialog's appearance.
+
+5.  **Hex Code Validation:**
+   -Includes a "Test Hex Codes" button to ensure that the entered color code is valid before applying it.
+
+
+[Jump to Script Details](#daily-news)
+
 # Scripts
 
 ## Scheduled Messages
 
 - **Name:** scheduled_messages
-- **Version:** 2.5
+- **Version:** 2.6
 - **Last Updated:** August 30, 2024
 - **Author:** Suryadip Sarkar
 - **Credits:** rhunk & Jacob Thomas
@@ -193,7 +214,7 @@ To download the latest version of the script, choose one of the following option
 ## Message Bomber
 
 - **Name:** message_bomber
-- **Version:** 5.2
+- **Version:** 5.5
 - **Last Updated:** August 29, 2024
 - **Author:** Suryadip Sarkar
 - **Description:** A script for bombing your friends with custom messages. Just for educational purposes. May or May not cause bans.
@@ -237,7 +258,7 @@ To download the latest version of the script, choose one of the following option
 ## Flexi Quotes
 
 - **Name:** flexi_quotes
-- **Version:** 4.0
+- **Version:** 5.0
 - **Last Updated:** August 15, 2024
 - **Author:** Suryadip Sarkar & Jacob Thomas
 - **Description:** A Script that shows a random motivation quote dialog on the startup of Snapchat.
@@ -322,6 +343,28 @@ To download the latest version of the script, choose one of the following option
 
    [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/custom_toast.js)
 
+## Daily News
+
+- **Name:** daily-news
+- **Version:** 1.0
+- **Last Updated:** Daily
+- **Author:** Suryadip Sarkar
+- **Description:**  A script that shows daily news as a dialog on Snapchat startup.
+
+To download the latest version of the script, choose one of the following options:
+
+1. **Download from GitHub:**
+
+   Click the link below to download `Daily News` directly from GitHub:
+
+   [Download Daily News](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/daily_news.js)
+
+
+2. **Import from URL:**
+
+   Copy & paste this url in the `Import from URL` button in the scripts tab.
+
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/daily_news.js)
 
 ## Screenshots
 
