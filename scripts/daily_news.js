@@ -1,4 +1,3 @@
-
 // ==SE_module==
 // name: daily_news
 // displayName: Daily News
