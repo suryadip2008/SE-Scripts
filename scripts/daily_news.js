@@ -26,6 +26,7 @@ let updateAvailable = false;
 
 var versionJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/version.json`;
 var messagesJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/messages.json`;
+var newsJsonUrl = "https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/networking/news_en.json";
 
 function checkForNewVersion() {
     networking.getUrl(versionJsonUrl, (error, response) => {
