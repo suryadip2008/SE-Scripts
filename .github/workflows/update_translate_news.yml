@@ -51,6 +51,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install translate
 
+    - name: Pull latest changes
+      run: |
+        git pull origin main --rebase
+
     - name: Run translation script
       run: |
         python networking/translate_news.py
