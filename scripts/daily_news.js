@@ -99,6 +99,7 @@ function showNewsDialog(activity, headline, fontSize, fontColor) {
 }
 
 function fetchAndShowNews(activity) {
+    config.load();
     var selectedLanguage = config.get("language", defaultLanguage);
     newsJsonUrl = `https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/networking/news_${selectedLanguage}.json`;
 
@@ -198,6 +199,7 @@ function createManagerToolBoxUI() {
                     var selectedLanguage = languageKeys[value];
                     text.label("Language: " + languages[selectedLanguage]);
                     config.set("language", selectedLanguage, true);
+                    config.save();
                 });
             });
         },
