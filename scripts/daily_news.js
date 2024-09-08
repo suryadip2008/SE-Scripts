@@ -2,7 +2,7 @@
 // name: daily_news
 // displayName: Daily News
 // description: A script that shows daily news as a dialog on Snapchat startup.
-// version: 1.0
+// version: 1.5
 // author: Suryadip Sarkar
 // updateUrl: https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/daily_news.js
 // ==/SE_module==
@@ -21,12 +21,11 @@ if (!config.getBoolean(hasShownWelcome, false)) {
 var owner = "suryadip2008";
 var repo = "SE-Scripts";
 var scriptName = "daily_news";
-var currentVersion = "v1.0";
+var currentVersion = "v1.5";
 let updateAvailable = false;
 
 var versionJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/version.json`;
 var messagesJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/messages.json`;
-var newsJsonUrl = "https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/networking/news.json";
 
 function checkForNewVersion() {
     networking.getUrl(versionJsonUrl, (error, response) => {
@@ -46,7 +45,7 @@ function checkForNewVersion() {
         }
     });
 }
-    
+
 function checkForNewMessages() {
     networking.getUrl(messagesJsonUrl, (error, response) => {
         if (error) {
@@ -73,6 +72,16 @@ function checkForNewMessages() {
 
 var defaultFontSize = 18;
 var defaultFontColor = "#000000";
+var defaultLanguage = "en";
+var languages = {
+    "en": "English",
+    "pt": "Portuguese",
+    "pa": "Punjabi",
+    "fr": "French",
+    "de": "German",
+    "ru": "Russian",
+    "ar": "Arabic"
+};
 
 var settingsContext = {
     events: [],
@@ -90,9 +99,12 @@ function showNewsDialog(activity, headline, fontSize, fontColor) {
 }
 
 function fetchAndShowNews(activity) {
+    var selectedLanguage = config.get("language", defaultLanguage);
+    newsJsonUrl = `https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/networking/news_${selectedLanguage}.json`;
+
     networking.getUrl(newsJsonUrl, (error, response) => {
         if (error) {
-            console.error("Error fetching news.json:", error);
+            console.error("Error fetching news_en.json:", error);
             return;
         }
         try {
@@ -176,6 +188,18 @@ function createManagerToolBoxUI() {
                     testHexCode();
                 });
             });
+
+            var languageKeys = Object.keys(languages);
+            var selectedLanguageIndex = languageKeys.indexOf(config.get("language", defaultLanguage));
+
+            builder.row(function (builder) {
+                var text = builder.text("Language: " + languages[languageKeys[selectedLanguageIndex]]);
+                builder.slider(0, languageKeys.length - 1, languageKeys.length - 1, selectedLanguageIndex, function (value) {
+                    var selectedLanguage = languageKeys[value];
+                    text.label("Language: " + languages[selectedLanguage]);
+                    config.set("language", selectedLanguage, true);
+                });
+            });
         },
     });
 }
@@ -224,6 +248,6 @@ module.onUnload = () => {
 
 module.onSnapMainActivityCreate = activity => {
     fetchAndShowNews(activity);
-    checkForNewVersion(); 
+    checkForNewVersion();
     checkForNewMessages();
 };
