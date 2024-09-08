@@ -55,12 +55,6 @@ jobs:
       run: |
         python networking/translate_news.py
 
-    - name: Pull the latest changes from the repository
-      run: |
-        git config --global user.name "suryadip2008"
-        git config --global user.email "suryadip.2008@gmail.com"
-        git pull --rebase origin main  # Pull the latest changes and rebase your local changes on top of them
-
     - name: Commit translated files
       run: |
         git config --global user.name "suryadip2008"
