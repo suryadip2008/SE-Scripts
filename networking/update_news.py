@@ -24,8 +24,8 @@ if 'articles' in news_data and len(news_data['articles']) > 0:
     news_json = {"headlines": headlines}
 
     # Save the headlines to networking/news.json
-    with open('networking/news.json', 'w') as f:
+    with open('networking/news_en.json', 'w') as f:
         json.dump(news_json, f, indent=4)
-    print("news.json file updated with latest headlines.")
+    print("news_en.json file updated with latest headlines.")
 else:
     print("No articles found or API error.")
