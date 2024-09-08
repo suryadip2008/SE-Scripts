@@ -19,6 +19,7 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 - [Custom Reminders](#custom-reminders)
 - [Saved Replies](#saved-replies)
 - [Custom Toast](#custom-toast)
+- [Daily News](#daily-news)
 - [Screenshots](#screenshots)
 - [How to Use](#how-to-use)
 - [Troubleshooting](#troubleshooting)
@@ -168,20 +169,19 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 ## daily_news.js
 
 1.  **Fetches Daily News:**
-   - Automatically retrieves news headlines from a news.json file hosted on GitHub which is updated daily.
+       • Automatically retrieves news headlines from a news.json file hosted on GitHub which is updated daily.
 
 2.  **Displays News in Dialog:**
-   -Shows a random, unread news headline in a dialog box when you open Snapchat.
+       • Shows a random, unread news headline in a dialog box when you open Snapchat.
 
 3.  **Font Size:**
-   - Allows you to customize the font size of the news headline in the dialog using a slider in the script's settings.
+       • Allows you to customize the font size of the news headline in the dialog using a slider in the script's settings.
 
 4.  **Font Color:**
-   - Lets you set a custom hex color code for the headline text, giving you more control over the dialog's appearance.
+       • Lets you set a custom hex color code for the headline text, giving you more control over the dialog's appearance.
 
 5.  **Hex Code Validation:**
-   -Includes a "Test Hex Codes" button to ensure that the entered color code is valid before applying it.
-
+       • Includes a "Test Hex Codes" button to ensure that the entered color code is valid before applying it.
 
 [Jump to Script Details](#daily-news)
 
@@ -191,7 +191,7 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 
 - **Name:** scheduled_messages
 - **Version:** 2.6
-- **Last Updated:** August 30, 2024
+- **Last Updated:** September 05, 2024
 - **Author:** Suryadip Sarkar
 - **Credits:** rhunk & Jacob Thomas
 - **Requirements:** Only works on SE versions released after 20/08/24
@@ -215,7 +215,7 @@ To download the latest version of the script, choose one of the following option
 
 - **Name:** message_bomber
 - **Version:** 5.5
-- **Last Updated:** August 29, 2024
+- **Last Updated:** September 06, 2024
 - **Author:** Suryadip Sarkar
 - **Description:** A script for bombing your friends with custom messages. Just for educational purposes. May or May not cause bans.
 
@@ -345,7 +345,7 @@ To download the latest version of the script, choose one of the following option
 
 ## Daily News
 
-- **Name:** daily-news
+- **Name:** daily_news
 - **Version:** 1.0
 - **Last Updated:** Daily
 - **Author:** Suryadip Sarkar
