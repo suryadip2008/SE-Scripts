@@ -183,6 +183,9 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 5.  **Hex Code Validation:**
        • Includes a "Test Hex Codes" button to ensure that the entered color code is valid before applying it.
 
+6.  **Translation:**
+       • Availability of daily news translated into many languages.
+
 [Jump to Script Details](#daily-news)
 
 # Scripts
@@ -346,7 +349,7 @@ To download the latest version of the script, choose one of the following option
 ## Daily News
 
 - **Name:** daily_news
-- **Version:** 1.0
+- **Version:** 1.5
 - **Last Updated:** Daily
 - **Author:** Suryadip Sarkar
 - **Description:**  A script that shows daily news as a dialog on Snapchat startup.
