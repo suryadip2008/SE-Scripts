@@ -71,7 +71,7 @@ function checkForNewMessages() {
 }
 
 var defaultFontSize = 18;
-var defaultFontColor = "#000000";
+var defaultFontColor = "#FFFFFF";
 var defaultLanguage = "en";
 var languages = {
     "en": "English",
