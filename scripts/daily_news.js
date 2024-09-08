@@ -1,3 +1,4 @@
+
 // ==SE_module==
 // name: daily_news
 // displayName: Daily News
@@ -87,12 +88,60 @@ var settingsContext = {
     events: [],
 };
 
+var translations = {
+    en: {
+        today: "Today's News",
+        },
+    pt: {
+        today: "Notícias de hoje",
+        },
+    pa: {
+        today: "ਅੱਜ ਦੀ ਖਬਰ",
+        },
+    de: {
+        today: "Aktuelle Nachrichten",
+    },
+    ru: {
+        today: "Сегодняшние новости",
+    },
+    ar: {
+        today: "أخبار اليوم",
+    },
+    fr: {
+        today: "L'actualité du jour",
+    }
+};
+
 function showNewsDialog(activity, headline, fontSize, fontColor) {
     activity.runOnUiThread(() => {
         var myDialog = im.createAlertDialog(activity, (builder, dialog) => {
+            var selectedLanguage = config.get("language", defaultLanguage);
+            function t(key) {
+                return translations[selectedLanguage][key] || translations['en'][key];
+            }
+            builder.row(function (builder) {
+                builder.text("📰"+ t("today"))
+                   .fontSize(25)
+            })
+            .arrangement("center")
+            .fillMaxWidth();
+
             builder.text(headline)
                    .fontSize(fontSize)
                    .color(fontColor);
+
+            builder.row(function (builder) {
+                builder.text("⚙️ v1.5")
+                    .fontSize(12)
+                    .padding(4);
+
+                builder.text("👨‍💻 Made By Suryadip Sarkar")
+                    .fontSize(12)
+                    .padding(4);
+            })
+            .arrangement("spaceBetween")
+            .alignment("centerVertically")
+            .fillMaxWidth();
         });
         myDialog.show();
     });
