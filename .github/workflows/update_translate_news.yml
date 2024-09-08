@@ -22,14 +22,14 @@ jobs:
       run: |
         pip install requests
 
-    - name: Run the script to update news.json
+    - name: Run the script to update news_en.json
       run: python networking/update_news.py
 
     - name: Commit changes
       run: |
         git config --local user.name "suryadip2008"
         git config --local user.email "suryadip.2008@gmail.com"
-        git add networking/news.json
+        git add networking/news_en.json
         git commit -m "bot(scripts): Daily News Update"
         git push
 
