@@ -422,6 +422,13 @@ Below are some screenshots demonstrating the script in action:
   <img src="scripts/screenshots/saved_replies_2.jpg" width="45%" />
 </p>
 
+- ## Daily News:
+  
+  <p align="center">
+  <img src="scripts/screenshots/daily_news_1.jpg" width="45%" style="margin-right:10px;" />
+  <img src="scripts/screenshots/daily_news_2.jpg" width="45%" />
+</p>
+
 ## How to Use
 
 Follow these steps to install and use the script:
