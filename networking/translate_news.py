@@ -2,8 +2,8 @@ import json
 from translate import Translator
 import os
 
-# Define the path to the news.json file
-news_file_path = 'networking/news.json'
+# Define the path to the news_en.json file
+news_file_path = 'networking/news_en.json'
 
 # Define the target languages and their respective file suffixes
 languages = {
@@ -15,7 +15,7 @@ languages = {
     "ar": "Arabic"
 }
 
-# Load the news headlines from the original news.json file
+# Load the news headlines from the original news_en.json file
 with open(news_file_path, 'r', encoding='utf-8') as f:
     news_data = json.load(f)
 
