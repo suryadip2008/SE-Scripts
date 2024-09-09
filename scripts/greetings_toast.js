@@ -195,15 +195,16 @@ function displayToast() {
 
         try {
             var greetingsData = JSON.parse(response);
-            
-            var predefinedPrompt = getRandomElement(greetingsData).replace('{username}', username);
+            var randomGreeting = getRandomElement(greetingsData); // Select a random greeting here
+
+            var predefinedPrompt = randomGreeting.replace('{username}', username);
 
             if (day === eDay && month === eMonth && selectedEvent === "birthday") {
                 var age = getAge(userEventDate);
                 predefinedPrompt += ` You are ${age} years old today!`;
             }
 
-            longToast(predefinedPrompt);
+            longToast(predefinedPrompt); 
 
         } catch (e) {
             console.error("Error parsing greetings.json:", e);
