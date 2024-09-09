@@ -2,11 +2,13 @@ name: Update and Translate News Headlines Daily
 
 on:
   schedule:
-    - cron: '0 3 * * *'   # Runs daily at 9:00 AM IST (3:30 AM UTC)
-    - cron: '30 9 * * *'  # Runs daily at 3:00 PM IST (9:30 AM UTC)
-    - cron: '30 12 * * *' # Runs daily at 6:00 PM IST (12:30 PM UTC)
-    - cron: '30 15 * * *' # Runs daily at 9:00 PM IST (3:30 PM UTC)
-    - cron: '30 21 * * *' # Runs daily at 3:00 AM IST (9:30 PM UTC)
+      - cron: '0 3 * * *'   # Runs daily at 9:00 AM IST (3:30 AM UTC)
+      - cron: '30 9 * * *'  # Runs daily at 3:00 PM IST (9:30 AM UTC)
+      - cron: '30 12 * * *' # Runs daily at 6:00 PM IST (12:30 PM UTC)
+      - cron: '30 15 * * *' # Runs daily at 9:00 PM IST (3:30 PM UTC)
+      - cron: '30 21 * * *' # Runs daily at 3:00 AM IST (9:30 PM UTC)
+      - cron: '30 18 * * *' # Runs daily at 12:00 AM IST (6:30 PM UTC previous day)
+      - cron: '30 0 * * *'  # Runs daily at 6:00 AM IST (12:30 AM UTC)
   workflow_dispatch:  # Allows manual trigger
 
 jobs:
