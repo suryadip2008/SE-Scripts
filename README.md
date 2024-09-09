@@ -1,6 +1,6 @@
 # SE-Scripts
 
-<h1 align="center"><img src="https://user -images.githubusercontent. com/72663882 /1 71687151 -bb31 c996-c9d2-49C8 -b593-734946893b23.gif"alt="waving hand gif"aria-hidden="true" width="40" /> Welcome to SE-Scripts</h1>
+<h1 align="center"><img src="https://user-images.githubusercontent.com/72663882/171687151-bb31c996-c9d2-49C8-b593-734946893b23.gif "alt="waving hand gif "aria-hidden="true" width="40" /> Welcome to SE-Scripts</h1>
 
 A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 
