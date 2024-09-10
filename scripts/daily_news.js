@@ -2,7 +2,7 @@
 // name: daily_news
 // displayName: Daily News
 // description: A script that shows daily news as a dialog on Snapchat startup.
-// version: 1.5
+// version: 2.0
 // author: Suryadip Sarkar
 // updateUrl: https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/daily_news.js
 // ==/SE_module==
@@ -21,7 +21,7 @@ if (!config.getBoolean(hasShownWelcome, false)) {
 var owner = "suryadip2008";
 var repo = "SE-Scripts";
 var scriptName = "daily_news";
-var currentVersion = "v1.5";
+var currentVersion = "v2.0";
 let updateAvailable = false;
 
 var versionJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/version.json`;
@@ -90,24 +90,143 @@ var settingsContext = {
 var translations = {
     en: {
         today: "Today's News",
-        },
+        moreScripts: "More Scripts",
+        scriptsAvailable: "The below scripts are available for download in the Scripts Repository.",
+        scheduledMessages:"1. Scheduled Messages",
+        messageBomber:"2. Message Bomber",
+        greetingsToast:"3. Greetings Toast",
+        flexiQuotes:"4. Flexi Quotes",
+        customReminders:"5. Custom Reminders",
+        savedReplies:"6. Saved Replies",
+        customToast:"7. Custom Toast",
+        returnBack: "⬅️ Return",
+        moduleInfo: "ℹ️ Module Information:",
+        moduleName: "Name:",
+        moduleAuthor: "Author:",
+        moduleDisplayName: "Display Name:",
+        moduleVersion: "Version:",
+        moduleDescription: "Description:",
+        refresh: "🔄️ Refresh",
+    },
     pt: {
         today: "Notícias de hoje",
-        },
+        moreScripts: "Mais Scripts", 
+        scriptsAvailable: "Os scripts abaixo estão disponíveis para download no Repositório de Scripts.",
+        scheduledMessages:"1. Mensagens Agendadas",
+        messageBomber:"2. Bombardeiro de Mensagens",
+        greetingsToast:"3. Boas-vindas Toast",
+        flexiQuotes:"4. Citações Flexíveis",
+        customReminders:"5. Lembretes Personalizados",
+        savedReplies:"6. Respostas Salvas",
+        customToast:"7. Toast Personalizado",
+        returnBack: "⬅️ Voltar",
+        moduleInfo: "ℹ️ Informações do Módulo:", 
+        moduleName: "Nome:", 
+        moduleAuthor: "Autor:", 
+        moduleDisplayName: "Nome de Exibição:", 
+        moduleVersion: "Versão:", 
+        moduleDescription: "Descrição:",
+        refresh: "🔄️ Atualizar",
+    },
     pa: {
         today: "ਅੱਜ ਦੀ ਖਬਰ",
-        },
+        moreScripts: "ਹੋਰ ਸਕ੍ਰਿਪਟਾਂ",  
+        scriptsAvailable: "ਹੇਠਾਂ ਦਿੱਤੇ ਸਕ੍ਰਿਪਟ ਸਕ੍ਰਿਪਟ ਰਿਪੋਜ਼ਟਰੀ ਵਿੱਚ ਡਾਊਨਲੋਡ ਲਈ ਉਪਲਬਧ ਹਨ।", 
+        scheduledMessages:"1. ਤਹਿ ਕੀਤੇ ਸੁਨੇਹੇ",
+        messageBomber:"2. ਸੁਨੇਹਾ ਬੰਬਾਰ",
+        greetingsToast:"3. ਸ਼ੁਭਕਾਮਨਾਵਾਂ ਟੋਸਟ",
+        flexiQuotes:"4. ਫਲੈਕਸੀ ਹਵਾਲੇ",
+        customReminders:"5. ਕਸਟਮ ਰਿਮਾਈਂਡਰ",
+        savedReplies:"6. ਸੁਰੱਖਿਅਤ ਕੀਤੇ ਜਵਾਬ",
+        customToast:"7. ਕਸਟਮ ਟੋਸਟ",
+        returnBack: "⬅️ ਵਾਪਸ ਜਾਓ", 
+        moduleInfo: "ℹ️ ਮੋਡੀਊਲ ਜਾਣਕਾਰੀ:",  
+        moduleName: "ਨਾਮ:", 
+        moduleAuthor: "ਲੇਖਕ:", 
+        moduleDisplayName: "ਪ੍ਰਦਰਸ਼ਨ ਨਾਮ:", 
+        moduleVersion: "ਵਰਜਨ:", 
+        moduleDescription: "ਵਿਆਖਿਆ:",
+        refresh: "🔄️ ਤਾਜ਼ਾ ਕਰੋ",
+    },
     de: {
         today: "Aktuelle Nachrichten",
+        moreScripts: "Weitere Skripte", 
+        scriptsAvailable: "Die folgenden Skripte stehen im Skript-Repository zum Download bereit.", 
+        scheduledMessages:"1. Geplante Nachrichten", 
+        messageBomber:"2. Nachrichtenbomber", 
+        greetingsToast:"3. Gruß-Toast", 
+        flexiQuotes:"4. Flexi-Zitate", 
+        customReminders:"5. Benutzerdefinierte Erinnerungen",
+        savedReplies:"6. Gespeicherte Antworten", 
+        customToast:"7. Benutzerdefinierter Toast", 
+        returnBack: "⬅️ Zurück",
+        moduleInfo: "ℹ️ Modulinformationen:",
+        moduleName: "Name:",
+        moduleAuthor: "Autor:",
+        moduleDisplayName: "Anzeigename:",
+        moduleVersion: "Version:",
+        moduleDescription: "Beschreibung:",
+        refresh: "🔄️ Aktualisieren",
     },
     ru: {
         today: "Сегодняшние новости",
+        moreScripts: "Больше скриптов",
+        scriptsAvailable: "Приведенные ниже скрипты доступны для скачивания в репозитории скриптов.",
+        scheduledMessages:"1. Запланированные сообщения",
+        messageBomber:"2. Бомбардировщик сообщений",
+        greetingsToast:"3. Приветственный тост",
+        flexiQuotes:"4. Гибкие цитаты",
+        customReminders:"5. Пользовательские напоминания",
+        savedReplies:"6. Сохраненные ответы",
+        customToast:"7. Пользовательский тост",
+        returnBack: "⬅️ Вернуться",
+        moduleInfo: "ℹ️ Информация о модуле:",
+        moduleName: "Название:",
+        moduleAuthor: "Автор:",
+        moduleDisplayName: "Отображаемое имя:", 
+        moduleVersion: "Версия:",
+        moduleDescription: "Описание:",
+        refresh: "🔄️ Обновить",
     },
     ar: {
         today: "أخبار اليوم",
+        moreScripts: "المزيد من البرامج النصية",
+        scriptsAvailable: "البرامج النصية أدناه متاحة للتنزيل في مستودع البرامج النصية.",
+        scheduledMessages:"1. رسائل مجدولة",
+        messageBomber:"2. قاذفة الرسائل",
+        greetingsToast:"3. تحية محمصة",
+        flexiQuotes:"4. اقتباسات مرنة",
+        customReminders:"5. تذكيرات مخصصة",
+        savedReplies:"6. الردود المحفوظة",
+        customToast:"7. نخب مخصص",
+        returnBack: "⬅️ عودة",
+        moduleInfo: "ℹ️ معلومات الوحدة:",
+        moduleName: "اسم:",
+        moduleAuthor: "المؤلف:",
+        moduleDisplayName: "اسم العرض:", 
+        moduleVersion: "الإصدار:",
+        moduleDescription: "الوصف:",
+        refresh: "🔄️ تحديث",
     },
     fr: {
         today: "L'actualité du jour",
+        moreScripts: "Plus de Scripts",
+        scriptsAvailable: "Les scripts ci-dessous sont disponibles en téléchargement dans le référentiel de scripts.",
+        scheduledMessages:"1. Messages planifiés",
+        messageBomber:"2. Bombardement de messages",
+        greetingsToast:"3. Toast de bienvenue",
+        flexiQuotes:"4. Citations Flexi",
+        customReminders:"5. Rappels personnalisés",
+        savedReplies:"6. Réponses sauvegardées",
+        customToast:"7. Toast personnalisé",
+        returnBack: "⬅️ Retour",
+        moduleInfo: "ℹ️ Informations sur le module:",
+        moduleName: "Nom:",
+        moduleAuthor: "Auteur:",
+        moduleDisplayName: "Nom d'affichage:",
+        moduleVersion: "Version:",
+        moduleDescription: "Description:",
+        refresh: "🔄️ Actualiser",
     }
 };
 
@@ -125,24 +244,145 @@ function showNewsDialog(activity, headline, fontSize, fontColor) {
             .arrangement("center")
             .fillMaxWidth();
 
+            builder.text("") 
+                   .fontSize(10);
+
             builder.text(headline)
                    .fontSize(fontSize)
                    .color(fontColor);
 
             builder.row(function (builder) {
-                builder.text("⚙️ v1.5")
-                    .fontSize(12)
-                    .padding(4);
-
-                builder.text("👨‍💻 Made By Suryadip Sarkar")
-                    .fontSize(12)
-                    .padding(4);
-            })
-            .arrangement("spaceBetween")
-            .alignment("centerVertically")
+                builder.text("_________________________")
+                .fontSize(10)
+                .color(0xFFCCCCCC)
+             })
+            .arrangement("center")
             .fillMaxWidth();
+
+            builder.row(function (builder) {
+                builder.button("📜" + t("moreScripts"), function() {
+                    showOtherScriptsDialog(activity);
+                    dialog.dismiss();
+                });
+                builder.button("ℹ️", function() {
+                    showModuleInfoDialog(activity); 
+                    dialog.dismiss();
+                });
+                builder.button(t("refresh"), function() {
+                    fetchAndShowNews(activity);
+                    dialog.dismiss();
+                });
+            })
+            .arrangement("center")
+            .fillMaxWidth();
+
+            if (updateAvailable) { 
+                builder.row(function (builder) {
+                    builder.text("📢 A new update is available! Please refresh the scripts page & then click on Update Module.")
+                        .fontSize(12)
+                        .padding(4);
+                })
+                .arrangement("center") 
+                .fillMaxWidth();
+            }
         });
         myDialog.show();
+    });
+}
+
+function showOtherScriptsDialog(activity) {
+    activity.runOnUiThread(() => {
+        var OtherScriptsDialog = im.createAlertDialog(activity, (builder, dialog) => {
+            var selectedLanguage = config.get("language", defaultLanguage);
+            function t(key) {
+                return translations[selectedLanguage][key] || translations['en'][key];
+            }
+            builder.row(function (builder) {
+                builder.text("📜" + t("moreScripts")+":")
+                   .fontSize(20)
+            })
+            .arrangement("center")
+            .fillMaxWidth();
+
+            builder.text("") 
+                   .fontSize(10);
+            
+            builder.text(t("scriptsAvailable"))
+                .fontSize(18);
+            builder.text("") 
+                   .fontSize(10);
+            builder.text(t("scheduledMessages"))
+                .fontSize(16);
+            builder.text(t("messageBomber"))
+                .fontSize(16);
+            builder.text(t("greetingsToast"))
+                .fontSize(16);
+            builder.text(t("flexiQuotes"))
+                .fontSize(16);
+            builder.text(t("customReminders"))
+                .fontSize(16);
+            builder.text(t("savedReplies"))
+                .fontSize(16);
+            builder.text(t("customToast"))
+                .fontSize(16);
+
+            builder.text("") 
+                   .fontSize(10);
+
+            builder.row(function (builder) {
+                builder.button(t("returnBack"), function() {
+                    fetchAndShowNews(activity);
+                    dialog.dismiss();
+                });
+            })
+            .arrangement("center")
+            .fillMaxWidth();
+            });
+        OtherScriptsDialog.show();
+    });
+}
+
+function showModuleInfoDialog(activity) {
+    activity.runOnUiThread(() => {
+        var infoDialog = im.createAlertDialog(activity, (builder, dialog) => {
+            var selectedLanguage = config.get("language", defaultLanguage);
+            function t(key) {
+                return translations[selectedLanguage][key] || translations['en'][key];
+            }
+            builder.row(function (builder) {
+                builder.text(t("moduleInfo"))
+                   .fontSize(20)
+            })
+            .arrangement("center")
+            .fillMaxWidth();
+
+            builder.text("") 
+                   .fontSize(10);
+            
+            builder.text(`${t("moduleName")} ${module.info.name}`) 
+                .fontSize(16);
+            builder.text(`${t("moduleAuthor")} ${module.info.author}`) 
+                .fontSize(16);
+            builder.text(`${t("moduleDisplayName")} ${module.info.displayName}`) 
+                .fontSize(16);
+            builder.text(`${t("moduleVersion")} ${module.info.version}`) 
+                .fontSize(16);
+            builder.text(`${t("moduleDescription")} ${module.info.description}`) 
+                .fontSize(16);
+
+            builder.text("") 
+                   .fontSize(10);
+
+            builder.row(function (builder) {
+                builder.button(t("returnBack"), function() {
+                    fetchAndShowNews(activity);
+                    dialog.dismiss();
+                });
+            })
+            .arrangement("center")
+            .fillMaxWidth();
+        });
+        infoDialog.show();
     });
 }
 
