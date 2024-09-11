@@ -184,8 +184,17 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
        • Includes a "Test Hex Codes" button to ensure that the entered color code is valid before applying it.
 
 6.  **Translation:**
-       • Availability of daily news translated into many languages.
+       • Now you can enjoy daily news into your desired language ! Currently supports :English, Portugese, Punj abi, French, German, Russian & Arabic.
 
+7.  **Refresh Button:**
+       • Refresh Button (Will refresh the news dialog and provide news instantly without needing to open Snapchat.)
+
+8.  **More Script Button:**
+       • More Scripts Button (Will show up a list of other scripts that have been made by creator. )
+
+9.  **Info Button:**
+       • Info Button (Will display module details.)
+    
 [Jump to Script Details](#daily-news)
 
 # Scripts
@@ -349,7 +358,7 @@ To download the latest version of the script, choose one of the following option
 ## Daily News
 
 - **Name:** daily_news
-- **Version:** 1.5
+- **Version:** 2.0
 - **Last Updated:** Daily
 - **Author:** Suryadip Sarkar
 - **Description:**  A script that shows daily news as a dialog on Snapchat startup.
