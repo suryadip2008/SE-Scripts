@@ -2,7 +2,7 @@
 // name: daily_news
 // displayName: Daily News
 // description: A script that shows daily news as a dialog on Snapchat startup.
-// version: 2.0
+// version: 2.2
 // author: Suryadip Sarkar
 // updateUrl: https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/daily_news.js
 // ==/SE_module==
@@ -21,7 +21,7 @@ if (!config.getBoolean(hasShownWelcome, false)) {
 var owner = "suryadip2008";
 var repo = "SE-Scripts";
 var scriptName = "daily_news";
-var currentVersion = "v2.0";
+var currentVersion = "v2.2";
 let updateAvailable = false;
 
 var versionJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/version.json`;
