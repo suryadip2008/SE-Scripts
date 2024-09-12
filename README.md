@@ -28,12 +28,15 @@ Select any option in Table of Contents to save time.
 - [Custom Toast](#custom-toast)
 
 # Use
+
 - [How to Use](#how-to-use)
 
-# Trouble Shooting 
+# TroubleShooting 
+
 - [Troubleshooting](#troubleshooting)
 
 # Discontinued Versions
+
 - [Discontinued Versions](#deprecated-versions)
 
 # Scripts 
