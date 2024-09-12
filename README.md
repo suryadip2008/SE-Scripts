@@ -127,7 +127,7 @@ To download the latest version of the script, choose one of the following option
 
    ## Screenshots:
 
-<p align="center">
+  <p align="center">
   <img src="scripts/screenshots/scheduled_messages_1.jpg" width="45%" style="margin-right:10px;" />
   <img src="scripts/screenshots/scheduled_messages_2.jpg" width="45%" />
 </p>
