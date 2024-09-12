@@ -19,8 +19,8 @@ Select any option in Table of Contents to save time.
 - [Flexi Quotes](#flexi-quotes)
 - [Custom Reminders](#custom-reminders)
 - [Saved Replies](#saved-replies)
-- [Custom Toast](#custom-toast)
 - [Daily News](#daily-news)
+- [Custom Toast](#custom-toast)
 
 # Use
 - [How to Use](#how-to-use)
@@ -339,49 +339,10 @@ To download the latest version of the script, choose one of the following option
   <img src="scripts/screenshots/saved_replies_2.jpg" width="45%" />
 </p>
 
-## Custom Toast
-
-- **Name:** custom_toast
-- **Version:** 1.5
-- **Last Updated:** July 20, 2024
-- **Author:** Gabriel Modz, Jacob Thomas & Suryadip Sarkar
-- **Description:** A Script that shows a custom toast on the startup of Snapchat.
-
-## Download 
-
-To download the latest version of the script, choose one of the following options:
-
-1. **Download from GitHub:**
-
-   Click the link below to download `Custom Toast` directly from GitHub:
-
-   [Download Custom Toast](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/custom_toast.js)
-
-2. **Import from URL:**
-
-   Copy & paste this url in the `Import from URL` button in the scripts tab.
-
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/custom_toast.js)
-   
-## Features 
-
-1. **Custom Message Toast:**
-   - Allows users to enter their favorite message to be displayed as a toast notification, enabling a personalized experience.
-
-2. **Testing Functionality:**
-   - Added a "Test Custom Script" button below the text input field. This allows users to test the changes they have made without needing to reopen Snapchat repeatedly, providing immediate feedback on their custom messages.
-
-## Screenshot:
-
-  <p align="center">
-  <img src="scripts/screenshots/custom_toast_1.jpg" width="45%" style="margin-right:10px;" />
-  <img src="scripts/screenshots/custom_toast_2.jpg" width="45%" />
-</p>
-
 ## Daily News
 
 - **Name:** daily_news
-- **Version:** 2.0
+- **Version:** 2.2
 - **Last Updated:** Daily
 - **Author:** Suryadip Sarkar
 - **Description:**  A script that shows daily news as a dialog on Snapchat startup.
@@ -437,4 +398,43 @@ To download the latest version of the script, choose one of the following option
   <p align="center">
   <img src="scripts/screenshots/daily_news_1.jpg" width="45%" style="margin-right:10px;" />
   <img src="scripts/screenshots/daily_news_2.jpg" width="45%" />
+</p>
+
+## Custom Toast
+
+- **Name:** custom_toast
+- **Version:** 1.5
+- **Last Updated:** July 20, 2024
+- **Author:** Gabriel Modz, Jacob Thomas & Suryadip Sarkar
+- **Description:** A Script that shows a custom toast on the startup of Snapchat.
+
+## Download 
+
+To download the latest version of the script, choose one of the following options:
+
+1. **Download from GitHub:**
+
+   Click the link below to download `Custom Toast` directly from GitHub:
+
+   [Download Custom Toast](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/custom_toast.js)
+
+2. **Import from URL:**
+
+   Copy & paste this url in the `Import from URL` button in the scripts tab.
+
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/custom_toast.js)
+   
+## Features 
+
+1. **Custom Message Toast:**
+   - Allows users to enter their favorite message to be displayed as a toast notification, enabling a personalized experience.
+
+2. **Testing Functionality:**
+   - Added a "Test Custom Script" button below the text input field. This allows users to test the changes they have made without needing to reopen Snapchat repeatedly, providing immediate feedback on their custom messages.
+
+## Screenshot:
+
+  <p align="center">
+  <img src="scripts/screenshots/custom_toast_1.jpg" width="45%" style="margin-right:10px;" />
+  <img src="scripts/screenshots/custom_toast_2.jpg" width="45%" />
 </p>
