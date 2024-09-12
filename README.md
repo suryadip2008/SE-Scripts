@@ -38,6 +38,22 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 - **Requirements:** Only works on SE versions released after 20/08/24
 - **Description:** A Script That Allows For Scheduling Messages. Please don't remove Snapchat from the background when your message is scheduled.
 
+## Download 
+
+To download the latest version of the script, choose one of the following options:
+
+1. **Download from GitHub:**
+
+   Click the link below to download `Scheduled Messages` directly from GitHub:
+
+   [Download Scheduled Messages](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/scheduled_messages.js)
+
+2. **Import from URL:**
+
+   Copy & paste this url in the `Import from URL` button in the scripts tab.
+
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/scheduled_messages.js)
+   
 ## Features 
 
 1. **Quick Schedule Options:**
@@ -59,22 +75,6 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
   <img src="scripts/screenshots/scheduled_messages_2.jpg" width="45%" />
 </p>
 
-## Download 
-
-To download the latest version of the script, choose one of the following options:
-
-1. **Download from GitHub:**
-
-   Click the link below to download `Scheduled Messages` directly from GitHub:
-
-   [Download Scheduled Messages](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/scheduled_messages.js)
-
-2. **Import from URL:**
-
-   Copy & paste this url in the `Import from URL` button in the scripts tab.
-
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/scheduled_messages.js)
-
 ## Message Bomber
 
 - **Name:** message_bomber
@@ -82,6 +82,23 @@ To download the latest version of the script, choose one of the following option
 - **Last Updated:** September 06, 2024
 - **Author:** Suryadip Sarkar
 - **Description:** A script for bombing your friends with custom messages. Just for educational purposes. May or May not cause bans.
+
+ ## Download 
+
+To download the latest version of the script, choose one of the following 
+
+ 1. **Download from GitHub:**
+
+   Click the link below to download `Message Bomber` directly from GitHub:
+
+   [Download Message Bomber](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/message_bomber.js)
+   
+  
+  2. **Import from URL:**
+
+   Copy & paste this url in the `Import from URL` button in the scripts tab.
+
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/message_bomber.js)
 
 ## Features
 
@@ -110,23 +127,6 @@ To download the latest version of the script, choose one of the following option
   <img src="scripts/screenshots/message_bomber_2.jpg" width="45%" />
 </p>
 
- ## Download 
-
-To download the latest version of the script, choose one of the following 
-
- 1. **Download from GitHub:**
-
-   Click the link below to download `Message Bomber` directly from GitHub:
-
-   [Download Message Bomber](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/message_bomber.js)
-   
-  
-  2. **Import from URL:**
-
-   Copy & paste this url in the `Import from URL` button in the scripts tab.
-
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/message_bomber.js)
-
 ## Greetings Toast
 
 - **Name:** greetings_toast
@@ -135,6 +135,22 @@ To download the latest version of the script, choose one of the following
 - **Author:** Suryadip Sarkar
 - **Description:** A Script that shows a greetings toast on the startup of Snapchat.
 
+## Download 
+
+To download the latest version of the script, choose one of the following options:
+
+1. **Download from GitHub:**
+
+   Click the link below to download `Greetings Toast` directly from GitHub:
+
+   [Download Greetings Toast](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/greetings_toast.js)
+
+2. **Import from URL:**
+
+   Copy & paste this url in the `Import from URL` button in the scripts tab.
+
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/greetings_toast.js)
+   
 ## Features
 
 1. **Dynamic Greetings:**
@@ -163,22 +179,7 @@ To download the latest version of the script, choose one of the following
   <img src="scripts/screenshots/greetings_toast_2.jpg" width="45%" />
 </p>
 
-## Download 
 
-To download the latest version of the script, choose one of the following options:
-
-1. **Download from GitHub:**
-
-   Click the link below to download `Greetings Toast` directly from GitHub:
-
-   [Download Greetings Toast](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/greetings_toast.js)
-
-2. **Import from URL:**
-
-   Copy & paste this url in the `Import from URL` button in the scripts tab.
-
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/greetings_toast.js)
-   
 
 
    
