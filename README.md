@@ -438,3 +438,63 @@ To download the latest version of the script, choose one of the following option
   <img src="scripts/screenshots/custom_toast_1.jpg" width="45%" style="margin-right:10px;" />
   <img src="scripts/screenshots/custom_toast_2.jpg" width="45%" />
 </p>
+
+## How to Use
+
+Follow these steps to install and use the script:
+
+1. **Download & Install Snapenhance:**
+
+   *Ignore this step if you already have Snapenhance installed.*
+
+   Click on this link for furthur instructions on how to install `Snapenhance`:
+   
+   [Installation Guide](https://github.com/rhunk/SnapEnhance/wiki/Installation-Guide)
+
+3. **Download the Script(Follow either of the two methods):**
+
+   - **Download from GitHub:**
+     - The link will open the script file on GitHub.
+     - Click on the three dots icon on the top right corner & then click on the "Download" button.
+
+   - **Import from URL:**
+     - Copy the url by pressing and holding it and then paste it in the `Import from URL` button in the Scripts tab of SE.
+       
+4. **Installation:**
+   *Ignore this step if you have followed the `Import from URL` Method*
+   - Copy the script to your Scripts folder.
+
+5. **Enable the Script:**
+
+   - Open SE.
+   - Navigate to the 'Scripts' section and enable the script.
+
+6. **Configuration:**
+
+   - Go to the script settings to customize options like custom toast, username, date of birth, etc.
+
+## Troubleshooting
+
+### FAQs
+
+- **SE crashes when I import the script/When I open the `Scripts` Tab!!**
+  - This is due to duplicate scripts existing in your scripts folder. Head over to your File Manager and navigate to your Scripts Folder and Delete all the duplicate scripts.
+
+- **Failed to Import Script!**
+  - You have to first give SE access to your Scripts Folder.(To do this, head over to the Scripts Tab in SE)
+ 
+- **Tapping on Import From URL Button Does Nothing!**
+  - Please follow the `Download from GitHub` method.
+
+- **Script Not Working:**
+  - Ensure the script is placed in the correct folder.
+  - Check if the script is enabled in SE.
+
+- **Toasts not showing up sometimes**
+  - Scripts like custom_toast.js, greetings_toast.js, etc which are based on toasts require Snapchat to be closed completely then opened. If you have just pressed the home button to exit Snapchat and reopened Snapchat again, the toast might not show up. You also need to clear Snapchat from the recents menu or exit it properly in order for the toast to show up.
+ 
+## Deprecated Versions
+
+   Deprecated versions of the scripts can be found here : [Link](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/deprecated/Deprecated.md)
+
+If you encounter any issues with these script, feel free to contact me : https://t.me/suryadip_sark08
