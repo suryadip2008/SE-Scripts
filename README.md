@@ -2,48 +2,63 @@
 
 A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 
-![Issues](https://img.shields.io/github/issues/suryadip2008/SE-Scripts)
-![Stars](https://img.shields.io/github/stars/suryadip2008/SE-Scripts)
-![Forks](https://img.shields.io/github/forks/suryadip2008/SE-Scripts)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Exo+2&weight=500&size=40&duration=3000&pause=1000&color=F3F742&center=true&vCenter=true&width=600&lines=Hi+there+%F0%9F%91%8B%F0%9F%8F%BB;Welcome+To+SE-SCRIPTS%F0%9F%94%A5;Project+By+Suryadip+Sarkar+%E2%9C%A8;Co-Supported+By+Being+Zain+%F0%9F%93%88)](https://git.io/typing-svg)
 
 ![Maintainer](https://img.shields.io/badge/Creator-Suryadip_Sarkar-black)
 ![Maintainer](https://img.shields.io/badge/Contributer-Being_Zain-black)
 
 ## Table of Contents
 
-- [Script Feature Overviews](#script-feature-overviews)
-- [Scheduled Messages](#scheduled-messages)
+Select any option in Table of Contents to save time.
+
+# Scripts
+
 - [Message Bomber](#message-bomber)
+- [Scheduled Messages](#scheduled-messages)
 - [Greetings Toast](#greetings-toast)
 - [Flexi Quotes](#flexi-quotes)
 - [Custom Reminders](#custom-reminders)
 - [Saved Replies](#saved-replies)
-- [Custom Toast](#custom-toast)
 - [Daily News](#daily-news)
-- [Screenshots](#screenshots)
+- [Custom Toast](#custom-toast)
+
+# Use
 - [How to Use](#how-to-use)
+
+# Trouble Shooting 
 - [Troubleshooting](#troubleshooting)
+
+# Discontinued Versions
 - [Discontinued Versions](#deprecated-versions)
 
-# Script Feature Overviews
+# Scripts 
 
-## scheduled_messages.js
+## Message Bomber
 
-1. **Quick Schedule Options:**
-   - Includes four preset scheduling buttons: 1 minute, 5 minutes, 30 minutes, and 1 hour. These options allow users to quickly set a message to be sent after the selected interval, making it easy to manage messaging without constant monitoring.
+- **Name:** message_bomber
+- **Version:** 5.5
+- **Last Updated:** September 06, 2024
+- **Author:** Suryadip Sarkar
+- **Description:** A script for bombing your friends with custom messages. Just for educational purposes. May or May not cause bans.
 
-2. **Custom Scheduling:**
-   - Allows users to set a custom time for sending messages, providing flexibility for specific needs. This feature ensures that users can plan their messaging schedule with precision beyond the preset options.
+ ## Download 
+
+To download the latest version of the script, choose one of the following 
+
+ 1. **Download from GitHub:**
+
+   Click the link below to download `Message Bomber` directly from GitHub:
+
+   [Download Message Bomber](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/message_bomber.js)
+   
   
-3. **Translations:**
-   - Added Translations for 7 languages i.e. English, Portugese, Punjabi, French, German, Russian & Arabic!
-  
-4. **Recurring Schedule:**
-   - The recurring schedule feature will help you to schedule any recurring message. For example: If I want to send Good Morning to my friend everyday, I just write Good Morning in the Recurring Message Field and Set the slider to Daily and click on the Recurring Schedule Button(Please note: the recurring message will be sent from the next day).
-  
-[Jump to Script Details](#scheduled-messages)
+  2. **Import from URL:**
 
-## message_bomber.js
+   Copy & paste this url in the `Import from URL` button in the scripts tab.
+
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/message_bomber.js)
+
+## Features
 
 1. **Customizable Message Bombing:**
    - Users can specify the number of times they want the recipient to receive messages, allowing for tailored message bombing.
@@ -62,10 +77,86 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
   
 6. **Translations:**
    - Added Translations for 7 languages i.e. English, Portugese, Punjabi, French, German, Russian & Arabic!
-  
-[Jump to Script Details](#message-bomber)
 
-## greetings_toast.js
+   ## Screenshots:
+  
+  <p align="center">
+  <img src="scripts/screenshots/message_bomber_1.jpg" width="45%" style="margin-right:10px;" />
+  <img src="scripts/screenshots/message_bomber_2.jpg" width="45%" />
+</p>
+
+## Scheduled Messages
+
+- **Name:** scheduled_messages
+- **Version:** 2.6
+- **Last Updated:** September 05, 2024
+- **Author:** Suryadip Sarkar
+- **Credits:** rhunk & Jacob Thomas
+- **Requirements:** Only works on SE versions released after 20/08/24
+- **Description:** A Script That Allows For Scheduling Messages. Please don't remove Snapchat from the background when your message is scheduled.
+
+## Download 
+
+To download the latest version of the script, choose one of the following options:
+
+1. **Download from GitHub:**
+
+   Click the link below to download `Scheduled Messages` directly from GitHub:
+
+   [Download Scheduled Messages](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/scheduled_messages.js)
+
+2. **Import from URL:**
+
+   Copy & paste this url in the `Import from URL` button in the scripts tab.
+
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/scheduled_messages.js)
+   
+## Features 
+
+1. **Quick Schedule Options:**
+   - Includes four preset scheduling buttons: 1 minute, 5 minutes, 30 minutes, and 1 hour. These options allow users to quickly set a message to be sent after the selected interval, making it easy to manage messaging without constant monitoring.
+
+2. **Custom Scheduling:**
+   - Allows users to set a custom time for sending messages, providing flexibility for specific needs. This feature ensures that users can plan their messaging schedule with precision beyond the preset options.
+  
+3. **Translations:**
+   - Added Translations for 7 languages i.e. English, Portugese, Punjabi, French, German, Russian & Arabic!
+  
+4. **Recurring Schedule:**
+   - The recurring schedule feature will help you to schedule any recurring message. For example: If I want to send Good Morning to my friend everyday, I just write Good Morning in the Recurring Message Field and Set the slider to Daily and click on the Recurring Schedule Button(Please note: the recurring message will be sent from the next day).
+
+   ## Screenshots:
+
+  <p align="center">
+  <img src="scripts/screenshots/scheduled_messages_1.jpg" width="45%" style="margin-right:10px;" />
+  <img src="scripts/screenshots/scheduled_messages_2.jpg" width="45%" />
+</p>
+
+## Greetings Toast
+
+- **Name:** greetings_toast
+- **Version:** 3.0
+- **Last Updated:** August 02, 2024
+- **Author:** Suryadip Sarkar
+- **Description:** A Script that shows a greetings toast on the startup of Snapchat.
+
+## Download 
+
+To download the latest version of the script, choose one of the following options:
+
+1. **Download from GitHub:**
+
+   Click the link below to download `Greetings Toast` directly from GitHub:
+
+   [Download Greetings Toast](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/greetings_toast.js)
+
+2. **Import from URL:**
+
+   Copy & paste this url in the `Import from URL` button in the scripts tab.
+
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/greetings_toast.js)
+   
+## Features
 
 1. **Dynamic Greetings:**
    - Greets users based on the time of day (Good Morning, Good Afternoon, Good Evening).
@@ -86,9 +177,38 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
    - Validates the date format and shows a toast message if the format is incorrect: "Invalid date format. Please use dd/mm/yyyy."
    - Ensures the correct input format for username and date of birth, with a toast message for invalid input: "Invalid Input format. Please use 'username dd/mm/yyyy'."
 
-[Jump to Script Details](#greetings-toast)
+## Screenshots:
 
-## flexi_quotes.js
+  <p align="center">
+  <img src="scripts/screenshots/greetings_toast_1.jpg" width="45%" style="margin-right:10px;" />
+  <img src="scripts/screenshots/greetings_toast_2.jpg" width="45%" />
+</p>
+
+## Flexi Quotes
+
+- **Name:** flexi_quotes
+- **Version:** 5.0
+- **Last Updated:** August 15, 2024
+- **Author:** Suryadip Sarkar & Jacob Thomas
+- **Description:** A Script that shows a random motivation quote dialog on the startup of Snapchat.
+
+## Download
+
+To download the latest version of the script, choose one of the following options:
+
+1. **Download from GitHub:**
+
+   Click the link below to download `Flexi Quotes` directly from GitHub:
+
+   [Download Flexi Quotes](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/flexi_quotes.js)
+
+2. **Import from URL:**
+
+   Copy & paste this url in the `Import from URL` button in the scripts tab.
+
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/flexi_quotes.js)
+
+## Features
 
 1. **Extensive Quote Collection:**
    - Preloaded with over 150+ motivational quotes.
@@ -112,9 +232,38 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 6. **Motivate your friends!:**:
    - You can now send a random motivational quote to your friend by clicking on the `Send Motivational Quote` Button in the Toolbox.
 
-[Jump to Script Details](#flexi-quotes)
+ - ## Screenshots:
+  
+  <p align="center">
+  <img src="scripts/screenshots/flexi_quotes_1.jpeg" width="45%" style="margin-right:10px;" />
+  <img src="scripts/screenshots/flexi_quotes_2.jpeg" width="45%" />
+</p>
 
-## custom_reminders.js
+## Custom Reminders
+
+ **Name:** custom_reminders
+- **Version:** 1.0
+- **Last Updated:** July 18, 2024
+- **Author:** Suryadip Sarkar
+- **Description:** A Script that shows custom reminders with countdowns based on specified dates.
+
+## Download 
+
+To download the latest version of the script, choose one of the following options:
+
+1. **Download from GitHub:**
+
+   Click the link below to download `Custom Reminders` directly from GitHub:
+
+   [Download Custom Reminders](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/custom_reminders.js)
+
+2. **Import from URL:**
+
+   Copy & paste this url in the `Import from URL` button in the scripts tab.
+
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/custom_reminders.js)
+
+## Features 
 
 1. **Custom Message Input:**
    - Two input fields provided:
@@ -131,11 +280,40 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
    - Several checks implemented to ensure proper user input:
      - Alerts the user if the date is entered in the wrong format.
      - Notifies users if only one input field is filled, ensuring both fields are completed for functionality.
+ 
+## Screenshots:
+ 
+  <p align="center">
+  <img src="scripts/screenshots/custom_reminders_1.jpg" width="45%" style="margin-right:10px;" />
+  <img src="scripts/screenshots/custom_reminders_2.jpg" width="45%" />
+</p>
 
-[Jump to Script Details](#custom-reminders)
+## Saved Replies
 
-## saved_replies.js
+- **Name:** saved_replies
+- **Version:** 1.5
+- **Last Updated:** July 22, 2024
+- **Author:** Suryadip Sarkar
+- **Description:** A Script That Allows Users to Save and Send Custom Replies
 
+## Download 
+
+To download the latest version of the script, choose one of the following options:
+
+1. **Download from GitHub:**
+
+   Click the link below to download `Saved Replies` directly from GitHub:
+
+   [Download Saved Replies](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/saved_replies.js)
+
+2. **Import from URL:**
+
+   Copy & paste this url in the `Import from URL` button in the scripts tab.
+
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/saved_replies.js)
+
+  ## Features 
+  
 1. **Save Replies Functionality:**
    - Users can now save replies for quick access.
    - To save a reply, navigate to any chat, click on the toolbox icon, type the desired reply, and click the Add button.
@@ -154,214 +332,22 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 5. **User Interface Enhancements:**
    - New Icons: Added icons for each button: Add, Delete, and Send for better visual representation.
   
-[Jump to Script Details](#saved-replies)
-
-## custom_toast.js
-
-1. **Custom Message Toast:**
-   - Allows users to enter their favorite message to be displayed as a toast notification, enabling a personalized experience.
-
-2. **Testing Functionality:**
-   - Added a "Test Custom Script" button below the text input field. This allows users to test the changes they have made without needing to reopen Snapchat repeatedly, providing immediate feedback on their custom messages.
-
-[Jump to Script Details](#custom-toast)
-
-## daily_news.js
-
-1.  **Fetches Daily News:**
-       • Automatically retrieves news headlines from a news.json file hosted on GitHub which is updated daily.
-
-2.  **Displays News in Dialog:**
-       • Shows a random, unread news headline in a dialog box when you open Snapchat.
-
-3.  **Font Size:**
-       • Allows you to customize the font size of the news headline in the dialog using a slider in the script's settings.
-
-4.  **Font Color:**
-       • Lets you set a custom hex color code for the headline text, giving you more control over the dialog's appearance.
-
-5.  **Hex Code Validation:**
-       • Includes a "Test Hex Codes" button to ensure that the entered color code is valid before applying it.
-
-6.  **Translation:**
-       • Now you can enjoy daily news into your desired language ! Currently supports :English, Portugese, Punj abi, French, German, Russian & Arabic.
-
-7.  **Refresh Button:**
-       • Refresh Button (Will refresh the news dialog and provide news instantly without needing to open Snapchat.)
-
-8.  **More Script Button:**
-       • More Scripts Button (Will show up a list of other scripts that have been made by creator. )
-
-9.  **Info Button:**
-       • Info Button (Will display module details.)
-    
-[Jump to Script Details](#daily-news)
-
-# Scripts
-
-## Scheduled Messages
-
-- **Name:** scheduled_messages
-- **Version:** 2.6
-- **Last Updated:** September 05, 2024
-- **Author:** Suryadip Sarkar
-- **Credits:** rhunk & Jacob Thomas
-- **Requirements:** Only works on SE versions released after 20/08/24
-- **Description:** A Script That Allows For Scheduling Messages. Please don't remove Snapchat from the background when your message is scheduled.
-
-To download the latest version of the script, choose one of the following options:
-
-1. **Download from GitHub:**
-
-   Click the link below to download `Scheduled Messages` directly from GitHub:
-
-   [Download Scheduled Messages](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/scheduled_messages.js)
-
-2. **Import from URL:**
-
-   Copy & paste this url in the `Import from URL` button in the scripts tab.
-
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/scheduled_messages.js)
-
-## Message Bomber
-
-- **Name:** message_bomber
-- **Version:** 5.5
-- **Last Updated:** September 06, 2024
-- **Author:** Suryadip Sarkar
-- **Description:** A script for bombing your friends with custom messages. Just for educational purposes. May or May not cause bans.
-
-To download the latest version of the script, choose one of the following options:
-
-1. **Download from GitHub:**
-
-   Click the link below to download `Message Bomber` directly from GitHub:
-
-   [Download Message Bomber](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/message_bomber.js)
-
-2. **Import from URL:**
-
-   Copy & paste this url in the `Import from URL` button in the scripts tab.
-
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/message_bomber.js)
-
-## Greetings Toast
-
-- **Name:** greetings_toast
-- **Version:** 3.0
-- **Last Updated:** August 02, 2024
-- **Author:** Suryadip Sarkar
-- **Description:** A Script that shows a greetings toast on the startup of Snapchat.
-
-To download the latest version of the script, choose one of the following options:
-
-1. **Download from GitHub:**
-
-   Click the link below to download `Greetings Toast` directly from GitHub:
-
-   [Download Greetings Toast](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/greetings_toast.js)
-
-2. **Import from URL:**
-
-   Copy & paste this url in the `Import from URL` button in the scripts tab.
-
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/greetings_toast.js)
-
-## Flexi Quotes
-
-- **Name:** flexi_quotes
-- **Version:** 5.0
-- **Last Updated:** August 15, 2024
-- **Author:** Suryadip Sarkar & Jacob Thomas
-- **Description:** A Script that shows a random motivation quote dialog on the startup of Snapchat.
-
-To download the latest version of the script, choose one of the following options:
-
-1. **Download from GitHub:**
-
-   Click the link below to download `Flexi Quotes` directly from GitHub:
-
-   [Download Flexi Quotes](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/flexi_quotes.js)
-
-2. **Import from URL:**
-
-   Copy & paste this url in the `Import from URL` button in the scripts tab.
-
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/flexi_quotes.js)
-
-## Custom Reminders
-
-- **Name:** custom_reminders
-- **Version:** 1.0
-- **Last Updated:** July 18, 2024
-- **Author:** Suryadip Sarkar
-- **Description:** A Script that shows custom reminders with countdowns based on specified dates.
-
-To download the latest version of the script, choose one of the following options:
-
-1. **Download from GitHub:**
-
-   Click the link below to download `Custom Reminders` directly from GitHub:
-
-   [Download Custom Reminders](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/custom_reminders.js)
-
-2. **Import from URL:**
-
-   Copy & paste this url in the `Import from URL` button in the scripts tab.
-
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/custom_reminders.js)
-
-## Saved Replies
-
-- **Name:** saved_replies
-- **Version:** 1.5
-- **Last Updated:** July 22, 2024
-- **Author:** Suryadip Sarkar
-- **Description:** A Script That Allows Users to Save and Send Custom Replies
-
-To download the latest version of the script, choose one of the following options:
-
-1. **Download from GitHub:**
-
-   Click the link below to download `Saved Replies` directly from GitHub:
-
-   [Download Saved Replies](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/saved_replies.js)
-
-2. **Import from URL:**
-
-   Copy & paste this url in the `Import from URL` button in the scripts tab.
-
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/saved_replies.js)
-
-## Custom Toast
-
-- **Name:** custom_toast
-- **Version:** 1.5
-- **Last Updated:** July 20, 2024
-- **Author:** Gabriel Modz, Jacob Thomas & Suryadip Sarkar
-- **Description:** A Script that shows a custom toast on the startup of Snapchat.
-
-To download the latest version of the script, choose one of the following options:
-
-1. **Download from GitHub:**
-
-   Click the link below to download `Custom Toast` directly from GitHub:
-
-   [Download Custom Toast](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/custom_toast.js)
-
-2. **Import from URL:**
-
-   Copy & paste this url in the `Import from URL` button in the scripts tab.
-
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/custom_toast.js)
+- ## Screenshots:
+  
+  <p align="center">
+  <img src="scripts/screenshots/saved_replies_1.jpg" width="45%" style="margin-right:10px;" />
+  <img src="scripts/screenshots/saved_replies_2.jpg" width="45%" />
+</p>
 
 ## Daily News
 
 - **Name:** daily_news
-- **Version:** 2.0
+- **Version:** 2.2
 - **Last Updated:** Daily
 - **Author:** Suryadip Sarkar
 - **Description:**  A script that shows daily news as a dialog on Snapchat startup.
+
+## Download 
 
 To download the latest version of the script, choose one of the following options:
 
@@ -378,64 +364,79 @@ To download the latest version of the script, choose one of the following option
 
    [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/daily_news.js)
 
-## Screenshots
+## Features 
 
-Below are some screenshots demonstrating the script in action:
+1. **Fetches Daily News:**
+   -  Automatically retrieves news headlines from a news.json file hosted on GitHub which is updated daily.
 
-- ## Scheduled Messages:
-  
-  <p align="center">
-  <img src="scripts/screenshots/scheduled_messages_1.jpg" width="45%" style="margin-right:10px;" />
-  <img src="scripts/screenshots/scheduled_messages_2.jpg" width="45%" />
-</p>
+2. **Display Daily News In Dialogue:**
+   - Shows a random, unread news headline in a dialog box when you open Snapchat..
 
-- ## Custom Toast:
-  
-  <p align="center">
-  <img src="scripts/screenshots/custom_toast_1.jpg" width="45%" style="margin-right:10px;" />
-  <img src="scripts/screenshots/custom_toast_2.jpg" width="45%" />
-</p>
+3.  **Font Size:**
+   - Allows you to customize the font size of the news headline in the dialog using a slider in the script's settings.
 
-- ## Greetings Toast:
-  
-  <p align="center">
-  <img src="scripts/screenshots/greetings_toast_1.jpg" width="45%" style="margin-right:10px;" />
-  <img src="scripts/screenshots/greetings_toast_2.jpg" width="45%" />
-</p>
+4.  **Font Color:**
+   - Lets you set a custom hex color code for the headline text, giving you more control over the dialog's appearance.
 
-- ## Flexi Quotes:
-  
-  <p align="center">
-  <img src="scripts/screenshots/flexi_quotes_1.jpeg" width="45%" style="margin-right:10px;" />
-  <img src="scripts/screenshots/flexi_quotes_2.jpeg" width="45%" />
-</p>
+5.  **Hex Code Validation:**
+   - Includes a "Test Hex Codes" button to ensure that the entered color code is valid before applying it.
 
-- ## Custom Reminders:
-  
-  <p align="center">
-  <img src="scripts/screenshots/custom_reminders_1.jpg" width="45%" style="margin-right:10px;" />
-  <img src="scripts/screenshots/custom_reminders_2.jpg" width="45%" />
-</p>
+6.  **Translation:**
+   - Now you can enjoy daily news into your desired language ! Currently supports :English, Portugese, Punj abi, French, German, Russian & Arabic.
 
-- ## Message Bomber:
-  
-  <p align="center">
-  <img src="scripts/screenshots/message_bomber_1.jpg" width="45%" style="margin-right:10px;" />
-  <img src="scripts/screenshots/message_bomber_2.jpg" width="45%" />
-</p>
+7.  **Refresh Button:**
+   - Refresh Button (Will refresh the news dialog and provide news instantly without needing to open Snapchat.)
 
-- ## Saved Replies:
-  
-  <p align="center">
-  <img src="scripts/screenshots/saved_replies_1.jpg" width="45%" style="margin-right:10px;" />
-  <img src="scripts/screenshots/saved_replies_2.jpg" width="45%" />
-</p>
+8.  **More Script Button:**
+   - More Scripts Button (Will show up a list of other scripts that have been made by creator. )
 
-- ## Daily News:
-  
+9.  **Info Button:**
+   - Info Button (Will display module details.)
+ 
+## Screenshots:
+
   <p align="center">
   <img src="scripts/screenshots/daily_news_1.jpg" width="45%" style="margin-right:10px;" />
   <img src="scripts/screenshots/daily_news_2.jpg" width="45%" />
+</p>
+
+## Custom Toast
+
+- **Name:** custom_toast
+- **Version:** 1.5
+- **Last Updated:** July 20, 2024
+- **Author:** Gabriel Modz, Jacob Thomas & Suryadip Sarkar
+- **Description:** A Script that shows a custom toast on the startup of Snapchat.
+
+## Download 
+
+To download the latest version of the script, choose one of the following options:
+
+1. **Download from GitHub:**
+
+   Click the link below to download `Custom Toast` directly from GitHub:
+
+   [Download Custom Toast](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/custom_toast.js)
+
+2. **Import from URL:**
+
+   Copy & paste this url in the `Import from URL` button in the scripts tab.
+
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/custom_toast.js)
+   
+## Features 
+
+1. **Custom Message Toast:**
+   - Allows users to enter their favorite message to be displayed as a toast notification, enabling a personalized experience.
+
+2. **Testing Functionality:**
+   - Added a "Test Custom Script" button below the text input field. This allows users to test the changes they have made without needing to reopen Snapchat repeatedly, providing immediate feedback on their custom messages.
+
+## Screenshot:
+
+  <p align="center">
+  <img src="scripts/screenshots/custom_toast_1.jpg" width="45%" style="margin-right:10px;" />
+  <img src="scripts/screenshots/custom_toast_2.jpg" width="45%" />
 </p>
 
 ## How to Use
