@@ -376,10 +376,10 @@ To download the latest version of the script, choose one of the following option
    -  Automatically retrieves news headlines from a news.json file hosted on GitHub which is updated daily.
 
 2. **Display Daily News In Dialogue:**
-   - Shows a random, unread news headline in a dialog box when you open Snapchat..
+   - Shows a random, unread news headline in a dialog box when you open Snapchat.
 
 3. **Font Size:**
-   -Allows you to customize the font size of the news headline in the dialog using a slider in the script's settings..
+   - Allows you to customize the font size of the news headline in the dialog using a slider in the script's settings.
 
 4. **Font Color:**
    - Lets you set a custom hex color code for the headline text, giving you more control over the dialog's appearance.
