@@ -260,17 +260,17 @@ To download the latest version of the script, choose one of the following option
 
 To download the latest version of the script, choose one of the following options:
 
-1. **Download from GitHub:**
-
-   Click the link below to download `Custom Reminders` directly from GitHub:
-
-   [Download Custom Reminders](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/custom_reminders.js)
-
-2. **Import from URL:**
+1. **Import from URL:**
 
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
    [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/custom_reminders.js)
+
+2. **Download from GitHub:**
+
+   Click the link below to download `Custom Reminders` directly from GitHub:
+
+   [Download Custom Reminders](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/custom_reminders.js)
 
 ## Features 
 
