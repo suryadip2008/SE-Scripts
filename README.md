@@ -378,25 +378,25 @@ To download the latest version of the script, choose one of the following option
 2. **Display Daily News In Dialogue:**
    - Shows a random, unread news headline in a dialog box when you open Snapchat..
 
-3.  **Font Size:**
-   - Allows you to customize the font size of the news headline in the dialog using a slider in the script's settings.
+3. **Font Size:**
+   -Allows you to customize the font size of the news headline in the dialog using a slider in the script's settings..
 
-4.  **Font Color:**
+4. **Font Color:**
    - Lets you set a custom hex color code for the headline text, giving you more control over the dialog's appearance.
 
-5.  **Hex Code Validation:**
+5. **Hex Code Validation:**
    - Includes a "Test Hex Codes" button to ensure that the entered color code is valid before applying it.
 
-6.  **Translation:**
+6. **Translation:**
    - Now you can enjoy daily news into your desired language ! Currently supports :English, Portugese, Punj abi, French, German, Russian & Arabic.
 
-7.  **Refresh Button:**
-   - Refresh Button (Will refresh the news dialog and provide news instantly without needing to open Snapchat.)
+7. **Refresh Button:**
+   - Refresh Button (Will refresh the news dialog and provide news instantly without needing to open Snapchat.).
 
-8.  **More Script Button:**
-   - More Scripts Button (Will show up a list of other scripts that have been made by creator. )
+8. **More Script Button:**
+   - More Scripts Button (Will show up a list of other scripts that have been made by creator.).
 
-9.  **Info Button:**
+9. **Info Button:**
    - Info Button (Will display module details.)
  
 ## Screenshots:
