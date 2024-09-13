@@ -33,9 +33,9 @@ Select any option in Table of Contents to save time.
 
 - [How to Use](#how-to-use)
 
-# TroubleShooting 
+# Trouble Shooting 
 
-- [Troubleshooting](#troubleshooting)
+- [Trouble Shooting](#trouble-shooting)
 
 # Discontinued Versions
 
@@ -482,7 +482,7 @@ Follow these steps to install and use the script:
 
    - Go to the script settings to customize options like custom toast, username, date of birth, etc.
    
-## Troubleshooting
+## Trouble Shooting
 
 ### FAQs
 
