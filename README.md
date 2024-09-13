@@ -33,9 +33,9 @@ Select any option in Table of Contents to save time.
 
 - [How to Use](#how-to-use)
 
-# Trouble-Shooting 
+# TroubleShooting 
 
-- [Trouble-Shooting](#trouble-shooting)
+- [Troubleshooting](#troubleshooting)
 
 # Discontinued Versions
 
@@ -481,8 +481,8 @@ Follow these steps to install and use the script:
 6. **Configuration:**
 
    - Go to the script settings to customize options like custom toast, username, date of birth, etc.
-
-## Trouble-Shooting
+   
+## Troubleshooting
 
 ### FAQs
 
@@ -501,7 +501,7 @@ Follow these steps to install and use the script:
 
 - **Toasts not showing up sometimes**
   - Scripts like custom_toast.js, greetings_toast.js, etc which are based on toasts require Snapchat to be closed completely then opened. If you have just pressed the home button to exit Snapchat and reopened Snapchat again, the toast might not show up. You also need to clear Snapchat from the recents menu or exit it properly in order for the toast to show up.
- 
+
 ## Deprecated Versions
 
    Deprecated versions of the scripts can be found here : [Link](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/deprecated/Deprecated.md)
