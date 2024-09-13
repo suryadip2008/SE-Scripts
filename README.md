@@ -51,23 +51,22 @@ Select any option in Table of Contents to save time.
 - **Author:** Suryadip Sarkar
 - **Description:** A script for bombing your friends with custom messages. Just for educational purposes. May or May not cause bans.
 
- ## Download 
+## Download
 
 To download the latest version of the script, choose one of the following 
-
- 1. **Download from GitHub:**
-
-   Click the link below to download `Message Bomber` directly from GitHub:
-
-   [Download Message Bomber](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/message_bomber.js)
-   
-  
-  2. **Import from URL:**
+ 
+ 1. **Import from URL:**
 
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
    [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/message_bomber.js)
 
+ 2. **Download from GitHub:**
+
+   Click the link below to download `Message Bomber` directly from GitHub:
+
+   [Download Message Bomber](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/message_bomber.js)
+   
 ## Features
 
 1. **Customizable Message Bombing:**
@@ -109,17 +108,17 @@ To download the latest version of the script, choose one of the following
 
 To download the latest version of the script, choose one of the following options:
 
-1. **Download from GitHub:**
-
-   Click the link below to download `Scheduled Messages` directly from GitHub:
-
-   [Download Scheduled Messages](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/scheduled_messages.js)
-
-2. **Import from URL:**
+1. **Import from URL:**
 
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
    [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/scheduled_messages.js)
+
+2. **Download from GitHub:**
+
+   Click the link below to download `Scheduled Messages` directly from GitHub:
+
+   [Download Scheduled Messages](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/scheduled_messages.js)
    
 ## Features 
 
@@ -154,19 +153,19 @@ To download the latest version of the script, choose one of the following option
 
 To download the latest version of the script, choose one of the following options:
 
-1. **Download from GitHub:**
-
-   Click the link below to download `Greetings Toast` directly from GitHub:
-
-   [Download Greetings Toast](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/greetings_toast.js)
-
-2. **Import from URL:**
+1. **Import from URL:**
 
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
    [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/greetings_toast.js)
-   
-## Features
+
+2. **Download from GitHub:**
+
+   Click the link below to download `Greetings Toast` directly from GitHub:
+
+   [Download Greetings Toast](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/greetings_toast.js)## Features
+
+## Features 
 
 1. **Dynamic Greetings:**
    - Greets users based on the time of day (Good Morning, Good Afternoon, Good Evening).
@@ -206,17 +205,17 @@ To download the latest version of the script, choose one of the following option
 
 To download the latest version of the script, choose one of the following options:
 
-1. **Download from GitHub:**
-
-   Click the link below to download `Flexi Quotes` directly from GitHub:
-
-   [Download Flexi Quotes](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/flexi_quotes.js)
-
-2. **Import from URL:**
+1. **Import from URL:**
 
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
    [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/flexi_quotes.js)
+
+2. **Download from GitHub:**
+
+   Click the link below to download `Flexi Quotes` directly from GitHub:
+
+   [Download Flexi Quotes](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/flexi_quotes.js)
 
 ## Features
 
@@ -310,17 +309,17 @@ To download the latest version of the script, choose one of the following option
 
 To download the latest version of the script, choose one of the following options:
 
-1. **Download from GitHub:**
-
-   Click the link below to download `Saved Replies` directly from GitHub:
-
-   [Download Saved Replies](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/saved_replies.js)
-
-2. **Import from URL:**
+1. **Import from URL:**
 
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
    [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/saved_replies.js)
+   
+2. **Download from GitHub:**
+
+   Click the link below to download `Saved Replies` directly from GitHub:
+
+   [Download Saved Replies](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/saved_replies.js)
 
   ## Features 
   
@@ -361,18 +360,18 @@ To download the latest version of the script, choose one of the following option
 
 To download the latest version of the script, choose one of the following options:
 
-1. **Download from GitHub:**
 
-   Click the link below to download `Daily News` directly from GitHub:
-
-   [Download Daily News](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/daily_news.js)
-
-
-2. **Import from URL:**
+1. **Import from URL:**
 
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
    [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/daily_news.js)
+
+2. **Download from GitHub:**
+
+   Click the link below to download `Daily News` directly from GitHub:
+
+   [Download Daily News](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/daily_news.js)
 
 ## Features 
 
@@ -422,18 +421,18 @@ To download the latest version of the script, choose one of the following option
 
 To download the latest version of the script, choose one of the following options:
 
-1. **Download from GitHub:**
-
-   Click the link below to download `Custom Toast` directly from GitHub:
-
-   [Download Custom Toast](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/custom_toast.js)
-
-2. **Import from URL:**
+1. **Import from URL:**
 
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
    [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/custom_toast.js)
    
+2. **Download from GitHub:**
+
+   Click the link below to download `Custom Toast` directly from GitHub:
+
+   [Download Custom Toast](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/custom_toast.js)
+
 ## Features 
 
 1. **Custom Message Toast:**
