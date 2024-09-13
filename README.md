@@ -30,15 +30,12 @@ Select any option in Table of Contents to save time.
 - [Custom Toast](#custom-toast)
 
 # Use
-
 - [How to Use](#how-to-use)
 
 # Trouble Shooting 
-
-- [Trouble Shooting](#trouble-shooting)
+- [Troubleshooting](#troubleshooting)
 
 # Discontinued Versions
-
 - [Discontinued Versions](#deprecated-versions)
 
 # Scripts 
@@ -482,7 +479,7 @@ Follow these steps to install and use the script:
 
    - Go to the script settings to customize options like custom toast, username, date of birth, etc.
    
-## Trouble Shooting
+## Troubleshooting 
 
 ### FAQs
 
