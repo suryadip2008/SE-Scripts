@@ -32,7 +32,7 @@ Select any option in Table of Contents to save time.
 # Use
 - [How to Use](#how-to-use)
 
-# Troubleshooting 
+# Problem Diagnosis 
 - [Troubleshooting](#troubleshooting)
 
 # Discontinued Versions
