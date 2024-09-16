@@ -483,11 +483,11 @@ Follow these steps to install and use the script:
 
 ### FAQs
 
-- **SE crashes when I import the script/When I open the `Scripts` Tab!!**
-  - This is due to duplicate scripts existing in your scripts folder. Head over to your File Manager and navigate to your Scripts Folder and Delete all the duplicate scripts.
-
 - **Failed to Import Script!**
   - You have to first give SE access to your Scripts Folder.(To do this, head over to the Scripts Tab in SE)
+ 
+- **SE crashes when I import the script/When I open the `Scripts` Tab!!**
+  - This is due to duplicate scripts existing in your scripts folder. Head over to your File Manager and navigate to your Scripts Folder and Delete all the duplicate scripts.
  
 - **Tapping on Import From URL Button Does Nothing!**
   - Please follow the `Download from GitHub` method.
