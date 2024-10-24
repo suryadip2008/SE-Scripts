@@ -2,7 +2,7 @@
 // name: message_bomber
 // displayName: Message Bomber
 // description: A script for bombing your friends with custom messages. Just for educational purposes. May or may not cause bans.
-// version: 5.5
+// version: 5.6
 // updateUrl: https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/message_bomber.js
 // author: Suryadip Sarkar
 // minSEVersion: Anti-Ban works only on versions after 20/08/24
@@ -79,6 +79,46 @@ var events = require("events");
             }
         });
     }
+
+    function showModuleDisclaimer(activity) {
+    activity.runOnUiThread(() => {
+        var disclaimerDialog = im.createAlertDialog(activity, (builder, dialog) => {
+            builder.row(function (builder) {
+                builder.text("⚠️ By using this module, you agree to:")
+                    .fontSize(20)
+            })
+                .arrangement("center")
+                .fillMaxWidth();
+
+            builder.text("")
+                .fontSize(10);
+
+            builder.text("1. Not blame the author if your account gets locked/banned.")
+                .fontSize(16);
+            builder.text("")
+                .fontSize(10);
+            builder.text("2. To not harm others while using this module.")
+                .fontSize(16);
+            builder.text("")
+                .fontSize(10);
+            builder.text("3. To use the module responsibly and in a controlled way.")
+                .fontSize(16);
+            builder.text("")
+                .fontSize(10);
+            builder.text("4. To not distribute/copy the module without the proper credits to the author.")
+                .fontSize(16);
+
+            builder.row(function (builder) {
+                builder.button("✅ I Agree", function () {
+                    dialog.dismiss();
+                });
+            })
+                .arrangement("center")
+                .fillMaxWidth();
+        });
+        disclaimerDialog.show();
+    });
+}
 
     var conversationId = null;
     var bombCount = 0;
@@ -776,6 +816,7 @@ function createConversationToolboxUI() {
     module.onSnapMainActivityCreate = activity => {
         checkForNewVersion(); 
         checkForNewMessages();
+        showModuleDisclaimer(activity);
     }
 
     function start() {
