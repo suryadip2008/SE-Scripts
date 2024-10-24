@@ -2,7 +2,7 @@
 // name: message_bomber
 // displayName: Message Bomber
 // description: A script for bombing your friends with custom messages. Just for educational purposes. May or may not cause bans.
-// version: 5.5
+// version: 5.6
 // updateUrl: https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/message_bomber.js
 // author: Suryadip Sarkar
 // minSEVersion: Anti-Ban works only on versions after 20/08/24
@@ -31,7 +31,7 @@ var events = require("events");
     var owner = "suryadip2008";
     var repo = "SE-Scripts";
     var scriptName = "message_bomber";
-    var currentVersion = "v5.5";
+    var currentVersion = "v5.6";
     let updateAvailable = false;
 
     var versionJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/version.json`;
@@ -79,6 +79,54 @@ var events = require("events");
             }
         });
     }
+
+    function showModuleDisclaimer(activity) {
+    activity.runOnUiThread(() => {
+        var disclaimerDialog = im.createAlertDialog(activity, (builder, dialog) => {
+            builder.row(function (builder) {
+                builder.text("⚠️ Disclaimer")
+                    .fontSize(20)
+            })
+                .arrangement("center")
+                .fillMaxWidth();
+
+            builder.text("")
+                .fontSize(10);
+
+            builder.text("1. By using this module, you shall not blame the author if your account gets locked/banned.")
+                .fontSize(16);
+            builder.text("")
+                .fontSize(10);
+            builder.text("2. Do not download the script from unknown sources as it may pose a risk to your account.")
+                .fontSize(16);
+            builder.text("")
+                .fontSize(10);
+            builder.text("3. You should use the module responsibly and in a controlled way.")
+                .fontSize(16);
+            builder.text("")
+                .fontSize(10);
+            builder.text("4. You should not distribute/copy the module without the proper credits to the author.")
+                .fontSize(16);
+            builder.text("")
+                .fontSize(10);
+            builder.text("5. Any issues encountered should be directly reported to the author.")
+                .fontSize(16);
+
+            builder.row(function (builder) {
+                builder.button("✅ I Understand", function () {
+                    dialog.dismiss();
+                });
+            })
+                .arrangement("center")
+                .fillMaxWidth();
+        });
+        if (!config.getBoolean("disclaimer", false)){
+            disclaimerDialog.show();
+            config.setBoolean("disclaimer", true);
+            config.save();
+        }
+    });
+}
 
     var conversationId = null;
     var bombCount = 0;
@@ -776,6 +824,7 @@ function createConversationToolboxUI() {
     module.onSnapMainActivityCreate = activity => {
         checkForNewVersion(); 
         checkForNewMessages();
+        showModuleDisclaimer(activity);
     }
 
     function start() {
