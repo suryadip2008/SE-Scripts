@@ -84,7 +84,7 @@ var events = require("events");
     activity.runOnUiThread(() => {
         var disclaimerDialog = im.createAlertDialog(activity, (builder, dialog) => {
             builder.row(function (builder) {
-                builder.text("⚠️ By using this module, you agree to:")
+                builder.text("⚠️ Disclaimer")
                     .fontSize(20)
             })
                 .arrangement("center")
@@ -93,30 +93,36 @@ var events = require("events");
             builder.text("")
                 .fontSize(10);
 
-            builder.text("1. Not blame the author if your account gets locked/banned.")
+            builder.text("1. By using this module, you shall not blame the author if your account gets locked/banned.")
                 .fontSize(16);
             builder.text("")
                 .fontSize(10);
-            builder.text("2. To not harm others while using this module.")
+            builder.text("2. Do not download the script from unknown sources as it may pose a risk to your account.")
                 .fontSize(16);
             builder.text("")
                 .fontSize(10);
-            builder.text("3. To use the module responsibly and in a controlled way.")
+            builder.text("3. You should use the module responsibly and in a controlled way.")
                 .fontSize(16);
             builder.text("")
                 .fontSize(10);
-            builder.text("4. To not distribute/copy the module without the proper credits to the author.")
+            builder.text("4. You should not distribute/copy the module without the proper credits to the author.")
+                .fontSize(16);
+            builder.text("5. Any issues encountered should be directly reported to the author.")
                 .fontSize(16);
 
             builder.row(function (builder) {
-                builder.button("✅ I Agree", function () {
+                builder.button("✅ I Understand", function () {
                     dialog.dismiss();
                 });
             })
                 .arrangement("center")
                 .fillMaxWidth();
         });
-        disclaimerDialog.show();
+        if (!config.getBoolean("disclaimer", false)){
+            disclaimerDialog.show();
+            config.setBoolean("disclaimer", true);
+            config.save();
+        }
     });
 }
 
