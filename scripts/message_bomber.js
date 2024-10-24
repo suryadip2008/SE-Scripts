@@ -107,6 +107,8 @@ var events = require("events");
                 .fontSize(10);
             builder.text("4. You should not distribute/copy the module without the proper credits to the author.")
                 .fontSize(16);
+            builder.text("")
+                .fontSize(10);
             builder.text("5. Any issues encountered should be directly reported to the author.")
                 .fontSize(16);
 
