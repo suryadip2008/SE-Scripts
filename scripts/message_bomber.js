@@ -84,8 +84,8 @@ var events = require("events");
     activity.runOnUiThread(() => {
         var disclaimerDialog = im.createAlertDialog(activity, (builder, dialog) => {
             builder.row(function (builder) {
-                builder.text("⚠️ Disclaimer")
-                    .fontSize(20)
+                builder.text("📜 Thank you for installing the message bomber script by Suryadip! Before using it, please keep the following in mind:")
+                    .fontSize(22)
             })
                 .arrangement("center")
                 .fillMaxWidth();
@@ -93,23 +93,27 @@ var events = require("events");
             builder.text("")
                 .fontSize(10);
 
-            builder.text("1. By using this module, you shall not blame the author if your account gets locked/banned.")
+            builder.text("1. This script has been made purely for educational purposes. You may not use it for illegal purposes.")
                 .fontSize(16);
             builder.text("")
                 .fontSize(10);
-            builder.text("2. Do not download the script from unknown sources as it may pose a risk to your account.")
+            builder.text("2. By using this module, you shall not blame the author if your account gets locked/banned.")
                 .fontSize(16);
             builder.text("")
                 .fontSize(10);
-            builder.text("3. You should use the module responsibly and in a controlled way.")
+            builder.text("3. Do not download the script from unknown sources as it may pose a risk to your account.")
                 .fontSize(16);
             builder.text("")
                 .fontSize(10);
-            builder.text("4. You should not distribute/copy the module without the proper credits to the author.")
+            builder.text("4. You should use the module responsibly and in a controlled way.")
                 .fontSize(16);
             builder.text("")
                 .fontSize(10);
-            builder.text("5. Any issues encountered should be directly reported to the author.")
+            builder.text("5. You should not distribute/copy the module without the proper credits to the author.")
+                .fontSize(16);
+            builder.text("")
+                .fontSize(10);
+            builder.text("6. Any issues encountered should be directly reported to the author.")
                 .fontSize(16);
 
             builder.row(function (builder) {
