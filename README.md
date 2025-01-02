@@ -58,25 +58,16 @@ To download the latest version of the script, choose one of the following
 
    [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/message_bomber.js)
 
-## Features
 
-1. **Customizable Message Bombing:**
-   - Users can specify the number of times they want the recipient to receive messages, allowing for tailored message bombing.
-  
-2. **Anti-Ban Features:**
-   - New Anti-Ban Features have been added! To use the new anti-ban features, click on the toolbox, then click on Message Bomber and turn on "Enable Anti-Ban".
-
-3. **Custom Message Input:**
-   - Users can enter custom messages to be used for the message bombing, providing flexibility in content.
-  
-4. **Schedule Bomb Feature:**
-   - Now you can schedule your bomb message in the format DD M YYYY HH MM. 
-
-5. **Enhanced User Experience:**
-   - Added icons for the "Message Bomb" button, improving visual appeal and user interaction.
-  
-6. **Translations:**
-   - Added Translations for 7 languages i.e. English, Portugese, Punjabi, French, German, Russian & Arabic!
+## 📖 Main Features
+<details closed>
+  <summary>💣 Message Bomber</summary>
+ 
+- `Customizable Message Bombing`
+- `Anti-Ban Features`
+- `Custom Message Input`
+- `Schedule Bomb Features`
+</details>
 
    ## Screenshots:
   
@@ -89,8 +80,7 @@ To download the latest version of the script, choose one of the following
 
 - **Name:** scheduled_messages
 - **Version:** 2.6
-- **Last Updated:** September 05, 2024
-- **Author:** Suryadip Sarkar
+- **Last Updated:** September 06 2024* Suryadip Sarkar
 - **Credits:** rhunk & Jacob Thomas
 - **Requirements:** Only works on SE versions released after 20/08/24
 - **Description:** A Script That Allows For Scheduling Messages. Please don't remove Snapchat from the background when your message is scheduled.
