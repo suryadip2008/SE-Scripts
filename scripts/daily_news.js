@@ -72,6 +72,7 @@ function checkForNewMessages() {
 
 var defaultFontSize = 18;
 var customTopText = "";
+var customSeperator = "";
 var oldUIEnabled = false;
 var oldUIConfigId = "oldUIEnabled";
 var defaultFontColor = "#FFFFFF";
@@ -287,7 +288,7 @@ function showNewsDialog(activity, headline, fontSize, fontColor) {
                 .fontSize(10);
 
             builder.row(function (builder) {
-                builder.text("_________________________")
+                builder.text(customSeperator)
                     .fontSize(10)
                     .color(0xFFCCCCCC)
             })
@@ -360,6 +361,17 @@ function showModuleConfig(activity) {
                 .fontSize(10);
                 builder.textInput("📰 Today's News", "", function (value) {
                 customTopText = value;
+            }).singleLine(true);
+            })
+            .arrangement("spaceBetween")
+            .fillMaxWidth()
+            .padding(4);
+
+            builder.row(function (builder) {
+                builder.text("Seperator lines:")
+                .fontSize(10);
+                builder.textInput("Add only ---", "", function (value) {
+                customSeperator = value;
             }).singleLine(true);
             })
             .arrangement("spaceBetween")
