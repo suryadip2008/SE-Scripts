@@ -71,6 +71,8 @@ function checkForNewMessages() {
 }
 
 var defaultFontSize = 18;
+var oldUIEnabled = false;
+var oldUIConfigId = "oldUIEnabled";
 var defaultFontColor = "#FFFFFF";
 var defaultLanguage = "en";
 var languages = {
@@ -362,37 +364,8 @@ function showModuleConfig(activity) {
             .arrangement("spaceBetween")
             .fillMaxWidth()
             .padding(4);
-            
-            builder.text("")
-                .fontSize(10);
-            builder.text(t("scheduledMessages"))
-                .fontSize(16);
-            builder.text(t("messageBomber"))
-                .fontSize(16);
-            builder.text(t("greetingsToast"))
-                .fontSize(16);
-            builder.text(t("flexiQuotes"))
-                .fontSize(16);
-            builder.text(t("customReminders"))
-                .fontSize(16);
-            builder.text(t("savedReplies"))
-                .fontSize(16);
-            builder.text(t("customToast"))
-                .fontSize(16);
-
-            builder.text("")
-                .fontSize(10);
-
-            builder.row(function (builder) {
-                builder.button(t("returnBack"), function () {
-                    fetchAndShowNews(activity);
-                    dialog.dismiss();
-                });
-            })
-                .arrangement("center")
-                .fillMaxWidth();
         });
-        OtherScriptsDialog.show();
+        ModuleConfig.show();
     });
 }
 
