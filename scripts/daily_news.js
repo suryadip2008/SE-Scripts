@@ -71,6 +71,7 @@ function checkForNewMessages() {
 }
 
 var defaultFontSize = 18;
+var customTopText = "";
 var oldUIEnabled = false;
 var oldUIConfigId = "oldUIEnabled";
 var defaultFontColor = "#FFFFFF";
