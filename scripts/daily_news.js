@@ -88,7 +88,7 @@ var languages = {
 };
 
 var now = new Date();
-console.log(now.getTime());
+console.log(now.getTime().toString());
 
 var settingsContext = {
     events: [],
