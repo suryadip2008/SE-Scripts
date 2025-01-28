@@ -377,6 +377,15 @@ function showModuleConfig(activity) {
             .arrangement("spaceBetween")
             .fillMaxWidth()
             .padding(4);
+
+            builder.row(function (builder) {
+                builder.button(t("returnBack"), function () {
+                    fetchAndShowNews(activity);
+                    dialog.dismiss();
+                });
+            })
+                .arrangement("center")
+                .fillMaxWidth();
         });
         ModuleConfig.show();
     });
