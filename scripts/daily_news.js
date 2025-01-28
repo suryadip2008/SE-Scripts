@@ -87,7 +87,6 @@ var languages = {
     "ar": "Arabic"
 };
 
-var targetDate = new Date(parts[2], parts[1] - 1, parts[0], parts[3], parts[4]);
 var now = new Date();
 console.log(now.getTime());
 
