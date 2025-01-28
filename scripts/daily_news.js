@@ -266,7 +266,7 @@ function showNewsDialog(activity, headline, fontSize, fontColor) {
                 return translations[selectedLanguage][key] || translations['en'][key];
             }
             builder.row(function (builder) {
-                builder.text("📰" + t("today"))
+                builder.text(customTopText)
                     .fontSize(config.getInteger("todaysNewsFontSize", 25))
                     .color(hexToColor(config.get("todaysNewsFontColor", "#FFFFFF")))
             })
@@ -292,15 +292,15 @@ function showNewsDialog(activity, headline, fontSize, fontColor) {
                 .fillMaxWidth();
 
             builder.row(function (builder) {
-                builder.button("📜" + t("moreScripts"), function () {
-                    showOtherScriptsDialog(activity);
+                builder.button("⚙️", function () {
+                    showModuleConfig(activity);
                     dialog.dismiss();
                 });
-                builder.button("ℹ️", function () {
+                builder.button("↗️", function () {
                     showModuleInfoDialog(activity);
                     dialog.dismiss();
                 });
-                builder.button(t("refresh"), function () {
+                builder.button("⏭️", function () {
                     fetchAndShowNews(activity);
                     dialog.dismiss();
                 });
@@ -320,6 +320,79 @@ function showNewsDialog(activity, headline, fontSize, fontColor) {
             }
         });
         myDialog.show();
+    });
+}
+
+function showModuleConfig(activity) {
+    activity.runOnUiThread(() => {
+        var ModuleConfig = im.createAlertDialog(activity, (builder, dialog) => {
+            var selectedLanguage = config.get("language", defaultLanguage);
+            function t(key) {
+                return translations[selectedLanguage][key] || translations['en'][key];
+            }
+            builder.row(function (builder) {
+                builder.text("⚙️ Configure")
+                    .fontSize(20)
+            })
+                .arrangement("center")
+                .fillMaxWidth();
+
+            builder.text("")
+                .fontSize(10);
+
+            builder.row(function (builder) {
+                builder.text("⏰ Old UI")
+                    .fontSize(10);
+                builder.switch(oldUIEnabled, function (value) {
+                    oldUIEnabled = value;
+                    config.setBoolean(oldUIConfigId, value, true);
+                });
+            })
+            .arrangement("spaceBetween")
+            .fillMaxWidth()
+            .padding(4);
+
+            builder.row(function (builder) {
+                builder.text("Enter custom top text:")
+                .fontSize(10);
+                builder.textInput("📰 Today's News", "", function (value) {
+                customTopText = value;
+            }).singleLine(true);
+            })
+            .arrangement("spaceBetween")
+            .fillMaxWidth()
+            .padding(4);
+            
+            builder.text("")
+                .fontSize(10);
+            builder.text(t("scheduledMessages"))
+                .fontSize(16);
+            builder.text(t("messageBomber"))
+                .fontSize(16);
+            builder.text(t("greetingsToast"))
+                .fontSize(16);
+            builder.text(t("flexiQuotes"))
+                .fontSize(16);
+            builder.text(t("customReminders"))
+                .fontSize(16);
+            builder.text(t("savedReplies"))
+                .fontSize(16);
+            builder.text(t("customToast"))
+                .fontSize(16);
+
+            builder.text("")
+                .fontSize(10);
+
+            builder.row(function (builder) {
+                builder.button(t("returnBack"), function () {
+                    fetchAndShowNews(activity);
+                    dialog.dismiss();
+                });
+            })
+                .arrangement("center")
+                .fillMaxWidth();
+        });
+        OtherScriptsDialog.show();
     });
 }
 
