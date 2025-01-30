@@ -773,6 +773,20 @@ function createManagerToolBoxUI() {
     });
 }
 
+function createConversationToolboxUI() {
+    im.create("conversationToolbox", function (builder, args) {
+        try {
+            builder.row(function (builder) {
+                builder.button("↗️ Show Latest News", function () {
+                    fetchAndShowNews(activity);
+                }); 
+            });
+        } catch (error) {
+            console.error("Error in createConversationToolboxUI: ", error); 
+        }
+    });
+}
+
 function isValidHex(hex) {
     return /^#([0-9A-Fa-f]{6})$/.test(hex);
 }
