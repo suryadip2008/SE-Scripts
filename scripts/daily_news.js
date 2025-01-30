@@ -24,8 +24,8 @@ var scriptName = "daily_news";
 var currentVersion = "v2.2";
 let updateAvailable = false;
 
-var versionJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/version.json`;
-var messagesJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/messages.json`;
+var versionJsonUrl = `https://raw.githubusercontent.com/<span class="math-inline">\{owner\}/</span>{repo}/main/version.json`;
+var messagesJsonUrl = `https://raw.githubusercontent.com/<span class="math-inline">\{owner\}/</span>{repo}/main/messages.json`;
 
 function checkForNewVersion() {
     networking.getUrl(versionJsonUrl, (error, response) => {
@@ -119,8 +119,7 @@ var translations = {
         newUpdateAvailable: "📢 A new update is available! Please refresh the scripts page & then click on Update Module.",
         understood: "Understood!",
         config: "⚙️ Configure",
-        timezoneInput: "Enter your timezone (e.g., IST, PST):",
-        timeLeft: "Time left for next news update:"
+        timeLeft: "🕑 Time left for next news update:"
     },
     pt: {
         today: "Notícias de hoje",
@@ -146,8 +145,7 @@ var translations = {
         newUpdateAvailable: "📢 Uma nova atualização está disponível! Atualize a página de scripts e clique em Atualizar Módulo.",
         understood: "Entendi!",
         config: "⚙️ Configurar",
-        timezoneInput: "Insira seu fuso horário (por exemplo, IST, PST):",
-        timeLeft: "Tempo restante para a próxima atualização de notícias:"
+        timeLeft: "🕑 Tempo restante para a próxima atualização de notícias:"
     },
     pa: {
         today: "ਅੱਜ ਦੀ ਖਬਰ",
@@ -173,8 +171,7 @@ var translations = {
         newUpdateAvailable: "📢 ਇੱਕ ਨਵਾਂ ਅੱਪਡੇਟ ਉਪਲਬਧ ਹੈ! ਕਿਰਪਾ ਕਰਕੇ ਸਕ੍ਰਿਪਟਾਂ ਵਾਲੇ ਪੰਨੇ ਨੂੰ ਤਾਜ਼ਾ ਕਰੋ ਅਤੇ ਅੱਪਡੇਟ ਮੋਡੀਊਲ 'ਤੇ ਕਲਿੱਕ ਕਰੋ।",
         understood: "ਸਮਝ ਆ ਗਿਆ!",
         config: "⚙️ ਸੰਰਚਨਾ ਕਰੋ",
-        timezoneInput: "ਆਪਣਾ ਸਮਾਂ ਖੇਤਰ ਦਰਜ ਕਰੋ (ਉਦਾਹਰਨ ਲਈ, IST, PST):",
-        timeLeft: "ਅਗਲੀ ਖਬਰ ਅੱਪਡੇਟ ਲਈ ਬਾਕੀ ਸਮਾਂ:"
+        timeLeft: "🕑 ਅਗਲੀ ਖਬਰ ਅੱਪਡੇਟ ਲਈ ਬਾਕੀ ਸਮਾਂ:"
     },
     de: {
         today: "Aktuelle Nachrichten",
@@ -200,8 +197,7 @@ var translations = {
         newUpdateAvailable: "📢 Ein neues Update ist verfügbar! Bitte aktualisieren Sie die Skriptseite und klicken Sie dann auf Modul aktualisieren.",
         understood: "Verstanden!",
         config: "⚙️ Konfigurieren",
-        timezoneInput: "Geben Sie Ihre Zeitzone ein (z. B. IST, PST):",
-        timeLeft: "Verbleibende Zeit bis zum nächsten Nachrichtenupdate:"
+        timeLeft: "🕑 Verbleibende Zeit bis zum nächsten Nachrichtenupdate:"
     },
     ru: {
         today: "Сегодняшние новости",
@@ -227,8 +223,7 @@ var translations = {
         newUpdateAvailable: "📢 Доступно новое обновление! Пожалуйста, обновите страницу скриптов и нажмите кнопку «Обновить модуль».",
         understood: "Понял!",
         config: "⚙️ Настроить",
-        timezoneInput: "Введите свой часовой пояс (например, IST, PST):",
-        timeLeft: "Оставшееся время до следующего обновления новостей:"
+        timeLeft: "🕑 Оставшееся время до следующего обновления новостей:"
     },
     ar: {
         today: "أخبار اليوم",
@@ -254,8 +249,7 @@ var translations = {
         newUpdateAvailable: "📢 يتوفر تحديث جديد! يرجى تحديث صفحة البرامج النصية ثم النقر فوق تحديث الوحدة النمطية.",
         understood: "فهمتك!",
         config: "⚙️ تكوين",
-        timezoneInput: "أدخل منطقتك الزمنية (على سبيل المثال، IST، PST):",
-        timeLeft: "الوقت المتبقي لتحديث الأخبار التالي:"
+        timeLeft: "🕑 الوقت المتبقي لتحديث الأخبار التالي:"
     },
     fr: {
         today: "L'actualité du jour",
@@ -281,8 +275,7 @@ var translations = {
         newUpdateAvailable: "📢 Une nouvelle mise à jour est disponible! Veuillez actualiser la page des scripts et cliquez ensuite sur Mettre à jour le module.",
         understood: "Compris!",
         config: "⚙️ Configurer",
-        timezoneInput: "Entrez votre fuseau horaire (par exemple, IST, PST) :",
-        timeLeft: "Temps restant avant la prochaine mise à jour des actualités :"
+        timeLeft: "🕑 Temps restant avant la prochaine mise à jour des actualités :"
     }
 };
 
@@ -319,10 +312,8 @@ function showNewsDialog(activity, headline, fontSize, fontColor) {
                 .arrangement("center")
                 .fillMaxWidth();
 
-            // Time Left Calculation and Display
-            var userTimezone = config.get("userTimezone", "UTC");
-            var timezoneOffset = getTimezoneOffset(userTimezone);
-            var currentTimeUTC = getCurrentTimeInUTC(timezoneOffset);
+            // Time Left Calculation and Display (UTC)
+            var currentTimeUTC = new Date(); 
 
             // News update schedules (UTC)
             var schedules = [
@@ -346,6 +337,14 @@ function showNewsDialog(activity, headline, fontSize, fontColor) {
                 .arrangement("center")
                 .fillMaxWidth();
             // End of Time Left Display
+
+            builder.row(function (builder) {
+                builder.text("ℹ Timing may be inaccurate")
+                    .fontSize(6)
+                    .padding(4);
+            })
+                .arrangement("center")
+                .fillMaxWidth();
 
             builder.row(function (builder) {
                 builder.button("⚙️", function () {
@@ -397,8 +396,7 @@ function showModuleConfig(activity) {
                 .fontSize(10);
 
             builder.row(function (builder) {
-                builder.text("⏰ Old UI")
-                    .fontSize(10);
+                builder.text("⏰ Old UI");
                 builder.switch(oldUIEnabled, function (value) {
                     oldUIEnabled = value;
                     config.setBoolean(oldUIConfigId, value, true);
@@ -424,18 +422,6 @@ function showModuleConfig(activity) {
                 .fontSize(10);
                 builder.textInput("Add only ---", "", function (value) {
                 customSeperator = value;
-            }).singleLine(true);
-            })
-            .arrangement("spaceBetween")
-            .fillMaxWidth()
-            .padding(4);
-
-             // Timezone input
-             builder.row(function (builder) {
-                builder.text(t("timezoneInput"))
-                .fontSize(10);
-                builder.textInput(config.get("userTimezone", "UTC"), "", function (value) {
-                config.set("userTimezone", value, true);
             }).singleLine(true);
             })
             .arrangement("spaceBetween")
@@ -637,29 +623,6 @@ function fetchAndShowNews(activity) {
             console.error("Error parsing news.json:", e);
         }
     });
-}
-
-// Function to get timezone offset (simplified, you might need a more robust solution)
-function getTimezoneOffset(timezoneAbbreviation) {
-    switch (timezoneAbbreviation) {
-        case "IST":
-            return -330; // IST is UTC+5:30
-        case "PST":
-            return 480;  // PST is UTC-8
-        case "EST":
-            return 300;  // EST is UTC-5
-        // Add more cases as needed...
-        default:
-            return 0;   // Default to UTC
-    }
-}
-
-// Function to get current time in UTC
-function getCurrentTimeInUTC(timezoneOffset) {
-    var now = new Date();
-    var utc = now.getTime() + (now.getTimezoneOffset() * 60000); // Local time to UTC
-    var localTimezoneTime = utc + (timezoneOffset * 60000)
-    return new Date(localTimezoneTime);
 }
 
 // Function to calculate time left
