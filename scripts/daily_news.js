@@ -24,8 +24,8 @@ var scriptName = "daily_news";
 var currentVersion = "v2.2";
 let updateAvailable = false;
 
-var versionJsonUrl = `https://raw.githubusercontent.com/<span class="math-inline">\{owner\}/</span>{repo}/main/version.json`;
-var messagesJsonUrl = `https://raw.githubusercontent.com/<span class="math-inline">\{owner\}/</span>{repo}/main/messages.json`;
+var versionJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/version.json`;
+var messagesJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/messages.json`;
 
 function checkForNewVersion() {
     networking.getUrl(versionJsonUrl, (error, response) => {
