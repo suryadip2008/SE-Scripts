@@ -70,6 +70,8 @@ function checkForNewMessages() {
     });
 }
 
+var dontShowOnStartup = false;
+var dontShowConfigId = "dontShowOnStartup";
 var defaultFontSize = 18;
 var customTopText = "";
 var customSeperator = "";
@@ -455,6 +457,18 @@ function showModuleConfig(activity) {
             .padding(4);
 
             builder.row(function (builder) {
+                builder.text("Don't show on Startup:")
+                    .fontSize(16);
+                builder.switch(dontShowOnStartup, function (value) {
+                    dontShowOnStartup = value;
+                    config.setBoolean(dontShowConfigId, value, true);
+                });
+            })
+                .arrangement("spaceBetween")
+                .fillMaxWidth()
+                .padding(4);
+
+            builder.row(function (builder) {
                 builder.button(t("returnBack"), function () {
                     fetchAndShowNews(activity);
                     dialog.dismiss();
@@ -802,7 +816,10 @@ module.onUnload = () => {
 }
 
 module.onSnapMainActivityCreate = activity => {
-    fetchAndShowNews(activity);
+    if (!config.getBoolean(dontShowConfigId, false))
+    {
+        fetchAndShowNews(activity);
+    }
     checkForNewVersion();
     checkForNewMessages();
 };
