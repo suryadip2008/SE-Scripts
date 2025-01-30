@@ -122,7 +122,11 @@ var translations = {
         timeLeft: "Time left for next news update:",
         header: "Header:",
         footer: "Footer:",
-        useClassicUI: "Use Classic UI"
+        useClassicUI: "Use Classic UI",
+        dontShowOnStartup: "Don't Show on Startup",
+        showNews: "Show News",
+        maxDisplayCount: "Max Daily Displays:",
+        displayCountReached: "News display limit reached for today."
     },
     pt: {
         today: "Notícias de hoje",
@@ -151,7 +155,11 @@ var translations = {
         timeLeft: "Tempo restante para a próxima atualização de notícias:",
         header: "Cabeçalho:",
         footer: "Rodapé:",
-        useClassicUI: "Usar UI Clássica"
+        useClassicUI: "Usar UI Clássica",
+        dontShowOnStartup: "Não mostrar na inicialização",
+        showNews: "Mostrar notícias",
+        maxDisplayCount: "Exibições Diárias Máximas:",
+        displayCountReached: "Limite de exibição de notícias atingido para hoje."
     },
     pa: {
         today: "ਅੱਜ ਦੀ ਖਬਰ",
@@ -180,7 +188,11 @@ var translations = {
         timeLeft: "ਅਗਲੀ ਖਬਰ ਅੱਪਡੇਟ ਲਈ ਬਾਕੀ ਸਮਾਂ:",
         header: "ਸਿਰਲੇਖ:",
         footer: "ਫੁੱਟਰ:",
-        useClassicUI: "ਕਲਾਸਿਕ UI ਦੀ ਵਰਤੋਂ ਕਰੋ"
+        useClassicUI: "ਕਲਾਸਿਕ UI ਦੀ ਵਰਤੋਂ ਕਰੋ",
+        dontShowOnStartup: "ਸਟਾਰਟਅੱਪ 'ਤੇ ਨਾ ਦਿਖਾਓ",
+        showNews: "ਖ਼ਬਰਾਂ ਦਿਖਾਓ",
+        maxDisplayCount: "ਅਧਿਕਤਮ ਰੋਜ਼ਾਨਾ ਡਿਸਪਲੇ:",
+        displayCountReached: "ਅੱਜ ਲਈ ਖਬਰਾਂ ਦੀ ਡਿਸਪਲੇ ਸੀਮਾ ਪੂਰੀ ਹੋ ਗਈ ਹੈ।"
     },
     de: {
         today: "Aktuelle Nachrichten",
@@ -209,7 +221,11 @@ var translations = {
         timeLeft: "Verbleibende Zeit bis zum nächsten Nachrichtenupdate:",
         header: "Kopfzeile:",
         footer: "Fußzeile:",
-        useClassicUI: "Verwenden Sie die klassische Benutzeroberfläche"
+        useClassicUI: "Verwenden Sie die klassische Benutzeroberfläche",
+        dontShowOnStartup: "Beim Start nicht anzeigen",
+        showNews: "Nachrichten anzeigen",
+        maxDisplayCount: "Maximale tägliche Anzeige:",
+        displayCountReached: "Nachrichten-Anzeigelimit für heute erreicht."
     },
     ru: {
         today: "Сегодняшние новости",
@@ -238,7 +254,11 @@ var translations = {
         timeLeft: "Оставшееся время до следующего обновления новостей:",
         header: "Заголовок:",
         footer: "Нижний колонтитул:",
-        useClassicUI: "Использовать классический интерфейс"
+        useClassicUI: "Использовать классический интерфейс",
+        dontShowOnStartup: "Не показывать при запуске",
+        showNews: "Показать новости",
+        maxDisplayCount: "Максимальное количество показов в день:",
+        displayCountReached: "Достигнут лимит показов новостей на сегодня."
     },
     ar: {
         today: "أخبار اليوم",
@@ -267,7 +287,11 @@ var translations = {
         timeLeft: "الوقت المتبقي لتحديث الأخبار التالي:",
         header: "رأس:",
         footer: "تذييل:",
-        useClassicUI: "استخدم واجهة المستخدم الكلاسيكية"
+        useClassicUI: "استخدم واجهة المستخدم الكلاسيكية",
+        dontShowOnStartup: "لا تظهر عند بدء التشغيل",
+        showNews: "عرض الأخبار",
+        maxDisplayCount: "الحد الأقصى لعدد مرات العرض اليومية:",
+        displayCountReached: "تم الوصول إلى حد عرض الأخبار لهذا اليوم."
     },
     fr: {
         today: "L'actualité du jour",
@@ -296,7 +320,11 @@ var translations = {
         timeLeft: "Temps restant avant la prochaine mise à jour des actualités :",
         header: "Entête:",
         footer: "Pied de page:",
-        useClassicUI: "Utiliser l'interface utilisateur classique"
+        useClassicUI: "Utiliser l'interface utilisateur classique",
+        dontShowOnStartup: "Ne pas afficher au démarrage",
+        showNews: "Afficher les actualités",
+        maxDisplayCount: "Nombre maximal d'affichages quotidiens:",
+        displayCountReached: "Limite d'affichage des actualités atteinte pour aujourd'hui."
     }
 };
 
@@ -313,7 +341,7 @@ function showNewsDialog(activity, headline, fontSize, fontColor) {
 
             builder.row(function (builder) {
                 builder.text(headerText)
-                    .fontSize(config.getInteger("todaysNewsFontSize", 25))
+                    .fontSize(config.getInteger("todaysNewsFontSize, 25))
                     .color(hexToColor(config.get("todaysNewsFontColor", "#FFFFFF")))
             })
                 .arrangement("center")
@@ -338,7 +366,7 @@ function showNewsDialog(activity, headline, fontSize, fontColor) {
                 .fillMaxWidth();
 
             // Time Left Calculation and Display (UTC)
-            var currentTimeUTC = new Date(); 
+            var currentTimeUTC = new Date();
 
             // News update schedules (UTC)
             var schedules = [
@@ -347,7 +375,7 @@ function showNewsDialog(activity, headline, fontSize, fontColor) {
                 { hours: 12, minutes: 30 }, // 6:00 PM IST
                 { hours: 15, minutes: 30 }, // 9:00 PM IST
                 { hours: 21, minutes: 30 }, // 3:00 AM IST (next day)
-                { hours: 6, minutes: 30 },// 12:00 AM IST (next day)
+                { hours: 6, minutes: 30 },  // 12:00 AM IST (next day)
                 { hours: 0, minutes: 30 }   // 6:00 AM IST
             ];
 
@@ -421,38 +449,65 @@ function showModuleConfig(activity) {
                 .fontSize(10);
 
             builder.row(function (builder) {
-                builder.text("⏰ "+t("useClassicUI"))
+                builder.text("⏰ " + t("useClassicUI"))
                     .fontSize(16);
                 builder.switch(oldUIEnabled, function (value) {
                     oldUIEnabled = value;
                     config.setBoolean(oldUIConfigId, value, true);
                 });
             })
-            .arrangement("spaceBetween")
-            .fillMaxWidth()
-            .padding(4);
+                .arrangement("spaceBetween")
+                .fillMaxWidth()
+                .padding(4);
 
             builder.row(function (builder) {
                 builder.text(t("header"))
-                .fontSize(16);
+                    .fontSize(16);
                 builder.textInput("📈 Top Stories", "", function (value) {
-                customTopText = value;
-            }).singleLine(true);
+                    customTopText = value;
+                }).singleLine(true);
             })
-            .arrangement("spaceBetween")
-            .fillMaxWidth()
-            .padding(4);
+                .arrangement("spaceBetween")
+                .fillMaxWidth()
+                .padding(4);
 
             builder.row(function (builder) {
                 builder.text(t("footer"))
-                .fontSize(16);
+                    .fontSize(16);
                 builder.textInput("---", "", function (value) {
-                customSeperator = value;
-            }).singleLine(true);
+                    customSeperator = value;
+                }).singleLine(true);
             })
-            .arrangement("spaceBetween")
-            .fillMaxWidth()
-            .padding(4);
+                .arrangement("spaceBetween")
+                .fillMaxWidth()
+                .padding(4);
+
+            // Don't Show on Startup Toggle
+            builder.row(function (builder) {
+                builder.text(t("dontShowOnStartup"))
+                    .fontSize(16);
+                builder.switch(config.getBoolean("dontShowOnStartup", false), function (value) {
+                    config.setBoolean("dontShowOnStartup", value, true);
+                });
+            })
+                .arrangement("spaceBetween")
+                .fillMaxWidth()
+                .padding(4);
+
+            // Max Daily Displays Input
+            builder.row(function (builder) {
+                builder.text(t("maxDisplayCount"))
+                    .fontSize(16);
+                builder.textInput(String(config.getInteger("maxDisplayCount", 3)), "", function (value) { // Default to 3
+                    var count = parseInt(value);
+                    if (!isNaN(count) && count > 0) {
+                        config.setInteger("maxDisplayCount", count, true);
+                    }
+                }).singleLine(true);
+            })
+                .arrangement("spaceBetween")
+                .fillMaxWidth()
+                .padding(4);
 
             builder.row(function (builder) {
                 builder.button(t("returnBack"), function () {
@@ -601,6 +656,23 @@ function showAllRead(activity) {
 
 function fetchAndShowNews(activity) {
     var selectedLanguage = config.get("language", defaultLanguage);
+    var dontShowOnStartup = config.getBoolean("dontShowOnStartup", false);
+    var maxDisplayCount = config.getInteger("maxDisplayCount", 3); // Default to 3
+    var today = new Date().toLocaleDateString();
+    var displayCount = config.getInteger(`displayCount_${today}`, 0);
+    
+    function t(key) {
+        return translations[selectedLanguage][key] || translations['en'][key];
+    }
+
+    // Check if the dialog should be shown based on startup setting and display count
+    if ((module.info.isSnapchatStartup && dontShowOnStartup) || displayCount >= maxDisplayCount) {
+        if (displayCount >= maxDisplayCount) {
+            console.log("Daily news display limit reached.");
+        }
+        return; // Don't show the dialog
+    }
+
     newsJsonUrl = `https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/networking/news_${selectedLanguage}.json`;
 
     networking.getUrl(newsJsonUrl, (error, response) => {
@@ -641,6 +713,7 @@ function fetchAndShowNews(activity) {
                 showNewsDialog(activity, selectedHeadline, fontSize, fontColor);
 
                 config.setBoolean(`headline_${selectedHeadline}`, true);
+                config.setInteger(`displayCount_${today}`, displayCount + 1); // Increment the display count
                 config.save();
             } else {
                 console.log("All headlines have been read.");
@@ -729,7 +802,8 @@ function createManagerToolBoxUI() {
             builder.row(function (builder) {
                 builder.textInput("Enter Custom Headline Font Color (hex)", config.get("fontColor", defaultFontColor), function (value) {
                     var trimmedValue = value.trim();
-                    if (trimmedValue === "") {
+                    if (trimmedValue === "")
+                        {
                         config.set("fontColor", defaultFontColor, true);
                     } else {
                         config.set("fontColor", trimmedValue, true);
@@ -759,6 +833,28 @@ function createManagerToolBoxUI() {
     });
 }
 
+// Create Conversation Toolbox UI
+function createConversationToolboxUI() {
+    var selectedLanguage = config.get("language", defaultLanguage);
+    function t(key) {
+        return translations[selectedLanguage][key] || translations['en'][key];
+    }
+    im.create("conversationToolbox" /* EnumUI.CONVERSATION_TOOLBOX */, function (builder, args) {
+        builder.row(function (builder) {
+            builder.button(t("showNews"), function () {
+                var today = new Date().toLocaleDateString();
+                var maxDisplayCount = config.getInteger("maxDisplayCount", 3);
+                var displayCount = config.getInteger(`displayCount_${today}`, 0);
+                if (displayCount < maxDisplayCount) {
+                    fetchAndShowNews(im.getActivity());
+                } else {
+                    im.longToast(t("displayCountReached"));
+                }
+            });
+        });
+    });
+}
+
 function isValidHex(hex) {
     return /^#([0-9A-Fa-f]{6})$/.test(hex);
 }
@@ -782,6 +878,7 @@ function hexToColor(hex) {
 
 function createInterface() {
     createManagerToolBoxUI();
+    createConversationToolboxUI();
 }
 
 function start(_) {
