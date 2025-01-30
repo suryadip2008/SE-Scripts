@@ -119,7 +119,10 @@ var translations = {
         newUpdateAvailable: "📢 A new update is available! Please refresh the scripts page & then click on Update Module.",
         understood: "Understood!",
         config: "⚙️ Configure",
-        timeLeft: "🕑 Time left for next news update:"
+        timeLeft: "Time left for next news update:",
+        header: "Header:",
+        footer: "Footer:",
+        useClassicUI: "Use Classic UI"
     },
     pt: {
         today: "Notícias de hoje",
@@ -145,7 +148,10 @@ var translations = {
         newUpdateAvailable: "📢 Uma nova atualização está disponível! Atualize a página de scripts e clique em Atualizar Módulo.",
         understood: "Entendi!",
         config: "⚙️ Configurar",
-        timeLeft: "🕑 Tempo restante para a próxima atualização de notícias:"
+        timeLeft: "Tempo restante para a próxima atualização de notícias:",
+        header: "Cabeçalho:",
+        footer: "Rodapé:",
+        useClassicUI: "Usar UI Clássica"
     },
     pa: {
         today: "ਅੱਜ ਦੀ ਖਬਰ",
@@ -171,7 +177,10 @@ var translations = {
         newUpdateAvailable: "📢 ਇੱਕ ਨਵਾਂ ਅੱਪਡੇਟ ਉਪਲਬਧ ਹੈ! ਕਿਰਪਾ ਕਰਕੇ ਸਕ੍ਰਿਪਟਾਂ ਵਾਲੇ ਪੰਨੇ ਨੂੰ ਤਾਜ਼ਾ ਕਰੋ ਅਤੇ ਅੱਪਡੇਟ ਮੋਡੀਊਲ 'ਤੇ ਕਲਿੱਕ ਕਰੋ।",
         understood: "ਸਮਝ ਆ ਗਿਆ!",
         config: "⚙️ ਸੰਰਚਨਾ ਕਰੋ",
-        timeLeft: "🕑 ਅਗਲੀ ਖਬਰ ਅੱਪਡੇਟ ਲਈ ਬਾਕੀ ਸਮਾਂ:"
+        timeLeft: "ਅਗਲੀ ਖਬਰ ਅੱਪਡੇਟ ਲਈ ਬਾਕੀ ਸਮਾਂ:",
+        header: "ਸਿਰਲੇਖ:",
+        footer: "ਫੁੱਟਰ:",
+        useClassicUI: "ਕਲਾਸਿਕ UI ਦੀ ਵਰਤੋਂ ਕਰੋ"
     },
     de: {
         today: "Aktuelle Nachrichten",
@@ -197,7 +206,10 @@ var translations = {
         newUpdateAvailable: "📢 Ein neues Update ist verfügbar! Bitte aktualisieren Sie die Skriptseite und klicken Sie dann auf Modul aktualisieren.",
         understood: "Verstanden!",
         config: "⚙️ Konfigurieren",
-        timeLeft: "🕑 Verbleibende Zeit bis zum nächsten Nachrichtenupdate:"
+        timeLeft: "Verbleibende Zeit bis zum nächsten Nachrichtenupdate:",
+        header: "Kopfzeile:",
+        footer: "Fußzeile:",
+        useClassicUI: "Verwenden Sie die klassische Benutzeroberfläche"
     },
     ru: {
         today: "Сегодняшние новости",
@@ -223,7 +235,10 @@ var translations = {
         newUpdateAvailable: "📢 Доступно новое обновление! Пожалуйста, обновите страницу скриптов и нажмите кнопку «Обновить модуль».",
         understood: "Понял!",
         config: "⚙️ Настроить",
-        timeLeft: "🕑 Оставшееся время до следующего обновления новостей:"
+        timeLeft: "Оставшееся время до следующего обновления новостей:",
+        header: "Заголовок:",
+        footer: "Нижний колонтитул:",
+        useClassicUI: "Использовать классический интерфейс"
     },
     ar: {
         today: "أخبار اليوم",
@@ -249,7 +264,10 @@ var translations = {
         newUpdateAvailable: "📢 يتوفر تحديث جديد! يرجى تحديث صفحة البرامج النصية ثم النقر فوق تحديث الوحدة النمطية.",
         understood: "فهمتك!",
         config: "⚙️ تكوين",
-        timeLeft: "🕑 الوقت المتبقي لتحديث الأخبار التالي:"
+        timeLeft: "الوقت المتبقي لتحديث الأخبار التالي:",
+        header: "رأس:",
+        footer: "تذييل:",
+        useClassicUI: "استخدم واجهة المستخدم الكلاسيكية"
     },
     fr: {
         today: "L'actualité du jour",
@@ -275,7 +293,10 @@ var translations = {
         newUpdateAvailable: "📢 Une nouvelle mise à jour est disponible! Veuillez actualiser la page des scripts et cliquez ensuite sur Mettre à jour le module.",
         understood: "Compris!",
         config: "⚙️ Configurer",
-        timeLeft: "🕑 Temps restant avant la prochaine mise à jour des actualités :"
+        timeLeft: "Temps restant avant la prochaine mise à jour des actualités :",
+        header: "Entête:",
+        footer: "Pied de page:",
+        useClassicUI: "Utiliser l'interface utilisateur classique"
     }
 };
 
@@ -286,8 +307,12 @@ function showNewsDialog(activity, headline, fontSize, fontColor) {
             function t(key) {
                 return translations[selectedLanguage][key] || translations['en'][key];
             }
+
+            // Use default header if customTopText is empty
+            var headerText = customTopText || "📈 Top Stories";
+
             builder.row(function (builder) {
-                builder.text(customTopText)
+                builder.text(headerText)
                     .fontSize(config.getInteger("todaysNewsFontSize", 25))
                     .color(hexToColor(config.get("todaysNewsFontColor", "#FFFFFF")))
             })
@@ -322,7 +347,7 @@ function showNewsDialog(activity, headline, fontSize, fontColor) {
                 { hours: 12, minutes: 30 }, // 6:00 PM IST
                 { hours: 15, minutes: 30 }, // 9:00 PM IST
                 { hours: 21, minutes: 30 }, // 3:00 AM IST (next day)
-                { hours: 6, minutes: 30 },  // 12:00 AM IST (next day)
+                { hours: 6, minutes: 30 },// 12:00 AM IST (next day)
                 { hours: 0, minutes: 30 }   // 6:00 AM IST
             ];
 
@@ -330,21 +355,21 @@ function showNewsDialog(activity, headline, fontSize, fontColor) {
             var timeLeft = calculateTimeLeft(currentTimeUTC, nextUpdateTime);
 
             builder.row(function (builder) {
-                builder.text(`${t("timeLeft")} ${timeLeft.hours}hr ${timeLeft.minutes}mins`)
+                builder.text(`🕑 ${t("timeLeft")} ${timeLeft.hours}hr ${timeLeft.minutes}mins`)
                     .fontSize(12)
                     .padding(4);
             })
                 .arrangement("center")
                 .fillMaxWidth();
-            // End of Time Left Display
 
             builder.row(function (builder) {
-                builder.text("ℹ Timing may be inaccurate")
+                builder.text("ℹ️timings may be inaccurate")
                     .fontSize(6)
                     .padding(4);
             })
                 .arrangement("center")
                 .fillMaxWidth();
+            // End of Time Left Display
 
             builder.row(function (builder) {
                 builder.button("⚙️", function () {
@@ -396,7 +421,8 @@ function showModuleConfig(activity) {
                 .fontSize(10);
 
             builder.row(function (builder) {
-                builder.text("⏰ Old UI");
+                builder.text("⏰ "+t("useClassicUI"))
+                    .fontSize(16);
                 builder.switch(oldUIEnabled, function (value) {
                     oldUIEnabled = value;
                     config.setBoolean(oldUIConfigId, value, true);
@@ -407,9 +433,9 @@ function showModuleConfig(activity) {
             .padding(4);
 
             builder.row(function (builder) {
-                builder.text("Enter custom top text:")
-                .fontSize(10);
-                builder.textInput("📰 Today's News", "", function (value) {
+                builder.text(t("header"))
+                .fontSize(16);
+                builder.textInput("📈 Top Stories", "", function (value) {
                 customTopText = value;
             }).singleLine(true);
             })
@@ -418,9 +444,9 @@ function showModuleConfig(activity) {
             .padding(4);
 
             builder.row(function (builder) {
-                builder.text("Seperator lines:")
-                .fontSize(10);
-                builder.textInput("Add only ---", "", function (value) {
+                builder.text(t("footer"))
+                .fontSize(16);
+                builder.textInput("---", "", function (value) {
                 customSeperator = value;
             }).singleLine(true);
             })
