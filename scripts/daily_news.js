@@ -8,8 +8,13 @@
 // ==/SE_module==
 
 var networking = require("networking");
-var im = require("interface-manager");
+var messaging = require("messaging");
 var config = require("config");
+var im = require("interface-manager");
+var ipc = require("ipc");
+var javaInterfaces = require("java-interfaces");
+var hooker = require("hooker");
+var events = require("events");
 var goodbyePrompt = "Sorry to see you go :( I hope you liked my script :D";
 var hasShownWelcome = "hasShownWelcome";
 
