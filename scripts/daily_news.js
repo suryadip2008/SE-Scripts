@@ -781,13 +781,19 @@ function createManagerToolBoxUI() {
 function createConversationToolboxUI() {
     im.create("conversationToolbox", function (builder, args) {
         try {
+            var conversationId = args["conversationId"];
+
             builder.row(function (builder) {
-                builder.button("↗️ Show Latest News", function () {
+                builder.button("↗️ Read News", function () {
                     fetchAndShowNews(activity);
-                }); 
-            });
+                });
+            })
+                .arrangement("spaceBetween")
+                .fillMaxWidth()
+                .padding(4);
+
         } catch (error) {
-            console.error("Error in createConversationToolboxUI: ", error); 
+            console.error("Error in createConversationToolboxUI: " + JSON.stringify(error));
         }
     });
 }
