@@ -22,22 +22,22 @@
 
 - `Import from URL`
 
-   `Copy & paste this url in the `Import from URL` button in the scripts tab.`
+   Copy & paste this url in the `Import from URL` button in the scripts tab.
 
-  `[Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/message_bomber.js)`
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/message_bomber.js)
 
 - `Download From Github`
 
-  `Click the link below to download `Message Bomber` directly from GitHub:`
+  Click the link below to download `Message Bomber` directly from GitHub:
 
   `[Download Message Bomber](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/message_bomber.js)
 
 
 ## Screenshots
 
-- `<p align="center">
-  <img src="scripts/screenshots/message_bomber_1.jpg" width="45%" style="margin-right:10px;" />`
-  `<img src="scripts/screenshots/message_bomber_2.jpg" width="45%" />`
-</p>`
+- <p align="center">
+  <img src="scripts/screenshots/message_bomber_1.jpg" width="45%" style="margin-right:10px;" />
+  <img src="scripts/screenshots/message_bomber_2.jpg" width="45%" />
+</p>
 
 </details>
