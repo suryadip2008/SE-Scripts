@@ -1,7 +1,7 @@
 
 ## 📖 Scripts
 <details closed>
-  <summary>⬇️ Media Bomber</summary>
+  <summary>💣 Media Bomber</summary>
   
 - **Name:** message_bomber
 - **Version:** 5.8
