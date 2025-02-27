@@ -110,6 +110,14 @@ To download the latest version of the script, choose one of the following option
 - **Author:** Suryadip Sarkar
 - **Description:** A Script that shows a greetings toast on the startup of Snapchat.
 
+## Features 
+
+- `Dynamic Greetings`
+- `User Input`
+- `Diverse Greeting Presets`
+- `Test Functionality`
+- `Input Validation`
+
 ## Download 
 
 To download the latest version of the script, choose one of the following options:
@@ -124,28 +132,7 @@ To download the latest version of the script, choose one of the following option
 
    Click the link below to download `Greetings Toast` directly from GitHub:
 
-   [Download Greetings Toast](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/greetings_toast.js)## Features
-
-## Features 
-
-1. **Dynamic Greetings:**
-   - Greets users based on the time of day (Good Morning, Good Afternoon, Good Evening).
-   - Users can select their preferred tone of Greetings: Formal, Informal & Humorous.
-   - Special birthday greeting when it’s the user’s birthday.
-
-2. **User Input:**
-   - Users can input their username and date of birth in the format: `username dd/mm/yyyy`.
-
-3. **Diverse Greeting Presets:**
-   - 30 unique presets for each greeting category (Good Morning, Good Afternoon, Good Evening, and Happy Birthday), ensuring varied and engaging messages.
-
-4. **Test Functionality:**
-   - Includes a test button to allow users to immediately test changes without reopening Snapchat.
-
-5. **Input Validation:**
-   - Checks for empty input fields and displays a toast message: "Please enter your username and date of birth first."
-   - Validates the date format and shows a toast message if the format is incorrect: "Invalid date format. Please use dd/mm/yyyy."
-   - Ensures the correct input format for username and date of birth, with a toast message for invalid input: "Invalid Input format. Please use 'username dd/mm/yyyy'."
+   [Download Greetings Toast](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/greetings_toast.js)
 
 ## Screenshots:
 
@@ -165,6 +152,15 @@ To download the latest version of the script, choose one of the following option
 - **Author:** Suryadip Sarkar & Jacob Thomas
 - **Description:** A Script that shows a random motivation quote dialog on the startup of Snapchat.
 
+## Features 
+
+- `Extensive Quote Collection`
+- `Dual Display`
+- `Customizable font & Color`
+- `Customizable Display Mode`
+- `Hex Code Testing`
+- `Motivate Your Friends`
+
 ## Download
 
 To download the latest version of the script, choose one of the following options:
@@ -180,30 +176,6 @@ To download the latest version of the script, choose one of the following option
    Click the link below to download `Flexi Quotes` directly from GitHub:
 
    [Download Flexi Quotes](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/flexi_quotes.js)
-
-## Features
-
-1. **Extensive Quote Collection:**
-   - Preloaded with over 150+ motivational quotes.
-   - Displays a random motivational quote each time Snapchat is opened.
-
-2. **Dual Display:**
-   - Utilizes both toast & dialog interface.
-
-3. **Customizable Font Size & Color:**
-   - Users can customize the font size of the motivation dialog text.
-   - Includes a font size slider in the settings for easy adjustment.
-   - Users can change the font color of the motivation dialog text.
-   - Features a text input field for entering custom HEX codes.
-
-4. **Customizable Display Mode:**:
-   - Users can choose whether to display the quote as a toast or a dialog!
-
-5. **HEX Code Testing:**
-   - Includes a "Test HEX Code" button to verify that the entered HEX code displays the desired color.
-  
-6. **Motivate your friends!:**:
-   - You can now send a random motivational quote to your friend by clicking on the `Send Motivational Quote` Button in the Toolbox.
 
  - ## Screenshots:
   
@@ -223,6 +195,13 @@ To download the latest version of the script, choose one of the following option
 - **Author:** Suryadip Sarkar
 - **Description:** A Script that shows custom reminders with countdowns based on specified dates.
 
+## Features 
+
+- `Custom Message Input`
+- `Dynamic Countdown Messages`
+- `Testing Functionality`
+- `Input Validation Checks`
+
 ## Download 
 
 To download the latest version of the script, choose one of the following options:
@@ -239,24 +218,6 @@ To download the latest version of the script, choose one of the following option
 
    [Download Custom Reminders](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/custom_reminders.js)
 
-## Features 
-
-1. **Custom Message Input:**
-   - Two input fields provided:
-     - Enter Custom Message: Allows users to input personalized reminder messages.
-     - Enter Countdown Date: Users can specify a date for the countdown.
-
-2. **Dynamic Countdown Messages:**
-   - Countdown messages are preloaded with several phrases that change based on the number of days remaining until the specified date, providing timely and relevant reminders.
-
-3. **Testing Functionality:**
-   - Includes a test button in the settings, allowing users to test the script directly in SE without needing to reopen Snapchat, ensuring quick feedback on changes.
-
-4. **Input Validation Checks:**
-   - Several checks implemented to ensure proper user input:
-     - Alerts the user if the date is entered in the wrong format.
-     - Notifies users if only one input field is filled, ensuring both fields are completed for functionality.
- 
 ## Screenshots:
  
   <p align="center">
@@ -275,6 +236,15 @@ To download the latest version of the script, choose one of the following option
 - **Author:** Suryadip Sarkar
 - **Description:** A Script That Allows Users to Save and Send Custom Replies
 
+
+## Features 
+
+- `Saved Replies Functionality`
+- `View Saved Replies`
+- `Direct Action On Saved Replies`
+- `Persistence Of Saved Replies`
+- `User Interface Enhancements`
+- 
 ## Download 
 
 To download the latest version of the script, choose one of the following options:
@@ -290,26 +260,6 @@ To download the latest version of the script, choose one of the following option
    Click the link below to download `Saved Replies` directly from GitHub:
 
    [Download Saved Replies](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/saved_replies.js)
-
-  ## Features 
-  
-1. **Save Replies Functionality:**
-   - Users can now save replies for quick access.
-   - To save a reply, navigate to any chat, click on the toolbox icon, type the desired reply, and click the Add button.
-   - A toast notification will confirm with "Reply added."
-
-2. **View Saved Replies:**
-   - After saving a reply, users must collapse and expand the Saved Replies flyout to see the newly added reply.
-
-3. **Direct Action on Saved Replies:**
-   - Saved replies can be sent or deleted directly from the toolbox.
-   - Simply click the Send or Delete button below any saved reply for immediate action.
-
-4. **Persistence of Saved Replies:**
-   - Saved replies do not get automatically deleted when Snapchat is reopened, ensuring that users retain their saved responses.
-
-5. **User Interface Enhancements:**
-   - New Icons: Added icons for each button: Add, Delete, and Send for better visual representation.
   
 - ## Screenshots:
   
@@ -329,6 +279,18 @@ To download the latest version of the script, choose one of the following option
 - **Author:** Suryadip Sarkar
 - **Description:**  A script that shows daily news as a dialog on Snapchat startup.
 
+## Features 
+
+- `Fetch Daily News`
+- `Display Daily News In Dialogue`
+- `Font Size`
+- `Font Color`
+- `Hex Code Validation`
+- `Refresh Button`
+- `Translations`
+- `More Script Button`
+- `Info Button`
+
 ## Download 
 
 To download the latest version of the script, choose one of the following options:
@@ -346,35 +308,6 @@ To download the latest version of the script, choose one of the following option
 
    [Download Daily News](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/daily_news.js)
 
-## Features 
-
-1. **Fetches Daily News:**
-   -  Automatically retrieves news headlines from a news.json file hosted on GitHub which is updated daily.
-
-2. **Display Daily News In Dialogue:**
-   - Shows a random, unread news headline in a dialog box when you open Snapchat.
-
-3. **Font Size:**
-   - Allows you to customize the font size of the news headline in the dialog using a slider in the script's settings.
-
-4. **Font Color:**
-   - Lets you set a custom hex color code for the headline text, giving you more control over the dialog's appearance.
-
-5. **Hex Code Validation:**
-   - Includes a "Test Hex Codes" button to ensure that the entered color code is valid before applying it.
-
-6. **Translation:**
-   - Now you can enjoy daily news into your desired language ! Currently supports :English, Portugese, Punj abi, French, German, Russian & Arabic.
-
-7. **Refresh Button:**
-   - Refresh Button (Will refresh the news dialog and provide news instantly without needing to open Snapchat.).
-
-8. **More Script Button:**
-   - More Scripts Button (Will show up a list of other scripts that have been made by creator.).
-
-9. **Info Button:**
-   - Info Button (Will display module details.)
- 
 ## Screenshots:
 
   <p align="center">
@@ -393,6 +326,11 @@ To download the latest version of the script, choose one of the following option
 - **Author:** Gabriel Modz, Jacob Thomas & Suryadip Sarkar
 - **Description:** A Script that shows a custom toast on the startup of Snapchat.
 
+## Features 
+
+- `Custom Message Toast`
+- `Testing Functionality`
+
 ## Download 
 
 To download the latest version of the script, choose one of the following options:
@@ -408,14 +346,6 @@ To download the latest version of the script, choose one of the following option
    Click the link below to download `Custom Toast` directly from GitHub:
 
    [Download Custom Toast](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/custom_toast.js)
-
-## Features 
-
-1. **Custom Message Toast:**
-   - Allows users to enter their favorite message to be displayed as a toast notification, enabling a personalized experience.
-
-2. **Testing Functionality:**
-   - Added a "Test Custom Script" button below the text input field. This allows users to test the changes they have made without needing to reopen Snapchat repeatedly, providing immediate feedback on their custom messages.
 
 ## Screenshot:
 
