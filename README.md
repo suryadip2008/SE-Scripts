@@ -479,10 +479,13 @@ Follow these steps to install and use the script:
 
    Deprecated versions of the scripts can be found here : [Link](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/deprecated/Deprecated.md)
 
-## Contact Me
+</details>
+
+## Contact Us
 
 <details closed>
-<summary> 💭 Contact Me </summary>
+<summary> 💭 Contact Us </summary>
 If you encounter any issues with these script, feel free to contact me : https://t.me/suryadip_sark08
+If you have any suggestions PM me right here, https://t.me/za1n_al1
 
 </details>
