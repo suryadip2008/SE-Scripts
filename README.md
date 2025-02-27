@@ -410,8 +410,10 @@ To download the latest version of the script, choose one of the following option
 
 </details>
 
+## Install SE / SE-EXTENDED 
+
 <details closed>
-  <summary>💣 How to use </summary>
+  <summary> 🦋 How to use </summary>
   
 Follow these steps to install and use the script:
 
@@ -447,10 +449,10 @@ Follow these steps to install and use the script:
 
    </details>
 
-   <details closed>
-  <summary>💣 Troubleshooting</summary>
+## Troubleshooting
 
-### FAQs
+   <details closed>
+  <summary> 🌔 FAQS </summary>
 
 - **Failed to Import Script!**
   - You have to first give SE access to your Scripts Folder.(To do this, head over to the Scripts Tab in SE)
@@ -470,11 +472,18 @@ Follow these steps to install and use the script:
 
  </details>
 
+## Versions
+
  <details closed>
-  <summary>💣 Deprecated Versions</summary>
+  <summary> 📜 Deprecated Versions</summary>
 
    Deprecated versions of the scripts can be found here : [Link](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/deprecated/Deprecated.md)
 
+## Contact Us
+
+<details closed>
+<summary> 💭 Contact Us </summary>
+  
 If you encounter any issues with these script, feel free to contact me : https://t.me/suryadip_sark08
 
 </details>
