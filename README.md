@@ -42,6 +42,7 @@
 
 </details>
 
+<details closed>
 <summary> 📩 Scheduled Messages </summary>
 
 - **Name:** scheduled_messages
