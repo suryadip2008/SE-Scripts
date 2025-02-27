@@ -8,12 +8,7 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 
 ![Maintainer](https://img.shields.io/badge/Creator-Suryadip_Sarkar-black)
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=Suryadip2008&theme=dark&hide_border=true)](https://git.io/streak-stats)
-
 ![Maintainer](https://img.shields.io/badge/Collabrator-Being_Zain-black)
-
-[![GitHub Streak](https://streak-stats.demolab.com?user=Beingzain&theme=dark&hide_border=true)](https://git.io/streak-stats)
-
 
 ## 📖 Scripts
 <details closed>
