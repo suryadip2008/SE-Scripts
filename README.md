@@ -36,13 +36,13 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 
 ## Download 
 
-- `Import from URL`
+1. **Import from URL:**
 
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
    [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/message_bomber.js)
 
-- `Download From Github`
+2. **Download from GitHub:**
 
   Click the link below to download `Message Bomber` directly from GitHub:
 
@@ -97,7 +97,7 @@ To download the latest version of the script, choose one of the following option
   <p align="center">
   <img src="scripts/screenshots/scheduled_messages_1.jpg" width="45%" style="margin-right:10px;" />
   <img src="scripts/screenshots/scheduled_messages_2.jpg" width="45%" />
-</p>
+  </p>
 
 </details>
 
