@@ -43,9 +43,9 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
    [Download Message Bomber](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/message_bomber.js)
 
 
-## Screenshots:
+## Screenshots
 
-- <p align="center">
+<p align="center">
   <img src="scripts/screenshots/message_bomber_1.jpg" width="45%" style="margin-right:10px;" />
   <img src="scripts/screenshots/message_bomber_2.jpg" width="45%" />
 </p>
@@ -86,7 +86,7 @@ To download the latest version of the script, choose one of the following option
 
    [Download Scheduled Messages](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/scheduled_messages.js)
   
-## Screenshots:
+## Screenshots
 
   <p align="center">
   <img src="scripts/screenshots/scheduled_messages_1.jpg" width="45%" style="margin-right:10px;" />
@@ -128,7 +128,7 @@ To download the latest version of the script, choose one of the following option
 
    [Download Greetings Toast](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/greetings_toast.js)
 
-## Screenshots:
+## Screenshots
 
   <p align="center">
   <img src="scripts/screenshots/greetings_toast_1.jpg" width="45%" style="margin-right:10px;" />
@@ -171,7 +171,7 @@ To download the latest version of the script, choose one of the following option
 
    [Download Flexi Quotes](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/flexi_quotes.js)
 
-## Screenshots:
+## Screenshots
   
   <p align="center">
   <img src="scripts/screenshots/flexi_quotes_1.jpeg" width="45%" style="margin-right:10px;" />
@@ -212,7 +212,7 @@ To download the latest version of the script, choose one of the following option
 
    [Download Custom Reminders](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/custom_reminders.js)
 
-## Screenshots:
+## Screenshots
  
   <p align="center">
   <img src="scripts/screenshots/custom_reminders_1.jpg" width="45%" style="margin-right:10px;" />
@@ -255,7 +255,7 @@ To download the latest version of the script, choose one of the following option
 
    [Download Saved Replies](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/saved_replies.js)
   
-## Screenshots:
+## Screenshots
   
   <p align="center">
   <img src="scripts/screenshots/saved_replies_1.jpg" width="45%" style="margin-right:10px;" />
@@ -302,7 +302,7 @@ To download the latest version of the script, choose one of the following option
 
    [Download Daily News](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/daily_news.js)
 
-## Screenshots:
+## Screenshots
 
   <p align="center">
   <img src="scripts/screenshots/daily_news_1.jpg" width="45%" style="margin-right:10px;" />
@@ -341,7 +341,7 @@ To download the latest version of the script, choose one of the following option
 
    [Download Custom Toast](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/custom_toast.js)
 
-## Screenshots:
+## Screenshots
 
   <p align="center">
   <img src="scripts/screenshots/custom_toast_1.jpg" width="45%" style="margin-right:10px;" />
@@ -357,13 +357,19 @@ To download the latest version of the script, choose one of the following option
   
 Follow these steps to install and use the script:
 
-1. **Download & Install Snapenhance:**
+1. **Download & Install Snapenhance/SE Extended:**
 
-   *Ignore this step if you already have Snapenhance installed.*
+   *Ignore this step if you already have Snapenhance/SE Extended installed.*
 
    Click on this link for furthur instructions on how to install `Snapenhance`:
    
    [Installation Guide](https://github.com/rhunk/SnapEnhance/wiki/Installation-Guide)
+
+                                      OR
+
+   Click on this link for furthur instructions on how to install `SE Extended`:
+   
+   [Installation Guide](https://github.com/bocajthomas/SE-Extended/wiki/Installation-Guide)
 
 3. **Download the Script(Follow either of the two methods):**
 
@@ -372,7 +378,7 @@ Follow these steps to install and use the script:
      - Click on the three dots icon on the top right corner & then click on the "Download" button.
 
    - **Import from URL:**
-     - Copy the url by pressing and holding it and then paste it in the `Import from URL` button in the Scripts tab of SE.
+     - Copy the url by pressing and holding it and then paste it in the `Import from URL` button in the Scripts tab of SE/SE Extended.
        
 4. **Installation:**
    *Ignore this step if you have followed the `Import from URL` Method*
@@ -380,7 +386,7 @@ Follow these steps to install and use the script:
 
 5. **Enable the Script:**
 
-   - Open SE.
+   - Open SE/SE Extended.
    - Navigate to the 'Scripts' section and enable the script.
 
 6. **Configuration:**
@@ -395,9 +401,9 @@ Follow these steps to install and use the script:
   <summary> 🌔 FAQS </summary>
 
 - **Failed to Import Script!**
-  - You have to first give SE access to your Scripts Folder.(To do this, head over to the Scripts Tab in SE)
+  - You have to first give SE access to your Scripts Folder.(To do this, head over to the Scripts Tab in SE/SE Extended)
  
-- **SE crashes when I import the script/When I open the `Scripts` Tab!!**
+- **SE/SE Extended crashes when I import the script/When I open the `Scripts` Tab!!**
   - This is due to duplicate scripts existing in your scripts folder. Head over to your File Manager and navigate to your Scripts Folder and Delete all the duplicate scripts.
  
 - **Tapping on Import From URL Button Does Nothing!**
@@ -405,7 +411,7 @@ Follow these steps to install and use the script:
 
 - **Script Not Working:**
   - Ensure the script is placed in the correct folder.
-  - Check if the script is enabled in SE.
+  - Check if the script is enabled in SE/SE Extended.
 
 - **Toasts not showing up sometimes**
   - Scripts like custom_toast.js, greetings_toast.js, etc which are based on toasts require Snapchat to be closed completely then opened. If you have just pressed the home button to exit Snapchat and reopened Snapchat again, the toast might not show up. You also need to clear Snapchat from the recents menu or exit it properly in order for the toast to show up.
