@@ -11,7 +11,7 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 
 ## 📖 Scripts
 <details closed>
-  <summary>💣 Media Bomber</summary>
+  <summary>💣 Message Bomber</summary>
   
 - **Name:** message_bomber
 - **Version:** 5.8
