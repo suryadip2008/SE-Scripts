@@ -86,7 +86,7 @@ To download the latest version of the script, choose one of the following option
 
    [Download Scheduled Messages](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/scheduled_messages.js)
   
-   ## Screenshots:
+## Screenshots:
 
   <p align="center">
   <img src="scripts/screenshots/scheduled_messages_1.jpg" width="45%" style="margin-right:10px;" />
@@ -171,7 +171,7 @@ To download the latest version of the script, choose one of the following option
 
    [Download Flexi Quotes](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/flexi_quotes.js)
 
- - ## Screenshots:
+## Screenshots:
   
   <p align="center">
   <img src="scripts/screenshots/flexi_quotes_1.jpeg" width="45%" style="margin-right:10px;" />
@@ -255,7 +255,7 @@ To download the latest version of the script, choose one of the following option
 
    [Download Saved Replies](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/saved_replies.js)
   
-- ## Screenshots:
+## Screenshots:
   
   <p align="center">
   <img src="scripts/screenshots/saved_replies_1.jpg" width="45%" style="margin-right:10px;" />
