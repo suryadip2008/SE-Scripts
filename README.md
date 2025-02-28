@@ -43,7 +43,7 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
    [Download Message Bomber](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/message_bomber.js)
 
 
-## Screenshots
+## Screenshots:
 
 - <p align="center">
   <img src="scripts/screenshots/message_bomber_1.jpg" width="45%" style="margin-right:10px;" />
@@ -341,7 +341,7 @@ To download the latest version of the script, choose one of the following option
 
    [Download Custom Toast](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/custom_toast.js)
 
-## Screenshot:
+## Screenshots:
 
   <p align="center">
   <img src="scripts/screenshots/custom_toast_1.jpg" width="45%" style="margin-right:10px;" />
