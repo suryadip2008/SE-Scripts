@@ -38,9 +38,9 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 
 2. **Download from GitHub:**
 
-  Click the link below to download `Message Bomber` directly from GitHub:
+   Click the link below to download `Message Bomber` directly from GitHub:
 
-  [Download Message Bomber](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/message_bomber.js)
+   [Download Message Bomber](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/message_bomber.js)
 
 
 ## Screenshots
