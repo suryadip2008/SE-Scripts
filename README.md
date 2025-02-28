@@ -238,7 +238,7 @@ To download the latest version of the script, choose one of the following option
 - `Direct Action On Saved Replies`
 - `Persistence Of Saved Replies`
 - `User Interface Enhancements`
-- 
+ 
 ## Download 
 
 To download the latest version of the script, choose one of the following options:
