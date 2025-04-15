@@ -131,13 +131,6 @@ To download the latest version of the script, choose one of the following option
 
    [Download Greetings Toast](https://github.com/particle-box/SE-Scripts/blob/main/scripts/greetings_toast.js)
 
-## Screenshots
-
-  <p align="center">
-  <img src="scripts/screenshots/greetings_toast_1.jpg" width="45%" style="margin-right:10px;" />
-  <img src="scripts/screenshots/greetings_toast_2.jpg" width="45%" />
-</p>
-
 </details>
 
 <details closed>
