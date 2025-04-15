@@ -2,7 +2,7 @@
 // name: custom_reminders
 // displayName: Custom Reminders with Custom Messages
 // description: A Script that shows custom reminders with countdowns based on specified dates.
-// version: 1.0
+// version: 1.2
 // author: ΞTΞRNAL
 // ==/SE_module==
 
