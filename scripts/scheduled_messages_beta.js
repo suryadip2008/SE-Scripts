@@ -2,8 +2,8 @@
 // name: scheduled_messages
 // displayName: Scheduled Messages
 // description: A Script That Allows For Scheduling Messages and Recurring Messages. Please don't remove Snapchat from the background when your message is scheduled.
-// version: 2.5 BETA
-// author: Suryadip Sarkar
+// version: 2.6 BETA
+// author: ΞTΞRNAL
 // credits: rhunk & Jacob Thomas
 // minSEVersion: Versions after 20/08/24
 // ==/SE_module==
@@ -33,7 +33,7 @@ var config = require("config");
 
   function showAuthorStartupToast() {
     if (shouldShowAuthorToast()) {
-        shortToast("Made by Suryadip Sarkar");
+        shortToast("Made by ΞTΞRNAL");
     }
   }
 
