@@ -3,7 +3,7 @@
 // displayName: Custom Reminders with Custom Messages
 // description: A Script that shows custom reminders with countdowns based on specified dates.
 // version: 1.0
-// author: Suryadip Sarkar
+// author: ΞTΞRNAL
 // ==/SE_module==
 
 var networking = require("networking");
