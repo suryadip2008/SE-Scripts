@@ -4,9 +4,9 @@
 
 A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&duration=2500&pause=500&color=A9F75A&center=true&vCenter=true&width=435&lines=HI+THERE+%F0%9F%91%8B%F0%9F%8F%BB!;WELCOME+TO+SE-SCRIPTS+%E2%9C%A8;CREATED+BY+SURYADIP+SARKAR+%E2%9C%A8;CO-SUPPORTED+BY+BEING+ZAIN+%E2%9C%A8)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&duration=2500&pause=500&color=A9F75A&center=true&vCenter=true&width=435&lines=HI+THERE+%F0%9F%91%8B%F0%9F%8F%BB!;WELCOME+TO+SE-SCRIPTS+%E2%9C%A8;CREATED+BY+ΞTΞRNAL+%E2%9C%A8;CO-SUPPORTED+BY+BEING+ZAIN+%E2%9C%A8)](https://git.io/typing-svg)
 
-![Maintainer](https://img.shields.io/badge/Creator-Suryadip_Sarkar-black)
+![Maintainer](https://img.shields.io/badge/Creator-ΞTΞRNAL-black)
 ![Maintainer](https://img.shields.io/badge/Collabrator-Being_Zain-black)
 
 ## 📖 Scripts
@@ -16,7 +16,7 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 - **Name:** message_bomber
 - **Version:** 5.8
 - **Last Updated:** October 25, 2024
-- **Author:** Suryadip Sarkar
+- **Author:** ΞTΞRNAL
 - **Description:** A script for bombing your friends with custom messages. Just for educational purposes. May or May not cause bans.
 
  ## Features
@@ -58,7 +58,7 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 - **Name:** scheduled_messages
 - **Version:** 2.6
 - **Last Updated:** September 05, 2024
-- **Author:** Suryadip Sarkar
+- **Author:** ΞTΞRNAL
 - **Credits:** rhunk & Jacob Thomas
 - **Requirements:** Only works on SE versions released after 20/08/24
 - **Description:** A Script That Allows For Scheduling Messages. Please don't remove Snapchat from the background when your message is scheduled.
@@ -101,7 +101,7 @@ To download the latest version of the script, choose one of the following option
 - **Name:** greetings_toast
 - **Version:** 3.0
 - **Last Updated:** August 02, 2024
-- **Author:** Suryadip Sarkar
+- **Author:** ΞTΞRNAL
 - **Description:** A Script that shows a greetings toast on the startup of Snapchat.
 
 ## Features 
@@ -143,7 +143,7 @@ To download the latest version of the script, choose one of the following option
 - **Name:** flexi_quotes
 - **Version:** 5.0
 - **Last Updated:** August 15, 2024
-- **Author:** Suryadip Sarkar & Jacob Thomas
+- **Author:** ΞTΞRNAL & Jacob Thomas
 - **Description:** A Script that shows a random motivation quote dialog on the startup of Snapchat.
 
 ## Features 
@@ -186,7 +186,7 @@ To download the latest version of the script, choose one of the following option
  **Name:** custom_reminders
 - **Version:** 1.0
 - **Last Updated:** July 18, 2024
-- **Author:** Suryadip Sarkar
+- **Author:** ΞTΞRNAL
 - **Description:** A Script that shows custom reminders with countdowns based on specified dates.
 
 ## Features 
@@ -227,7 +227,7 @@ To download the latest version of the script, choose one of the following option
 - **Name:** saved_replies
 - **Version:** 1.5
 - **Last Updated:** July 22, 2024
-- **Author:** Suryadip Sarkar
+- **Author:** ΞTΞRNAL
 - **Description:** A Script That Allows Users to Save and Send Custom Replies
 
 
@@ -270,7 +270,7 @@ To download the latest version of the script, choose one of the following option
 - **Name:** daily_news
 - **Version:** 2.2
 - **Last Updated:** Daily
-- **Author:** Suryadip Sarkar
+- **Author:** ΞTΞRNAL
 - **Description:**  A script that shows daily news as a dialog on Snapchat startup.
 
 ## Features 
@@ -317,7 +317,7 @@ To download the latest version of the script, choose one of the following option
 - **Name:** custom_toast
 - **Version:** 1.5
 - **Last Updated:** July 20, 2024
-- **Author:** Gabriel Modz, Jacob Thomas & Suryadip Sarkar
+- **Author:** Gabriel Modz, Jacob Thomas & ΞTΞRNAL
 - **Description:** A Script that shows a custom toast on the startup of Snapchat.
 
 ## Features 
@@ -431,7 +431,7 @@ Follow these steps to install and use the script:
 
 <details closed>
 <summary> 💭 Contact Us </summary>
-If you encounter any issues with these script, feel free to contact me : https://t.me/suryadip_sark08
+If you encounter any issues with these script, feel free to contact me : https://t.me/particle_box
 If you have any suggestions PM me right here, https://t.me/za1n_al1
 
 </details>
