@@ -2,8 +2,8 @@
 // name: saved_replies
 // displayName: Saved Replies
 // description: A Script That Allows Users to Save and Send Custom Replies
-// version: 1.5
-// author: Suryadip Sarkar
+// version: 1.6
+// author: ΞTΞRNAL
 // ==/SE_module==
 
 (function () {
