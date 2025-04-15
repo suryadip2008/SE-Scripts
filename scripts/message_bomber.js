@@ -2,9 +2,9 @@
 // name: message_bomber
 // displayName: Message Bomber
 // description: A script for bombing your friends with custom messages. Just for educational purposes. May or may not cause bans.
-// version: 5.8
-// updateUrl: https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/message_bomber.js
-// author: Suryadip Sarkar
+// version: 6.0
+// updateUrl: https://raw.githubusercontent.com/particle-box/SE-Scripts/main/scripts/message_bomber.js
+// author: ΞTΞRNAL
 // minSEVersion: Anti-Ban works only on versions after 20/08/24
 // ==/SE_module==
 
@@ -28,10 +28,10 @@ var events = require("events");
         config.setBoolean(hasShownWelcome, true, true);
     }
 
-    var owner = "suryadip2008";
+    var owner = "particle-box";
     var repo = "SE-Scripts";
     var scriptName = "message_bomber";
-    var currentVersion = "v5.8";
+    var currentVersion = "v6.0";
     let updateAvailable = false;
 
     var versionJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/version.json`;
@@ -84,7 +84,7 @@ var events = require("events");
     activity.runOnUiThread(() => {
         var disclaimerDialog = im.createAlertDialog(activity, (builder, dialog) => {
             builder.row(function (builder) {
-                builder.text("📜 Thank you for installing the message bomber script by Suryadip! Before using it, please keep the following in mind:")
+                builder.text("📜 Thank you for installing the message bomber script by ΞTΞRNAL! Before using it, please keep the following in mind:")
                     .fontSize(22)
             })
                 .arrangement("center")
@@ -784,11 +784,11 @@ function createConversationToolboxUI() {
             .padding(4);
 
             builder.row(function (builder) {
-                builder.text("⚙️ v5.8")
+                builder.text("⚙️ v6.0")
                     .fontSize(12)
                     .padding(4);
 
-                builder.text("👨‍💻 Made By Suryadip Sarkar")
+                builder.text("👨‍💻 Made By ΞTΞRNAL")
                     .fontSize(12)
                     .padding(4);
             })
