@@ -33,8 +33,7 @@ jobs:
 
     - name: Commit changes
       run: |
-        git config --local user.name "suryadip2008"
-        git config --local user.email "suryadip.2008@gmail.com"
+        git config --local user.name "particle-box"
         git add networking/news_en.json
         git commit -m "bot(scripts): Daily News Update"
         git push
@@ -67,8 +66,7 @@ jobs:
 
     - name: Commit translated files
       run: |
-        git config --global user.name "suryadip2008"
-        git config --global user.email "suryadip.2008@gmail.com"
+        git config --global user.name "particle-box"
         git add networking/news_*.json
         git commit -m "bot(scripts): News Translations"
         git push
