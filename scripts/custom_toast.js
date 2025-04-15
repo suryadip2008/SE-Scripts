@@ -2,7 +2,7 @@
 // name: custom_toast
 // displayName: Custom Toast
 // description: A Script that shows a custom toast on the startup of Snapchat.
-// version: 1.5
+// version: 1.6
 // author: Gabriel Modz, Jacob Thomas, Jimothy & ΞTΞRNAL
 // ==/SE_module==
 
