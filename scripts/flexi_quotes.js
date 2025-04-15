@@ -2,9 +2,9 @@
 // name: flexi_quotes
 // displayName: FlexiQuote: Customizable Motivation
 // description: A script that shows customizable motivation quotes on Snapchat startup, with options for dialog or toast notifications.
-// version: 5.0 
-// updateUrl: https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/flexi_quotes.js
-// author: Suryadip Sarkar & Jacob Thomas
+// version: 5.2
+// updateUrl: https://raw.githubusercontent.com/particle-box/SE-Scripts/main/scripts/flexi_quotes.js
+// author: ΞTΞRNAL & Jacob Thomas
 // ==/SE_module==
 
 var networking = require("networking");
@@ -24,10 +24,10 @@ if (!config.getBoolean(hasShownWelcome, false)) {
     config.setBoolean(hasShownWelcome, true, true);
 }
 
-var owner = "suryadip2008";
+var owner = "particle-box";
 var repo = "SE-Scripts";
 var scriptName = "flexi_quotes";
-var currentVersion = "v5.0";
+var currentVersion = "v5.2";
 let updateAvailable = false;
 
 var versionJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/version.json`;
@@ -225,11 +225,11 @@ function createConversationToolboxUI() {
                 .padding(4);
 
             builder.row(function (builder) {
-                builder.text("⚙️ v5.0")
+                builder.text("⚙️ v5.2")
                     .fontSize(12)
                     .padding(4);
 
-                builder.text("👨‍💻 Made By Suryadip Sarkar")
+                builder.text("👨‍💻 Made By ΞTΞRNAL")
                     .fontSize(12)
                     .padding(4);
             })
