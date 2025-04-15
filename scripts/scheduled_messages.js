@@ -2,9 +2,9 @@
 // name: scheduled_messages
 // displayName: Scheduled Messages
 // description: A Script That Allows For Scheduling Messages. Please don't remove Snapchat from the background when your message is scheduled.
-// version: 2.6 STABLE
-// updateUrl: https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/scheduled_messages.js
-// author: Suryadip Sarkar
+// version: 2.8 STABLE
+// updateUrl: https://raw.githubusercontent.com/particle-box/SE-Scripts/main/scripts/scheduled_messages.js
+// author: ΞTΞRNAL
 // credits: rhunk & Jacob Thomas
 // minSEVersion: Versions after 20/08/24
 // ==/SE_module==
@@ -24,10 +24,10 @@ var config = require("config");
         config.setBoolean(hasShownWelcome, true, true);
     }
 
-    var owner = "suryadip2008";
+    var owner = "particle-box";
     var repo = "SE-Scripts";
     var scriptName = "scheduled_messages";
-    var currentVersion = "v2.6";
+    var currentVersion = "v2.8";
     let updateAvailable = false;
 
     var versionJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/version.json`;
@@ -482,11 +482,11 @@ var config = require("config");
         .padding(4);
 
         builder.row(function (builder) {
-                builder.text("⚙️ v2.6 STABLE")
+                builder.text("⚙️ v2.8 STABLE")
                     .fontSize(12)
                     .padding(4);
 
-                builder.text("👨‍💻 Made By Suryadip Sarkar")
+                builder.text("👨‍💻 Made By ΞTΞRNAL")
                     .fontSize(12)
                     .padding(4);
             })
