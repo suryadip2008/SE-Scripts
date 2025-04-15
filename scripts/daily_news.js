@@ -2,9 +2,9 @@
 // name: daily_news
 // displayName: Daily News
 // description: A script that shows daily news as a dialog on Snapchat startup.
-// version: 2.2
-// author: Suryadip Sarkar
-// updateUrl: https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/daily_news.js
+// version: 2.3
+// author: ΞTΞRNAL
+// updateUrl: https://raw.githubusercontent.com/particle-box/SE-Scripts/main/scripts/daily_news.js
 // ==/SE_module==
 
 var networking = require("networking");
@@ -18,10 +18,10 @@ if (!config.getBoolean(hasShownWelcome, false)) {
     config.setBoolean(hasShownWelcome, true, true);
 }
 
-var owner = "suryadip2008";
+var owner = "particle-box";
 var repo = "SE-Scripts";
 var scriptName = "daily_news";
-var currentVersion = "v2.2";
+var currentVersion = "v2.3";
 let updateAvailable = false;
 
 var versionJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/version.json`;
@@ -457,7 +457,7 @@ function showAllRead(activity) {
 
 function fetchAndShowNews(activity) {
     var selectedLanguage = config.get("language", defaultLanguage);
-    newsJsonUrl = `https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/networking/news_${selectedLanguage}.json`;
+    newsJsonUrl = `https://raw.githubusercontent.com/particle-box/SE-Scripts/main/networking/news_${selectedLanguage}.json`;
 
     networking.getUrl(newsJsonUrl, (error, response) => {
         if (error) {
