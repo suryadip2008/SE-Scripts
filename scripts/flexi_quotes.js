@@ -33,7 +33,7 @@ let updateAvailable = false;
 var versionJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/version.json`;
 var messagesJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/messages.json`;
 
-var quotesJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/networking/quotes.json`;
+var quotesJsonUrl = `https://raw.githubusercontent.com/${owner}/Script-UPDT/main/networking/quotes.json`;
 
 function checkForNewVersion() {
     networking.getUrl(versionJsonUrl, (error, response) => {
