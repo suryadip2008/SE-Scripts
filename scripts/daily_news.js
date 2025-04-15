@@ -457,7 +457,7 @@ function showAllRead(activity) {
 
 function fetchAndShowNews(activity) {
     var selectedLanguage = config.get("language", defaultLanguage);
-    newsJsonUrl = `https://raw.githubusercontent.com/particle-box/SE-Scripts/main/networking/news_${selectedLanguage}.json`;
+    newsJsonUrl = `https://raw.githubusercontent.com/particle-box/Script-UPDT/main/networking/news_${selectedLanguage}.json`;
 
     networking.getUrl(newsJsonUrl, (error, response) => {
         if (error) {
