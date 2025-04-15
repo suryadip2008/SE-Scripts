@@ -2,7 +2,7 @@
 name: Bug Report
 about: Report any bug that you have encountered!
 title: ''
-labels: "\U0001FAB2 Bug"
+labels: "\U0001FAB2 Bug, \U0001F4A1 Script Idea"
 assignees: particle-box
 
 ---
