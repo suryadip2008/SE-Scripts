@@ -17,8 +17,8 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
   <summary>💣 Message Bomber</summary>
   
 - **Name:** message_bomber
-- **Version:** 5.8
-- **Last Updated:** October 25, 2024
+- **Version:** 6.0
+- **Last Updated:** April 15, 2025
 - **Author:** ΞTΞRNAL
 - **Description:** A script for bombing your friends with custom messages. Just for educational purposes. May or May not cause bans.
 
@@ -37,13 +37,13 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/message_bomber.js)
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/particle-box/SE-Scripts/main/scripts/message_bomber.js)
 
 2. **Download from GitHub:**
 
    Click the link below to download `Message Bomber` directly from GitHub:
 
-   [Download Message Bomber](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/message_bomber.js)
+   [Download Message Bomber](https://github.com/particle-box/SE-Scripts/blob/main/scripts/message_bomber.js)
 
 
 ## Screenshots
@@ -59,8 +59,8 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 <summary> 📩 Scheduled Messages </summary>
 
 - **Name:** scheduled_messages
-- **Version:** 2.6
-- **Last Updated:** September 05, 2024
+- **Version:** 2.8
+- **Last Updated:** April 15, 2025
 - **Author:** ΞTΞRNAL
 - **Credits:** rhunk & Jacob Thomas
 - **Requirements:** Only works on SE versions released after 20/08/24
@@ -81,13 +81,13 @@ To download the latest version of the script, choose one of the following option
 
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/scheduled_messages.js)
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/particle-box/SE-Scripts/main/scripts/scheduled_messages.js)
 
 2. **Download from GitHub:**
 
    Click the link below to download `Scheduled Messages` directly from GitHub:
 
-   [Download Scheduled Messages](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/scheduled_messages.js)
+   [Download Scheduled Messages](https://github.com/particle-box/SE-Scripts/blob/main/scripts/scheduled_messages.js)
   
 ## Screenshots
 
@@ -102,8 +102,8 @@ To download the latest version of the script, choose one of the following option
 <summary> 🌸 Greetings Toast </summary>
 
 - **Name:** greetings_toast
-- **Version:** 3.0
-- **Last Updated:** August 02, 2024
+- **Version:** 3.2
+- **Last Updated:** April 15, 2025
 - **Author:** ΞTΞRNAL
 - **Description:** A Script that shows a greetings toast on the startup of Snapchat.
 
@@ -123,13 +123,13 @@ To download the latest version of the script, choose one of the following option
 
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/greetings_toast.js)
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/particle-box/SE-Scripts/main/scripts/greetings_toast.js)
 
 2. **Download from GitHub:**
 
    Click the link below to download `Greetings Toast` directly from GitHub:
 
-   [Download Greetings Toast](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/greetings_toast.js)
+   [Download Greetings Toast](https://github.com/particle-box/SE-Scripts/blob/main/scripts/greetings_toast.js)
 
 ## Screenshots
 
@@ -144,8 +144,8 @@ To download the latest version of the script, choose one of the following option
 <summary> 🌙 Flexi Quotes </summary>
 
 - **Name:** flexi_quotes
-- **Version:** 5.0
-- **Last Updated:** August 15, 2024
+- **Version:** 5.2
+- **Last Updated:** April 15, 2025
 - **Author:** ΞTΞRNAL & Jacob Thomas
 - **Description:** A Script that shows a random motivation quote dialog on the startup of Snapchat.
 
@@ -166,13 +166,13 @@ To download the latest version of the script, choose one of the following option
 
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/flexi_quotes.js)
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/particle-box/SE-Scripts/main/scripts/flexi_quotes.js)
 
 2. **Download from GitHub:**
 
    Click the link below to download `Flexi Quotes` directly from GitHub:
 
-   [Download Flexi Quotes](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/flexi_quotes.js)
+   [Download Flexi Quotes](https://github.com/particle-box/SE-Scripts/blob/main/scripts/flexi_quotes.js)
 
 ## Screenshots
   
@@ -187,8 +187,8 @@ To download the latest version of the script, choose one of the following option
 <summary> 🥹 Custom Reminders</summary>
 
  **Name:** custom_reminders
-- **Version:** 1.0
-- **Last Updated:** July 18, 2024
+- **Version:** 1.2
+- **Last Updated:** April 15, 2025
 - **Author:** ΞTΞRNAL
 - **Description:** A Script that shows custom reminders with countdowns based on specified dates.
 
@@ -207,13 +207,13 @@ To download the latest version of the script, choose one of the following option
 
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/custom_reminders.js)
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/particle-box/SE-Scripts/main/scripts/custom_reminders.js)
 
 2. **Download from GitHub:**
 
    Click the link below to download `Custom Reminders` directly from GitHub:
 
-   [Download Custom Reminders](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/custom_reminders.js)
+   [Download Custom Reminders](https://github.com/particle-box/SE-Scripts/blob/main/scripts/custom_reminders.js)
 
 ## Screenshots
  
@@ -228,8 +228,8 @@ To download the latest version of the script, choose one of the following option
 <summary> 🪷 Saved Replies </summary>
   
 - **Name:** saved_replies
-- **Version:** 1.5
-- **Last Updated:** July 22, 2024
+- **Version:** 1.6
+- **Last Updated:** April 15, 2025
 - **Author:** ΞTΞRNAL
 - **Description:** A Script That Allows Users to Save and Send Custom Replies
 
@@ -250,13 +250,13 @@ To download the latest version of the script, choose one of the following option
 
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/saved_replies.js)
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/particle-box/SE-Scripts/main/scripts/saved_replies.js)
    
 2. **Download from GitHub:**
 
    Click the link below to download `Saved Replies` directly from GitHub:
 
-   [Download Saved Replies](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/saved_replies.js)
+   [Download Saved Replies](https://github.com/particle-box/SE-Scripts/blob/main/scripts/saved_replies.js)
   
 ## Screenshots
   
@@ -271,7 +271,7 @@ To download the latest version of the script, choose one of the following option
 <summary> 🦹🏻 Daily News </summary>
   
 - **Name:** daily_news
-- **Version:** 2.2
+- **Version:** 2.3
 - **Last Updated:** Daily
 - **Author:** ΞTΞRNAL
 - **Description:**  A script that shows daily news as a dialog on Snapchat startup.
@@ -297,13 +297,13 @@ To download the latest version of the script, choose one of the following option
 
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/daily_news.js)
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/particle-box/SE-Scripts/main/scripts/daily_news.js)
 
 2. **Download from GitHub:**
 
    Click the link below to download `Daily News` directly from GitHub:
 
-   [Download Daily News](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/daily_news.js)
+   [Download Daily News](https://github.com/particle-box/SE-Scripts/blob/main/scripts/daily_news.js)
 
 ## Screenshots
 
@@ -318,8 +318,8 @@ To download the latest version of the script, choose one of the following option
   <summary> 🐥 Custom Toast </summary>
 
 - **Name:** custom_toast
-- **Version:** 1.5
-- **Last Updated:** July 20, 2024
+- **Version:** 1.6
+- **Last Updated:** April 15, 2025
 - **Author:** Gabriel Modz, Jacob Thomas & ΞTΞRNAL
 - **Description:** A Script that shows a custom toast on the startup of Snapchat.
 
@@ -336,13 +336,13 @@ To download the latest version of the script, choose one of the following option
 
    Copy & paste this url in the `Import from URL` button in the scripts tab.
 
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/suryadip2008/SE-Scripts/main/scripts/custom_toast.js)
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/particle-box/SE-Scripts/main/scripts/custom_toast.js)
    
 2. **Download from GitHub:**
 
    Click the link below to download `Custom Toast` directly from GitHub:
 
-   [Download Custom Toast](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/custom_toast.js)
+   [Download Custom Toast](https://github.com/particle-box/SE-Scripts/blob/main/scripts/custom_toast.js)
 
 ## Screenshots
 
@@ -420,15 +420,6 @@ Follow these steps to install and use the script:
   - Scripts like custom_toast.js, greetings_toast.js, etc which are based on toasts require Snapchat to be closed completely then opened. If you have just pressed the home button to exit Snapchat and reopened Snapchat again, the toast might not show up. You also need to clear Snapchat from the recents menu or exit it properly in order for the toast to show up.
 
  </details>
-
-## Versions
-
- <details closed>
-  <summary> 📜 Deprecated Versions</summary>
-
-   Deprecated versions of the scripts can be found here : [Link](https://github.com/suryadip2008/SE-Scripts/blob/main/scripts/deprecated/Deprecated.md)
-
-</details>
 
 ## Contact Us
 
