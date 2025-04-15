@@ -1,10 +1,10 @@
 {
-  "scheduled_messages": "v2.6",
-  "message_bomber": "v5.8",
-  "greetings_toast": "v3.0",
-  "flexi_quotes": "v5.0",
-  "daily_news": "v2.2",
-  "custom_reminders": "v1.0",
-  "saved_replies": "v1.5",
-  "custom_toast": "v1.5"
+  "scheduled_messages": "v2.8",
+  "message_bomber": "v6.0",
+  "greetings_toast": "v3.2",
+  "flexi_quotes": "v5.2",
+  "daily_news": "v2.3",
+  "custom_reminders": "v1.2",
+  "saved_replies": "v1.6",
+  "custom_toast": "v1.6"
 }
